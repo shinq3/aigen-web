@@ -1,0 +1,212 @@
+{
+  "title": "Bảng Điều Khiển Quản Trị",
+  "dashboard": "Bảng Điều Khiển CMS Quản Trị",
+  "welcome": "Chào mừng, {username}",
+  "logout": "Đăng Xuất",
+  "home": "Trang Chủ",
+  
+  "login": {
+    "title": "Truy Cập Quản Trị",
+    "subtitle": "Đăng nhập vào Bảng Điều Khiển CMS D'auchy.Studio",
+    "username": "Tên Đăng Nhập",
+    "password": "Mật Khẩu",
+    "usernamePlaceholder": "Nhập tên đăng nhập",
+    "passwordPlaceholder": "Nhập mật khẩu",
+    "showPassword": "Hiển thị mật khẩu",
+    "hidePassword": "Ẩn mật khẩu",
+    "signIn": "Đăng Nhập",
+    "signingIn": "Đang Đăng Nhập...",
+    "errors": {
+      "invalidCredentials": "Tên đăng nhập hoặc mật khẩu không hợp lệ",
+      "networkError": "Đã xảy ra lỗi mạng",
+      "unknownError": "Đã xảy ra lỗi không xác định"
+    }
+  },
+
+  "tabs": {
+    "news": "Quản Lý Tin Tức",
+    "contacts": "Quản Lý Liên Hệ",
+    "users": "Quản Lý Người Dùng"
+  },
+
+  "news": {
+    "title": "Quản Lý Tin Tức",
+    "description": "Tạo, chỉnh sửa và xuất bản bài viết tin tức",
+    "createNews": "Tạo Tin Tức",
+    "editNews": "Chỉnh Sửa Tin Tức",
+    "deleteNews": "Xóa Tin Tức",
+    "publishNews": "Xuất Bản Tin Tức",
+    "unpublishNews": "Hủy Xuất Bản Tin Tức",
+    "viewUpdates": "Xem Cập Nhật",
+    "noNews": "Chưa có bài viết tin tức",
+    "noNewsDescription": "Tạo bài viết tin tức đầu tiên để chia sẻ cập nhật với khán giả của bạn.",
+    "form": {
+      "title": "Tiêu Đề",
+      "titlePlaceholder": "Nhập tiêu đề bài viết",
+      "excerpt": "Tóm Tắt",
+      "excerptPlaceholder": "Tóm tắt ngắn về bài viết",
+      "content": "Nội Dung",
+      "category": "Danh Mục",
+      "categoryPlaceholder": "Chọn danh mục",
+      "status": "Trạng Thái",
+      "isExternal": "Bài Viết Bên Ngoài",
+      "externalUrl": "URL Bên Ngoài",
+      "externalUrlPlaceholder": "URL của bài viết bên ngoài",
+      "thumbnailUrl": "URL Hình Thu Nhỏ",
+      "thumbnailUrlPlaceholder": "URL của hình ảnh thu nhỏ",
+      "tags": "Thẻ",
+      "tagsPlaceholder": "Nhập thẻ, cách nhau bằng dấu phẩy"
+    },
+    "status": {
+      "draft": "Bản Nháp",
+      "published": "Đã Xuất Bản",
+      "archived": "Đã Lưu Trữ"
+    },
+    "categories": {
+      "product": "Sản Phẩm",
+      "company": "Công Ty",
+      "technology": "Công Nghệ",
+      "announcement": "Thông Báo"
+    },
+    "actions": {
+      "save": "Lưu",
+      "cancel": "Hủy",
+      "delete": "Xóa",
+      "edit": "Chỉnh Sửa",
+      "view": "Xem",
+      "create": "Tạo",
+      "update": "Cập Nhật"
+    },
+    "messages": {
+      "created": "Bài viết tin tức đã được tạo thành công",
+      "updated": "Bài viết tin tức đã được cập nhật thành công",
+      "deleted": "Bài viết tin tức đã được xóa thành công",
+      "publishedStatusChanged": "Trạng thái xuất bản đã thay đổi",
+      "error": "Đã xảy ra lỗi",
+      "createError": "Không thể tạo bài viết tin tức",
+      "updateError": "Không thể cập nhật bài viết tin tức",
+      "deleteError": "Không thể xóa bài viết tin tức"
+    },
+    "confirmDelete": {
+      "message": "Bạn có chắc chắn muốn xóa \"{title}\"? Hành động này không thể hoàn tác."
+    }
+  },
+
+  "contacts": {
+    "title": "Quản Lý Liên Hệ",
+    "description": "Quản lý và phản hồi các yêu cầu của khách hàng ({count} tổng cộng)",
+    "noContacts": "Chưa có liên hệ",
+    "noContactsDescription": "Khi mọi người gửi biểu mẫu liên hệ, các yêu cầu của họ sẽ xuất hiện ở đây để bạn quản lý.",
+    "contactInfo": "Thông Tin Liên Hệ",
+    "timeline": "Dòng Thời Gian",
+    "message": "Tin Nhắn",
+    "details": "Chi Tiết Liên Hệ",
+    "form": {
+      "name": "Tên",
+      "email": "Email",
+      "company": "Công Ty",
+      "phone": "Điện Thoại",
+      "submitted": "Đã Gửi",
+      "lastUpdated": "Cập Nhật Lần Cuối",
+      "status": "Trạng Thái"
+    },
+    "status": {
+      "new": "Mới",
+      "inProgress": "Đang Xử Lý",
+      "resolved": "Đã Giải Quyết",
+      "closed": "Đã Đóng"
+    },
+    "messages": {
+      "statusUpdated": "Trạng thái đã được cập nhật thành công",
+      "statusUpdateError": "Không thể cập nhật trạng thái"
+    }
+  },
+
+  "users": {
+    "title": "Quản Lý Người Dùng",
+    "description": "Quản lý người dùng quản trị, vai trò và quyền hạn",
+    "createUser": "Tạo Người Dùng",
+    "editUser": "Chỉnh Sửa Người Dùng",
+    "deleteUser": "Xóa Người Dùng",
+    "changePassword": "Đổi Mật Khẩu",
+    "noUsers": "Không tìm thấy người dùng",
+    "lastLogin": "Đăng Nhập Lần Cuối",
+    "form": {
+      "username": "Tên Đăng Nhập",
+      "email": "Email",
+      "password": "Mật Khẩu",
+      "confirmPassword": "Xác Nhận Mật Khẩu",
+      "role": "Vai Trò",
+      "isActive": "Hoạt Động",
+      "newPassword": "Mật Khẩu Mới",
+      "selectRole": "Chọn một vai trò",
+      "createTitle": "Tạo Người Dùng Mới",
+      "createDescription": "Thêm người dùng quản trị mới vào hệ thống",
+      "editTitle": "Chỉnh Sửa Người Dùng",
+      "changePasswordTitle": "Đổi Mật Khẩu",
+      "changePasswordDescription": "Đổi mật khẩu cho {username}"
+    },
+    "roles": {
+      "superadmin": "Siêu Quản Trị",
+      "admin": "Quản Trị",
+      "editor": "Biên Tập",
+      "viewer": "Người Xem"
+    },
+    "status": {
+      "active": "Hoạt Động",
+      "inactive": "Không Hoạt Động"
+    },
+    "actions": {
+      "create": "Tạo Người Dùng",
+      "edit": "Chỉnh Sửa",
+      "delete": "Xóa",
+      "changePassword": "Đổi Mật Khẩu",
+      "save": "Lưu",
+      "cancel": "Hủy"
+    },
+    "messages": {
+      "created": "Người dùng đã được tạo thành công",
+      "updated": "Người dùng đã được cập nhật thành công",
+      "deleted": "Người dùng đã được xóa thành công",
+      "passwordChanged": "Mật khẩu đã được thay đổi thành công",
+      "createError": "Không thể tạo người dùng",
+      "updateError": "Không thể cập nhật người dùng",
+      "deleteError": "Không thể xóa người dùng",
+      "passwordChangeError": "Không thể thay đổi mật khẩu",
+      "passwordMismatch": "Mật khẩu không khớp",
+      "passwordTooShort": "Mật khẩu mới phải có ít nhất 6 ký tự"
+    },
+    "confirmDelete": {
+      "title": "Xác Nhận Xóa Người Dùng",
+      "message": "Bạn có chắc chắn muốn xóa {username}? Hành động này không thể hoàn tác.",
+      "confirm": "Xóa",
+      "cancel": "Hủy"
+    }
+  },
+
+  "common": {
+    "loading": "Đang tải...",
+    "error": "Lỗi",
+    "success": "Thành công",
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "delete": "Xóa",
+    "edit": "Chỉnh sửa",
+    "view": "Xem",
+    "create": "Tạo",
+    "update": "Cập nhật",
+    "confirm": "Xác nhận",
+    "close": "Đóng",
+    "back": "Quay lại",
+    "next": "Tiếp",
+    "previous": "Trước",
+    "search": "Tìm kiếm",
+    "filter": "Lọc",
+    "sort": "Sắp xếp",
+    "actions": "Hành động",
+    "status": "Trạng thái",
+    "createdAt": "Ngày tạo",
+    "updatedAt": "Ngày cập nhật",
+    "ago": "trước"
+  }
+}

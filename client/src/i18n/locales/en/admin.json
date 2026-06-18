@@ -1,0 +1,212 @@
+{
+  "title": "Admin Panel",
+  "dashboard": "CMS Admin Dashboard",
+  "welcome": "Welcome, {username}",
+  "logout": "Logout",
+  "home": "Home",
+  
+  "login": {
+    "title": "Admin Access",
+    "subtitle": "Sign in to the D'auchy.Studio CMS Dashboard",
+    "username": "Username",
+    "password": "Password",
+    "usernamePlaceholder": "Enter your username",
+    "passwordPlaceholder": "Enter your password",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "signIn": "Sign In",
+    "signingIn": "Signing In...",
+    "errors": {
+      "invalidCredentials": "Invalid username or password",
+      "networkError": "Network error occurred",
+      "unknownError": "An unknown error occurred"
+    }
+  },
+
+  "tabs": {
+    "news": "News Management",
+    "contacts": "Contact Management",
+    "users": "User Management"
+  },
+
+  "news": {
+    "title": "News Management",
+    "description": "Create, edit, and publish news articles",
+    "createNews": "Create News",
+    "editNews": "Edit News",
+    "deleteNews": "Delete News",
+    "publishNews": "Publish News",
+    "unpublishNews": "Unpublish News",
+    "viewUpdates": "View Updates",
+    "noNews": "No news articles yet",
+    "noNewsDescription": "Create your first news article to share updates with your audience.",
+    "form": {
+      "title": "Title",
+      "titlePlaceholder": "Enter article title",
+      "excerpt": "Excerpt",
+      "excerptPlaceholder": "Brief summary of the article",
+      "content": "Content",
+      "category": "Category",
+      "categoryPlaceholder": "Select category",
+      "status": "Status",
+      "isExternal": "External Article",
+      "externalUrl": "External URL",
+      "externalUrlPlaceholder": "URL of external article",
+      "thumbnailUrl": "Thumbnail URL",
+      "thumbnailUrlPlaceholder": "URL of thumbnail image",
+      "tags": "Tags",
+      "tagsPlaceholder": "Enter tags separated by commas"
+    },
+    "status": {
+      "draft": "Draft",
+      "published": "Published",
+      "archived": "Archived"
+    },
+    "categories": {
+      "product": "Product",
+      "company": "Company",
+      "technology": "Technology",
+      "announcement": "Announcement"
+    },
+    "actions": {
+      "save": "Save",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "edit": "Edit",
+      "view": "View",
+      "create": "Create",
+      "update": "Update"
+    },
+    "messages": {
+      "created": "News article created successfully",
+      "updated": "News article updated successfully",
+      "deleted": "News article deleted successfully",
+      "publishedStatusChanged": "Publication status changed",
+      "error": "An error occurred",
+      "createError": "Failed to create news article",
+      "updateError": "Failed to update news article",
+      "deleteError": "Failed to delete news article"
+    },
+    "confirmDelete": {
+      "message": "Are you sure you want to delete \"{title}\"? This action cannot be undone."
+    }
+  },
+
+  "contacts": {
+    "title": "Contact Management",
+    "description": "Manage and respond to customer inquiries ({count} total)",
+    "noContacts": "No contacts yet",
+    "noContactsDescription": "When people submit the contact form, their inquiries will appear here for you to manage.",
+    "contactInfo": "Contact Information",
+    "timeline": "Timeline",
+    "message": "Message",
+    "details": "Contact Details",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "company": "Company",
+      "phone": "Phone",
+      "submitted": "Submitted",
+      "lastUpdated": "Last Updated",
+      "status": "Status"
+    },
+    "status": {
+      "new": "New",
+      "inProgress": "In Progress",
+      "resolved": "Resolved",
+      "closed": "Closed"
+    },
+    "messages": {
+      "statusUpdated": "Status updated successfully",
+      "statusUpdateError": "Failed to update status"
+    }
+  },
+
+  "users": {
+    "title": "User Management",
+    "description": "Manage admin users, roles, and permissions",
+    "createUser": "Create User",
+    "editUser": "Edit User",
+    "deleteUser": "Delete User",
+    "changePassword": "Change Password",
+    "noUsers": "No users found",
+    "lastLogin": "Last Login",
+    "form": {
+      "username": "Username",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "role": "Role",
+      "isActive": "Active",
+      "newPassword": "New Password",
+      "selectRole": "Select a role",
+      "createTitle": "Create New User",
+      "createDescription": "Add a new admin user to the system",
+      "editTitle": "Edit User",
+      "changePasswordTitle": "Change Password",
+      "changePasswordDescription": "Change password for {username}"
+    },
+    "roles": {
+      "superadmin": "Super Admin",
+      "admin": "Admin",
+      "editor": "Editor",
+      "viewer": "Viewer"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "actions": {
+      "create": "Create User",
+      "edit": "Edit",
+      "delete": "Delete",
+      "changePassword": "Change Password",
+      "save": "Save",
+      "cancel": "Cancel"
+    },
+    "messages": {
+      "created": "User created successfully",
+      "updated": "User updated successfully",
+      "deleted": "User deleted successfully",
+      "passwordChanged": "Password changed successfully",
+      "createError": "Failed to create user",
+      "updateError": "Failed to update user",
+      "deleteError": "Failed to delete user",
+      "passwordChangeError": "Failed to change password",
+      "passwordMismatch": "Passwords don't match",
+      "passwordTooShort": "New password must be at least 6 characters"
+    },
+    "confirmDelete": {
+      "title": "Confirm User Deletion",
+      "message": "Are you sure you want to delete {username}? This action cannot be undone.",
+      "confirm": "Delete",
+      "cancel": "Cancel"
+    }
+  },
+
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "create": "Create",
+    "update": "Update",
+    "confirm": "Confirm",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "actions": "Actions",
+    "status": "Status",
+    "createdAt": "Created At",
+    "updatedAt": "Updated At",
+    "ago": "ago"
+  }
+}

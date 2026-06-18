@@ -1,0 +1,315 @@
+{
+  "meta": {
+    "title": "AiGen-One - AI Operations Portal | D'auchy.Studio",
+    "description": "An AI operations platform that turns spoken business needs into internal systems and distributes AI features through a managed company portal."
+  },
+  "hero": {
+    "badge": "AI Operations Portal",
+    "eyebrow": "FROM AI TOOLS TO AI OPERATIONS",
+    "productName": "AiGen-One",
+    "title": "From distributing AI tools\nto distributing AI work.",
+    "subtitle": "Create business systems just by talking",
+    "description": "AiGen-One introduces ready-to-use AI workflows such as meeting minutes, proposal generation, internal document search, and multilingual chat through an internal portal. Employees do not need to learn AI tools first.",
+    "proofs": ["Deploy preset AI workflows quickly", "Turn frontline language into business systems", "Manage permissions, logs, and updates centrally"],
+    "buttons": {
+      "contact": "Talk to us",
+      "demo": "View demo"
+    },
+    "mockupLabel": "Place AI work inside the portal"
+  },
+  "problem": {
+    "eyebrow": "What is happening in companies",
+    "title": "AI tools increased.\nWork is still fragmented.",
+    "description": "ChatGPT, Gemini, NotebookLM, Claude, Copilot. AI tools are useful, but employees still switch tools, copy results, reorganize outputs, and share them manually.",
+    "items": [
+      {
+        "title": "Usage differs by employee",
+        "description": "Prompts, settings, and useful workflows become personal know-how instead of shared company assets."
+      },
+      {
+        "title": "AI outputs still need manual return to work",
+        "description": "Summaries and documents are faster, but people still move the results back into business systems."
+      },
+      {
+        "title": "Internal data and permissions stay disconnected",
+        "description": "It is hard to manage who can see what and which files were used as references."
+      },
+      {
+        "title": "Teams keep relearning new AI features",
+        "description": "Every model or product update creates another learning burden for the frontline."
+      }
+    ]
+  },
+  "values": {
+    "eyebrow": "The AiGen-One approach",
+    "title": "AiGen-One is a system to create,\ndistribute, and operate AI work.",
+    "description": "AiGen-One is not a service that teaches people how to use AI. It is a system for creating, distributing, and operating AI-powered business functions across the company.",
+    "items": [
+      {
+        "title": "Create business systems by talking",
+        "description": "When users describe their operational problem, AI asks for the right fields, permissions, and workflow, then converts it into screens and data structures."
+      },
+      {
+        "title": "Add AI functions as plugins",
+        "description": "Meeting minutes, proposal generation, file RAG, multilingual chat, and other common AI workflows can be added to the portal."
+      },
+      {
+        "title": "Distribute, update, and govern as a company",
+        "description": "Manage availability by department or role, usage logs, versions, prompts, and model updates from one place."
+      }
+    ]
+  },
+  "flow": {
+    "eyebrow": "How it works",
+    "title": "From frontline language\nto working business systems.",
+    "description": "Users do not need requirement documents or system design skills. AiGen-One clarifies inputs, outputs, reference files, permissions, notifications, and AI assistance through conversation.",
+    "steps": [
+      {
+        "number": "Step 1",
+        "title": "Describe the business problem",
+        "description": "Move inquiries out of Excel, create proposals from meeting notes, search internal documents, or ask in natural business language."
+      },
+      {
+        "number": "Step 2",
+        "title": "AI asks for the needed requirements",
+        "description": "Who will use it, what fields are needed, whether approvals or notifications exist, and which files should be referenced."
+      },
+      {
+        "number": "Step 3",
+        "title": "Generate the system or AI feature",
+        "description": "Lists, forms, detail screens, search, summaries, document generation, and answer support are created for the workflow."
+      },
+      {
+        "number": "Step 4",
+        "title": "Place it in the internal portal",
+        "description": "Generated functions appear in the AiGen-One work menu, so employees do not need to think about tool names or model names."
+      }
+    ]
+  },
+  "marketplace": {
+    "eyebrow": "Plugin Marketplace",
+    "title": "Common AI workflows\ncan be added as plugins.",
+    "description": "Not every user needs to build from scratch. Frequently used AI business functions can be installed from the marketplace and distributed internally by administrators.",
+    "noteTitle": "Start immediately with preset AI workflows",
+    "note": "Meeting minutes, proposal generation, file search, and multilingual chat can deliver value even before core database integration. Companies can create the first AI work entry point without modifying existing systems."
+  },
+  "plugins": {
+    "items": [
+      {
+        "category": "Meeting",
+        "title": "Meeting Minutes Plugin",
+        "description": "Turns audio, transcripts, and notes into key points, decisions, tasks, owners, and deadlines."
+      },
+      {
+        "category": "Sales",
+        "title": "Proposal from Notes",
+        "description": "Creates customer issues, proposal direction, structure, and slide drafts from sales notes or interviews."
+      },
+      {
+        "category": "Knowledge",
+        "title": "File Sharing RAG",
+        "description": "Searches PDFs, Word, Excel, and PowerPoint files and answers with cited sources."
+      },
+      {
+        "category": "Global",
+        "title": "Multilingual Interpretation Chat",
+        "description": "Helps members using different languages communicate naturally in chat."
+      },
+      {
+        "category": "Agent",
+        "title": "Skills and Agents",
+        "description": "Future marketplace support for AI agents that execute multi-step business processes."
+      }
+    ]
+  },
+  "architecture": {
+    "eyebrow": "Technical Structure",
+    "title": "Not just an AI model.\nA usable form for business.",
+    "description": "AiGen-One combines models, prompts, RAG, file processing, screen generation, permissions, and logs into an operational AI layer for real work.",
+    "layers": [
+      {
+        "title": "Portal UI",
+        "description": "Unifies work menus, chat, and generated business screens in one entry point."
+      },
+      {
+        "title": "App Generation",
+        "description": "Supports requirement interviews, screen design, data design, and workflow design."
+      },
+      {
+        "title": "AI Runtime",
+        "description": "Controls LLM, RAG, summarization, translation, document generation, and agents by function."
+      },
+      {
+        "title": "Data Layer",
+        "description": "Manages uploaded files, shared documents, business data, vector search, and source references."
+      },
+      {
+        "title": "Admin Layer",
+        "description": "Manages users, permissions, plugins, usage logs, and versions."
+      }
+    ]
+  },
+  "useCases": {
+    "eyebrow": "Use Cases",
+    "title": "AI workflows ready for each department.",
+    "description": "Start small without waiting for core system integration, prove impact, then expand company-wide.",
+    "items": [
+      {
+        "title": "Sales",
+        "points": ["Create proposals from meeting notes", "Search past proposal materials", "Summarize sales reports"]
+      },
+      {
+        "title": "Administration",
+        "points": ["Search internal policies", "Draft approval documents", "Assist contract checks"]
+      },
+      {
+        "title": "HR",
+        "points": ["Summarize interview notes", "Create job descriptions", "Organize evaluation comments"]
+      },
+      {
+        "title": "Support",
+        "points": ["Classify inquiries", "Draft answer suggestions", "Improve FAQs"]
+      },
+      {
+        "title": "Global Work",
+        "points": ["Multilingual chat", "Summarize meetings with overseas offices", "Share translated documents"]
+      }
+    ]
+  },
+  "roadmap": {
+    "eyebrow": "Rollout Steps",
+    "title": "Start small,\nthen grow into an AI work foundation.",
+    "description": "Begin with AI workflows that do not require existing system changes, then expand into systemizing frontline work, portal operations, and agents.",
+    "phases": [
+      {
+        "label": "Phase 1",
+        "title": "Ready-to-use AI work plugins",
+        "description": "Deploy meeting minutes, proposal generation, file sharing RAG, and multilingual chat."
+      },
+      {
+        "label": "Phase 2",
+        "title": "Systemize frontline work",
+        "description": "Create inquiry management, daily reports, task management, and checklists through conversation."
+      },
+      {
+        "label": "Phase 3",
+        "title": "Internal portal operations",
+        "description": "Organize generated systems and plugins by department and role."
+      },
+      {
+        "label": "Phase 4",
+        "title": "Agent workflows",
+        "description": "Add AI agents that execute multi-step work instead of single AI functions only."
+      },
+      {
+        "label": "Phase 5",
+        "title": "External marketplace",
+        "description": "Expand into a marketplace where partners and developers can publish plugins and agents."
+      }
+    ]
+  },
+  "governance": {
+    "eyebrow": "Security & Operations",
+    "title": "Designed not only to be useful,\nbut to be governable.",
+    "description": "Business AI must show who accessed what, what was generated, and which function was used. AiGen-One is designed so companies can manage AI usage as an operating system.",
+    "items": [
+      {
+        "title": "AI cannot see what users cannot see",
+        "description": "Control accessible files and functions by department, role, and user."
+      },
+      {
+        "title": "Manage sources by function",
+        "description": "Configure which files RAG can reference and how evidence appears for each business function."
+      },
+      {
+        "title": "Track usage logs",
+        "description": "Administrators can see who used which feature and which information was referenced."
+      },
+      {
+        "title": "Version plugins",
+        "description": "Update prompts, model settings, screens, and processing logic centrally."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "Pricing Plans",
+    "description": "AiGen-One offers a flexible pricing model so each organization can choose only the functions needed by app users, AI users, app builders, and administrators.",
+    "tableHeaders": {
+      "plan": "Plan",
+      "monthly": "Monthly",
+      "target": "Primary users",
+      "features": "Main features"
+    },
+    "plans": [
+      {
+        "plan": "Business User",
+        "monthly": "¥800 / user",
+        "target": "Staff who use business apps",
+        "features": "Business menu access, use of production apps, input, search, edit, and review"
+      },
+      {
+        "plan": "AI User",
+        "monthly": "¥2,800 / user",
+        "target": "Staff who research or consult with AI",
+        "features": "Business User features, AiGen-One Chat, general LLM chat, internal knowledge search, business data Q&A, operation guidance, MCP Access"
+      },
+      {
+        "plan": "Workspace User",
+        "monthly": "¥5,800 / user",
+        "target": "People who create and improve business apps",
+        "features": "AI User features, app generation, app improvement from existing apps, preview, chat refinement, sharing requests"
+      },
+      {
+        "plan": "Organization Admin",
+        "monthly": "¥6,800 / user",
+        "target": "Department managers and business owners",
+        "features": "AI User features, app generation, staff management, permission management, usage limit management, sharing approval, business menu management"
+      },
+      {
+        "plan": "System Admin",
+        "monthly": "Included / add-on",
+        "target": "IT and global administrators",
+        "features": "Organization management, DB connection, external integrations, Git / API / MCP / OAuth management, production release, plugin management, security, audit logs"
+      }
+    ],
+    "aiUserTitle": "Included with AI User",
+    "aiUserDescription": "AiGen-One Chat is a business AI that supports writing, summarization, and consultation as a general LLM chat, plus internal knowledge search, business data Q&A, operation guidance, and app generation support. With MCP Access, teams can also use AiGen-One internal knowledge, business data, and app generation safely from MCP-compatible LLM chats such as Claude and Codex.",
+    "aiUserQuote": "Keep using familiar AI tools. Connect business data and internal knowledge safely through AiGen-One.",
+    "baseTitle": "Base Fees",
+    "baseFees": [
+      {
+        "item": "Initial implementation",
+        "price": "¥500k-¥1.5M"
+      },
+      {
+        "item": "Platform base fee",
+        "price": "¥150k / month"
+      },
+      {
+        "item": "Plugin usage fee",
+        "price": "¥30k-¥150k / month / plugin"
+      },
+      {
+        "item": "Industry plugin set",
+        "price": "¥200k-¥500k / month"
+      }
+    ],
+    "policyTitle": "Plan Philosophy",
+    "notes": [
+      "Keep costs low for staff who only use business apps.",
+      "Add AI usage, app generation, organization management, and plugins only where needed.",
+      "In smaller organizations, organization admins can also handle app generation.",
+      "In larger organizations, Workspace Users and Organization Admins can be separated for safer development, approval, and operation."
+    ]
+  },
+  "cta": {
+    "badge": "AI work as company infrastructure",
+    "title": "Before adding more AI tools,\nembed AI into work.",
+    "description": "AiGen-One creates business systems from frontline language, distributes AI functions internally, and turns AI progress into operational value.",
+    "buttons": {
+      "contact": "Discuss implementation",
+      "demo": "View online demo"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "company": {
+    "name": "D'auchy.Studio",
+    "description": "We create future technology solutions through the development and provision of AI products.",
+    "tagline": "AI solutions that support people from daily life to business",
+    "copyright": "© 2024 D'auchy.Studio. All rights reserved.",
+    "address": "1-1-1 Ebisu, Shibuya-ku, Tokyo",
+    "contact": {
+      "email": "contact@d-auchy.studio",
+      "phone": "+81-3-1234-5678"
+    }
+  },
+  "sections": {
+    "products": "Products",
+    "company": "Company",
+    "follow": "Follow Us"
+  },
+  "links": {
+    "about": "About Us",
+    "news": "News",
+    "careers": "Careers",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "sitemap": "Sitemap",
+    "support": "Support"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "title": "About Us | D'auchy.Studio",
+    "description": "Learn about D'auchy.Studio's company information, mission, values, team, and journey in AI innovation."
+  },
+  "hero": {
+    "title": "About Us",
+    "description": "D'auchy.Studio develops products that harness the power of AI to enrich people's lives and work. We combine technology and creativity to provide truly valuable solutions as our mission."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "description": "We bring innovation to education, enterprise, and creative fields through AI technology. By valuing co-creation with users and developing practical and sustainable solutions, we contribute to the digital transformation of society as a whole."
+  },
+  "values": {
+    "title": "Our Values",
+    "items": [
+      {
+        "title": "Innovation",
+        "description": "We provide innovative solutions that leverage cutting-edge AI technology to solve conventional challenges."
+      },
+      {
+        "title": "User-Centered",
+        "description": "We deeply understand user needs and design and develop truly valuable experiences."
+      },
+      {
+        "title": "Creativity",
+        "description": "We combine creative thinking and technology to open up new possibilities."
+      },
+      {
+        "title": "Sustainable Growth",
+        "description": "Through continuous learning and improvement, we continue to create long-term value."
+      }
+    ]
+  },
+  "team": {
+    "title": "Team",
+    "description": "Our expert team with rich experience working on innovative product development.",
+    "members": [
+      {
+        "name": "Shin Uchida",
+        "role": "AI System Producer",
+        "description": "Builds all kinds of systems with over 30 years of experience."
+      },
+      {
+        "name": "Michael Ito",
+        "role": "Planning & Consultant",
+        "description": "Provides proposals from system and app planning to operation."
+      },
+      {
+        "name": "John Kaneko",
+        "role": "Project Manager",
+        "description": "A guide who leads projects to success."
+      }
+    ]
+  },
+  "history": {
+    "title": "Our Journey",
+    "milestones": [
+      {
+        "title": "January 2024 - D'auchy Studio Founded",
+        "description": "Founded D'auchy.Studio with the goal of democratizing AI technology."
+      },
+      {
+        "title": "March 2025 - Enterprise LLM Release",
+        "description": "Released 'Enterprise LLM', an integrated enterprise platform combining project management, knowledge sharing, and AI assistant capabilities in an all-in-one solution."
+      },
+      {
+        "title": "May 2025 - LingaLink Release",
+        "description": "Officially released 'LingaLink',  an online learning AI coaching service."
+      },
+      {
+        "title": "August 2025 - OfficeBrain Release",
+        "description": "Released 'OfficeBrain', an enterprise RAG system. Entered the enterprise market."
+      },
+      {
+        "title": "October 2025 - Present",
+        "description": "EduMate beta released, Bayd-System in development. More innovative products in preparation."
+      }
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "hero": {
+    "title": "LingaLink",
+  "subtitle": "オンラインレッスンでAIが自動レビューを行うコーチングサービス。\nパーソナライズされた学習体験を提供し、効果的なスキルアップをサポートします。",
+    "badge": "AI学習プラットフォーム",
+    "description": "学ぶ・教えるの効率をAIがサポートするオンライン学習プラットフォーム",
+    "buttons": {
+      "demo": "無料デモを試す",
+      "learnMore": "詳しく見る"
+    }
+  },
+  "summary": {
+    "students": {
+      "title": "受講生向け",
+      "description": "授業に集中すれば、あとでAIが要点を整理してくれる"
+    },
+    "teachers": {
+      "title": "講師向け",
+      "description": "ニュースや記事からAIが教材作りを手伝ってくれる"
+    },
+    "ai": {
+      "title": "AI支援",
+      "description": "学習と教育の両方を効率化する革新的なツール"
+    }
+  },
+  "studentFeatures": {
+    "title": "受講生が使える機能",
+    "booking": {
+      "title": "レッスン予約・参加",
+      "description1": "好きな講師のスケジュールを確認して、ワンタップで予約",
+      "description2": "ビデオ通話や画面共有でオンライン授業を受けられる"
+    },
+    "aiSummary": {
+      "title": "AIによる自動まとめ",
+      "description1": "レッスンが終わると、AIが授業内容を自動で要約",
+      "description2": "要点をまとめた復習レビューが自動生成され、効率よく復習できる"
+    },
+    "learningRecord": {
+      "title": "学習記録の保存",
+      "description1": "過去のレッスン内容・要約・レビューをいつでも見返せる",
+      "description2": "音声は自動で文字起こしされるので、聞き逃しゼロ"
+    },
+    "collaboration": {
+      "title": "共同作業ツール",
+      "description1": "レッスン中にホワイトボード感覚で書いたり描いたりできる",
+      "description2": "受講生と講師が同時に操作できて、そのまま保存される"
+    }
+  },
+  "teacherFeatures": {
+    "title": "講師が使える機能",
+    "schedule": {
+      "title": "スケジュール管理",
+      "description": "自分の空き時間を登録して、生徒がそこから予約"
+    },
+    "materialCreation": {
+      "title": "オリジナル教材の作成（AIサポート）",
+      "description1": "ニュース記事を検索して教材に変換",
+      "description2": "内容を要約し、イラストもAIで生成してオリジナル教材をすぐ作れる"
+    },
+    "materialManagement": {
+      "title": "教材の保存・編集",
+      "description1": "作った教材を一覧で管理、修正・更新も可能",
+      "description2": "難易度をレベル別に設定して、生徒に合わせられる"
+    }
+  },
+  "commonFeatures": {
+    "title": "共通の便利機能",
+    "multilingual": {
+      "title": "多言語対応",
+      "description": "日本語・英語を切り替えて使える"
+    },
+    "videoCall": {
+      "title": "高品質なビデオ通話",
+      "description": "安定した接続で映像・音声のやりとり"
+    },
+    "screenShare": {
+      "title": "スクリーン共有・録音",
+      "description": "授業を画面付きで共有でき、録音も自動保存"
+    },
+    "reminder": {
+      "title": "復習リマインド",
+      "description": "後から要約やレビューを元に学習し直せる"
+    }
+  },
+  "cta": {
+    "title": "LingaLinkで始める新しい学習体験",
+    "description": "AIが支援する効率的な学習と教育を体験してみませんか？",
+    "buttons": {
+      "demo": "無料デモを試す",
+      "contact": "お問い合わせ"
+    }
+  }
+}

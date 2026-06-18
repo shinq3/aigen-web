@@ -1,0 +1,93 @@
+{
+  "hero": {
+    "title": "LingaLink",
+    "subtitle": "Dịch vụ huấn luyện được hỗ trợ bởi AI cung cấp đánh giá tự động trong các bài học trực tuyến. Mang đến trải nghiệm học tập cá nhân hóa để hỗ trợ phát triển kỹ năng hiệu quả.",
+    "badge": "Nền Tảng Học Tập AI",
+    "description": "Nền tảng học tập trực tuyến nơi AI hỗ trợ hiệu quả của việc học và dạy",
+    "buttons": {
+      "demo": "Thử Demo Miễn Phí",
+      "learnMore": "Tìm Hiểu Thêm"
+    }
+  },
+  "summary": {
+    "students": {
+      "title": "Dành Cho Học Sinh",
+      "description": "Tập trung vào bài học, AI sẽ sắp xếp các điểm chính cho bạn sau đó"
+    },
+    "teachers": {
+      "title": "Dành Cho Giáo Viên",
+      "description": "AI giúp tạo tài liệu giáo dục từ tin tức và bài viết"
+    },
+    "ai": {
+      "title": "Hỗ Trợ AI",
+      "description": "Công cụ cách mạng giúp tối ưu hóa cả việc học và giáo dục"
+    }
+  },
+  "studentFeatures": {
+    "title": "Tính Năng Dành Cho Học Sinh",
+    "booking": {
+      "title": "Đặt Lịch & Tham Gia Bài Học",
+      "description1": "Kiểm tra lịch trình của giáo viên yêu thích và đặt lịch chỉ với một lần chạm",
+      "description2": "Tham gia lớp học trực tuyến với cuộc gọi video và chia sẻ màn hình"
+    },
+    "aiSummary": {
+      "title": "Tóm Tắt Tự Động Bằng AI",
+      "description1": "Sau khi bài học kết thúc, AI tự động tóm tắt nội dung lớp học",
+      "description2": "Bản tóm tắt ôn tập được tạo tự động để học tập hiệu quả"
+    },
+    "learningRecord": {
+      "title": "Lưu Trữ Hồ Sơ Học Tập",
+      "description1": "Truy cập nội dung bài học, tóm tắt và đánh giá trong quá khứ bất cứ lúc nào",
+      "description2": "Âm thanh được chuyển đổi văn bản tự động, vì vậy bạn không bao giờ bỏ lỡ gì"
+    },
+    "collaboration": {
+      "title": "Công Cụ Cộng Tác",
+      "description1": "Viết và vẽ kiểu bảng trắng trong bài học",
+      "description2": "Học sinh và giáo viên có thể thao tác đồng thời và lưu mọi thứ"
+    }
+  },
+  "teacherFeatures": {
+    "title": "Tính Năng Dành Cho Giáo Viên",
+    "schedule": {
+      "title": "Quản Lý Lịch Trình",
+      "description": "Đăng ký khung thời gian rảnh để học sinh đặt lịch"
+    },
+    "materialCreation": {
+      "title": "Tạo Tài Liệu Gốc (Hỗ Trợ AI)",
+      "description1": "Tìm kiếm bài báo và chuyển đổi thành tài liệu giảng dạy",
+      "description2": "Tóm tắt nội dung và tạo hình minh họa AI để tạo tài liệu gốc ngay lập tức"
+    },
+    "materialManagement": {
+      "title": "Lưu Trữ & Chỉnh Sửa Tài Liệu",
+      "description1": "Quản lý tài liệu đã tạo trong danh sách, với khả năng chỉnh sửa và cập nhật",
+      "description2": "Đặt mức độ khó để phù hợp với từng học sinh"
+    }
+  },
+  "commonFeatures": {
+    "title": "Tính Năng Hữu Ích Chung",
+    "multilingual": {
+      "title": "Hỗ Trợ Đa Ngôn Ngữ",
+      "description": "Chuyển đổi giữa tiếng Nhật và tiếng Anh"
+    },
+    "videoCall": {
+      "title": "Cuộc Gọi Video Chất Lượng Cao",
+      "description": "Kết nối ổn định cho giao tiếp video và âm thanh"
+    },
+    "screenShare": {
+      "title": "Chia Sẻ Màn Hình & Ghi Âm",
+      "description": "Chia sẻ bài học với hiển thị màn hình và tự động lưu bản ghi"
+    },
+    "reminder": {
+      "title": "Nhắc Nhở Ôn Tập",
+      "description": "Học lại sau này bằng cách sử dụng tóm tắt và đánh giá"
+    }
+  },
+  "cta": {
+    "title": "Bắt Đầu Trải Nghiệm Học Tập Mới Với LingaLink",
+    "description": "Trải nghiệm việc học và dạy hiệu quả được hỗ trợ bởi AI",
+    "buttons": {
+      "demo": "Thử Demo Miễn Phí",
+      "contact": "Liên Hệ"
+    }
+  }
+}

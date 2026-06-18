@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "Enterprise LLM - Nền tảng Doanh nghiệp Tích hợp | D'auchy.Studio",
+    "description": "Enterprise LLM - Nền tảng doanh nghiệp tất-cả-trong-một tích hợp quản lý dự án, chia sẻ kiến thức và trợ lý AI. Giải pháp thống nhất tối đa hóa tiềm năng đội nhóm."
+  },
+  "hero": {
+    "badge": "Nền tảng Tích hợp",
+    "title": "Enterprise LLM",
+    "subtitle": "Quản lý Dự án × Chia sẻ Kiến thức × Trợ lý AI",
+    "tagline": "Nền tảng tích hợp làm cho công việc doanh nghiệp thông minh hơn",
+    "description": "Hệ thống này là môi trường tất-cả-trong-một kết hợp quản lý dự án, giao tiếp, chia sẻ kiến thức và hỗ trợ AI.\nTừ các tác vụ hàng ngày đến các dự án quy mô lớn, nó tối đa hóa tiềm năng đội nhóm.",
+    "buttons": {
+      "demo": "Đặt lịch Demo",
+      "contact": "Liên hệ để biết Chi tiết"
+    }
+  },
+  "coreFeatures": {
+    "title": "Tối ưu hóa Hoạt động với Tính năng Tất-cả-trong-một",
+    "subtitle": "Từ quản lý dự án đến trợ lý AI, tích hợp tất cả các chức năng mà doanh nghiệp của bạn cần.\nTối đa hóa năng suất đội nhóm."
+  },
+  "features": [
+    {
+      "title": "Xác thực & Quản lý Tài khoản",
+      "description": "Quản lý thông tin người dùng một cách an toàn trong môi trường xác thực bảo mật",
+      "details": [
+        "Tăng cường bảo mật với Xác thực Đa yếu tố (MFA)",
+        "Quản lý hồ sơ người dùng hoàn chỉnh (tên, phòng ban, ảnh)",
+        "Hỗ trợ giao diện đa ngôn ngữ cho tiếng Nhật, tiếng Anh và tiếng Việt"
+      ]
+    },
+    {
+      "title": "Quản lý Tổ chức",
+      "description": "Quản lý tập trung từ thông tin công ty đến quản lý kế hoạch",
+      "details": [
+        "Quản lý tích hợp thông tin công ty, địa điểm và liên hệ",
+        "Hỗ trợ kế hoạch linh hoạt từ Basic đến Enterprise",
+        "Thiết lập quyền quản trị viên và thành viên một cách mượt mà"
+      ]
+    },
+    {
+      "title": "Quản lý Dự án",
+      "description": "Quản lý dự án tiên tiến với tính năng dự đoán AI",
+      "details": [
+        "Hoạt động trực quan về tỷ lệ tiến độ, ưu tiên và thành viên",
+        "Quản lý cột mốc để hiển thị các cột mốc quan trọng",
+        "Quản lý rủi ro và dự đoán tương lai để cải thiện tỷ lệ thành công dự án"
+      ]
+    },
+    {
+      "title": "Quản lý Nhiệm vụ",
+      "description": "Tối ưu hóa nhiệm vụ với bảng kanban có đề xuất AI",
+      "details": [
+        "Bảng kanban kéo & thả",
+        "Tính năng nhiệm vụ phụ để chia nhỏ công việc lớn",
+        "Đề xuất AI cho nhiệm vụ mới dựa trên trạng thái dự án"
+      ]
+    },
+    {
+      "title": "Chat & Giao tiếp",
+      "description": "Giao tiếp thời gian thực với hỗ trợ đa ngôn ngữ",
+      "details": [
+        "Cuộc trò chuyện thời gian thực trong chat một-đối-một và nhóm",
+        "Tính năng @mention với hỗ trợ dịch tự động",
+        "Tìm kiếm nhanh lịch sử cuộc trò chuyện"
+      ]
+    },
+    {
+      "title": "Cơ sở Kiến thức",
+      "description": "Môi trường Wiki nội bộ với chức năng tìm kiếm AI",
+      "details": [
+        "Tạo bài viết, phân loại thẻ và quản lý lịch sử",
+        "Trình chỉnh sửa phong phú để tạo bài viết dễ đọc",
+        "Tìm kiếm AI tự động trình bày tài liệu liên quan"
+      ]
+    },
+    {
+      "title": "Tích hợp Tin tức",
+      "description": "Thu thập tự động tin tức ngành và thông tin liên quan đến dự án",
+      "details": [
+        "Phân phối tin tức mới nhất trong lĩnh vực kinh doanh và công nghệ",
+        "Thu thập tự động tin tức liên quan đến các dự án đang diễn ra",
+        "Thông báo cảnh báo cho thông tin quan trọng"
+      ]
+    },
+    {
+      "title": "Cuộc họp & Biên bản",
+      "description": "Hệ thống quản lý cuộc họp với chức năng tóm tắt AI",
+      "details": [
+        "Quản lý lịch trình cuộc họp, người tham gia và URL",
+        "Tóm tắt AI tự động tóm tắt nội dung cuộc họp",
+        "Dịch đa ngôn ngữ cho biên bản cuộc họp"
+      ]
+    },
+    {
+      "title": "Tìm kiếm & Truy vấn",
+      "description": "Khám phá thông tin ngay lập tức với tìm kiếm chéo được hỗ trợ bởi AI",
+      "details": [
+        "Tìm kiếm hàng loạt các dự án, nhiệm vụ và kiến thức",
+        "Tìm kiếm AI hiểu ý nghĩa từ ngữ",
+        "Quản lý tập trung lịch sử Q&A nội bộ"
+      ]
+    },
+    {
+      "title": "Trợ lý AI",
+      "description": "Hỗ trợ AI tiên tiến tương thích với OpenAI & Gemini",
+      "details": [
+        "Chuyển đổi giữa OpenAI và Gemini theo cách sử dụng",
+        "Cải thiện hiệu quả công việc với tóm tắt tự động, dịch thuật và phân tích tình cảm",
+        "Câu trả lời có độ chính xác cao sử dụng dữ liệu nội bộ với tìm kiếm RAG"
+      ]
+    },
+    {
+      "title": "Hỗ trợ Đa ngôn ngữ",
+      "description": "Hỗ trợ đa ngôn ngữ hoàn chỉnh cho các đội quốc tế",
+      "details": [
+        "Hỗ trợ hoàn chỉnh cho tiếng Nhật, tiếng Anh và tiếng Việt",
+        "Dịch chat tự động để an tâm cho các đội quốc tế",
+        "Hỗ trợ múi giờ và tiền tệ cho hợp tác văn phòng nước ngoài"
+      ]
+    },
+    {
+      "title": "Bảng điều khiển & Phân tích",
+      "description": "Phân tích trực quan hóa tiến độ và hiệu suất",
+      "details": [
+        "Biểu diễn đồ họa trạng thái dự án và nhiệm vụ",
+        "Hiểu hiệu suất theo thành viên",
+        "Xuất báo cáo tùy chỉnh ra Excel và PDF"
+      ]
+    }
+  ],
+  "systemManagement": {
+    "title": "Quản lý Hệ thống Cấp Doanh nghiệp",
+    "subtitle": "Các chức năng quản lý được thiết kế với bảo mật và quản trị là ưu tiên hàng đầu"
+  },
+  "systemFeatures": [
+    {
+      "title": "Quản lý Quyền",
+      "description": "Kiểm soát truy cập chi tiết"
+    },
+    {
+      "title": "Nhật ký Kiểm toán",
+      "description": "Theo dõi tất cả lịch sử hoạt động"
+    },
+    {
+      "title": "Quản lý Sử dụng AI",
+      "description": "Quản lý tập trung khóa API và cách sử dụng"
+    },
+    {
+      "title": "Bảo vệ Dữ liệu",
+      "description": "Mã hóa và sao lưu thường xuyên"
+    }
+  ],
+  "pricing": {
+    "title": "Các Gói Linh hoạt cho Các Quy mô Đội khác nhau",
+    "subtitle": "Từ startup đến doanh nghiệp lớn, chúng tôi cung cấp các gói tối ưu theo quy mô",
+    "recommendedBadge": "Được Đề xuất",
+    "plans": [
+      {
+        "name": "Basic",
+        "price": "1.580.000₫",
+        "period": "hàng tháng / 5 người dùng",
+        "features": [
+          "Quản lý dự án cơ bản",
+          "Quản lý nhiệm vụ",
+          "Chức năng chat",
+          "Cơ sở kiến thức cơ bản",
+          "Hỗ trợ email & chat"
+        ],
+        "buttonText": "Chọn Gói"
+      },
+      {
+        "name": "Professional",
+        "price": "3.210.000₫",
+        "period": "hàng tháng / 15 người dùng",
+        "features": [
+          "Tất cả tính năng Basic",
+          "Chức năng tìm kiếm & tóm tắt AI",
+          "Quản lý cuộc họp & tóm tắt biên bản AI",
+          "Tích hợp tin tức",
+          "Dịch đa ngôn ngữ",
+          "Hỗ trợ điện thoại, Zoom & chat"
+        ],
+        "buttonText": "Chọn Gói"
+      },
+      {
+        "name": "Enterprise",
+        "price": "Liên hệ",
+        "period": "Giá tùy chỉnh",
+        "features": [
+          "Tất cả tính năng Professional",
+          "Tích hợp mô hình AI tùy chỉnh",
+          "Máy chủ chuyên dụng & kết nối VPN",
+          "Cài đặt quyền tùy chỉnh",
+          "Thành công khách hàng chuyên dụng",
+          "Hỗ trợ triển khai tại chỗ"
+        ],
+        "buttonText": "Liên hệ"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Sẵn sàng Tối đa hóa Tiềm năng Đội của bạn?",
+    "description": "Với Enterprise LLM, tích hợp mọi thứ từ quản lý dự án đến sử dụng AI.\nTrải nghiệm nền tảng tích hợp tối đa hóa năng suất doanh nghiệp.",
+    "buttons": {
+      "contact": "Liên hệ",
+      "demo": "Lên lịch Trình diễn"
+    }
+  }
+}

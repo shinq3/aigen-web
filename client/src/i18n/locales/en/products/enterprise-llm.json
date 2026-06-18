@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "Enterprise LLM - Integrated Enterprise Platform | D'auchy.Studio",
+    "description": "Enterprise LLM - An all-in-one enterprise platform integrating project management, knowledge sharing, and AI assistants. A unified solution that maximizes team potential."
+  },
+  "hero": {
+    "badge": "Integrated Platform",
+    "title": "Enterprise LLM",
+    "subtitle": "Project Management × Knowledge Sharing × AI Assistant",
+    "tagline": "An integrated platform that makes enterprise work smarter",
+    "description": "This system is an all-in-one environment that combines project management, communication, knowledge sharing, and AI support.\nFrom daily tasks to large-scale projects, it maximizes team potential.",
+    "buttons": {
+      "demo": "Book a Demo",
+      "contact": "Contact for Details"
+    }
+  },
+  "coreFeatures": {
+    "title": "Streamline Operations with All-in-One Features",
+    "subtitle": "From project management to AI assistants, integrate all functions your enterprise needs.\nMaximize team productivity."
+  },
+  "features": [
+    {
+      "title": "Authentication & Account Management",
+      "description": "Securely manage user information in a secure authentication environment",
+      "details": [
+        "Enhanced security with Multi-Factor Authentication (MFA)",
+        "Complete user profile management (name, department, photo)",
+        "Multi-language UI support for Japanese, English, and Vietnamese"
+      ]
+    },
+    {
+      "title": "Organization Management",
+      "description": "Centralized management from company information to plan management",
+      "details": [
+        "Integrated management of company information, location, and contacts",
+        "Flexible plan support from Basic to Enterprise",
+        "Smooth setup of administrator and member permissions"
+      ]
+    },
+    {
+      "title": "Project Management",
+      "description": "Advanced project management with AI prediction features",
+      "details": [
+        "Intuitive operation of progress rates, priorities, and members",
+        "Milestone management to visualize important milestones",
+        "Risk management and future prediction to improve project success rates"
+      ]
+    },
+    {
+      "title": "Task Management",
+      "description": "Streamline tasks with AI-suggested kanban boards",
+      "details": [
+        "Drag & drop kanban board",
+        "Subtask feature to break down large work",
+        "AI suggestions for new tasks based on project status"
+      ]
+    },
+    {
+      "title": "Chat & Communication",
+      "description": "Real-time communication with multi-language support",
+      "details": [
+        "Real-time conversations in one-on-one and group chats",
+        "@mention feature with automatic translation support",
+        "Quick search of past conversation history"
+      ]
+    },
+    {
+      "title": "Knowledge Base",
+      "description": "Internal Wiki environment with AI search functionality",
+      "details": [
+        "Article creation, tag classification, and history management",
+        "Rich editor for creating readable articles",
+        "AI search automatically presents related documents"
+      ]
+    },
+    {
+      "title": "News Integration",
+      "description": "Automatic collection of industry news and project-related information",
+      "details": [
+        "Latest news distribution in business and tech fields",
+        "Automatic collection of news related to ongoing projects",
+        "Alert notification for important information"
+      ]
+    },
+    {
+      "title": "Meetings & Minutes",
+      "description": "Meeting management system with AI summary functionality",
+      "details": [
+        "Meeting schedule, participant, and URL management",
+        "AI summary automatically summarizes meeting content",
+        "Multi-language translation for meeting minutes"
+      ]
+    },
+    {
+      "title": "Search & Inquiry",
+      "description": "Instantly discover information with AI-powered cross-search",
+      "details": [
+        "Batch search of projects, tasks, and knowledge",
+        "AI search that understands word meanings",
+        "Centralized management of internal Q&A history"
+      ]
+    },
+    {
+      "title": "AI Assistant",
+      "description": "Advanced AI support compatible with OpenAI & Gemini",
+      "details": [
+        "Switch between OpenAI and Gemini according to usage",
+        "Improve work efficiency with automatic summarization, translation, and sentiment analysis",
+        "High-precision answers using internal data with RAG search"
+      ]
+    },
+    {
+      "title": "Multi-language Support",
+      "description": "Complete multi-language support for international teams",
+      "details": [
+        "Complete support for Japanese, English, and Vietnamese",
+        "Automatic chat translation for peace of mind for international teams",
+        "Timezone and currency support for overseas office collaboration"
+      ]
+    },
+    {
+      "title": "Dashboard & Analytics",
+      "description": "Visualization analysis of progress and performance",
+      "details": [
+        "Graphical representation of project and task status",
+        "Understanding performance by member",
+        "Custom report output to Excel and PDF"
+      ]
+    }
+  ],
+  "systemManagement": {
+    "title": "Enterprise-Level System Management",
+    "subtitle": "Management functions designed with security and governance as top priorities"
+  },
+  "systemFeatures": [
+    {
+      "title": "Permission Management",
+      "description": "Fine-grained access control"
+    },
+    {
+      "title": "Audit Logs",
+      "description": "Track all operation history"
+    },
+    {
+      "title": "AI Usage Management",
+      "description": "Centrally manage API keys and usage"
+    },
+    {
+      "title": "Data Protection",
+      "description": "Encryption and regular backups"
+    }
+  ],
+  "pricing": {
+    "title": "Flexible Plans for Different Team Sizes",
+    "subtitle": "From startups to large enterprises, we provide optimal plans according to scale",
+    "recommendedBadge": "Recommended",
+    "plans": [
+      {
+        "name": "Basic",
+        "price": "$68",
+        "period": "monthly / 5 users",
+        "features": [
+          "Basic project management",
+          "Task management",
+          "Chat functionality",
+          "Basic knowledge base",
+          "Email & chat support"
+        ],
+        "buttonText": "Select Plan"
+      },
+      {
+        "name": "Professional",
+        "price": "$138",
+        "period": "monthly / 15 users",
+        "features": [
+          "All Basic features",
+          "AI search & summary functions",
+          "Meeting management & AI minute summary",
+          "News integration",
+          "Multi-language translation",
+          "Phone, Zoom & chat support"
+        ],
+        "buttonText": "Select Plan"
+      },
+      {
+        "name": "Enterprise",
+        "price": "Contact Us",
+        "period": "Custom pricing",
+        "features": [
+          "All Professional features",
+          "Custom AI model integration",
+          "Dedicated server & VPN connection",
+          "Custom permission settings",
+          "Dedicated customer success",
+          "On-site implementation support"
+        ],
+        "buttonText": "Contact Us"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Maximize Your Team's Potential?",
+    "description": "With Enterprise LLM, integrate everything from project management to AI utilization.\nExperience the integrated platform that maximizes enterprise productivity.",
+    "buttons": {
+      "contact": "Contact Us",
+      "demo": "Schedule Demonstration"
+    }
+  }
+}

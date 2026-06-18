@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "title": "AI & Technology News | D'auchy.Studio",
+    "description": "Stay up-to-date with the latest AI and technology industry news and trends. Covering generative AI, enterprise DX, educational technology and more."
+  },
+  "hero": {
+    "badge": "Latest News",
+    "title": "AI & Technology News",
+    "subtitle": "Generative AI, Enterprise DX, EdTech\nLatest technology trends delivered",
+    "description": "From industry insights to practical use cases, we explain the cutting edge of technological innovation in an accessible way."
+  },
+  "categories": {
+    "all": "All",
+    "ai-tech": "AI Technology",
+    "enterprise": "Enterprise Systems",
+    "entertainment": "Entertainment",
+    "business-ai": "Business AI",
+    "dev-tools": "Development Tools",
+    "design-art": "Design & Art"
+  },
+  "article": {
+    "external_badge": "External Article",
+    "read_article": "Read Article",
+    "by": "by"
+  }
+}

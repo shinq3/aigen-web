@@ -1,0 +1,28 @@
+{
+  "company": {
+    "name": "D'auchy.Studio",
+    "description": "Chúng tôi tạo ra các giải pháp công nghệ tương lai thông qua việc phát triển và cung cấp các sản phẩm AI.",
+    "tagline": "Giải pháp AI đồng hành từ cuộc sống hàng ngày đến kinh doanh",
+    "copyright": "© 2024 D'auchy.Studio. Tất cả quyền được bảo lưu.",
+    "address": "1-1-1 Ebisu, Shibuya-ku, Tokyo",
+    "contact": {
+      "email": "contact@dachy.studio",
+      "phone": "+81-3-1234-5678"
+    }
+  },
+  "sections": {
+    "products": "Sản Phẩm",
+    "company": "Công Ty",
+    "follow": "Theo Dõi Chúng Tôi"
+  },
+  "links": {
+    "about": "Về Chúng Tôi",
+    "news": "Tin Tức",
+    "careers": "Tuyển Dụng",
+    "contact": "Liên Hệ",
+    "privacy": "Chính Sách Quyền Riêng Tư",
+    "terms": "Điều Khoản Dịch Vụ",
+    "sitemap": "Sơ Đồ Trang Web",
+    "support": "Hỗ Trợ"
+  }
+}

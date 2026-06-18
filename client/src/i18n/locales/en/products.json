@@ -1,0 +1,36 @@
+{
+  "title": "Products",
+  "subtitle": "Explore D'auchy.Studio's AI solutions that accompany people from daily life to business",
+  "products": {
+    "lingalink": {
+      "name": "LingaLink",
+      "description": "A coaching service where AI provides automatic reviews in online lessons. Offers personalized learning experiences and supports effective skill development.",
+      "tags": ["Education", "AI", "Online Learning", "Coaching"]
+    },
+    "edumate": {
+      "name": "EduMate",
+      "description": "A service where friends can collaborate on homework reviews and joint studying while creating reports for parents. Deepen understanding through collaborative learning.",
+      "tags": ["Education", "Collaborative Learning", "Reports", "Learning Management"]
+    },
+    "officebrain": {
+      "name": "OfficeBrain",
+      "description": "A RAG system for sharing files and managing permissions within organizations. Enables secure information sharing and improves operational efficiency.",
+      "tags": ["Enterprise", "RAG", "File Management", "Security"]
+    },
+    "enterprise-llm": {
+      "name": "Enterprise LLM",
+      "description": "An all-in-one enterprise platform integrating project management, knowledge sharing, and AI assistants. A comprehensive solution that maximizes team potential.",
+      "tags": ["Enterprise", "LLM", "Integrated Platform", "Project Management"]
+    },
+    "aigen-one": {
+      "name": "AiGen-One",
+      "description": "An AI operations platform that turns frontline language into business systems and distributes managed AI features through an internal portal.",
+      "tags": ["Enterprise", "AI Portal", "Plugins", "Business Systems"]
+    },
+    "bayd-system": {
+      "name": "Bayd-System",
+      "description": "Music rehearsal studio management system. AI-powered optimal studio search based on conditions, comprehensive support from booking to equipment management.",
+      "tags": ["Music", "Studio", "Management System", "Booking Management"]
+    }
+  }
+}

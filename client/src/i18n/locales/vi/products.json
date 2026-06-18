@@ -1,0 +1,36 @@
+{
+  "title": "Sản phẩm",
+  "subtitle": "Khám phá các giải pháp AI của D'auchy.Studio đồng hành cùng con người từ cuộc sống hằng ngày đến kinh doanh",
+  "products": {
+    "lingalink": {
+      "name": "LingaLink",
+      "description": "Dịch vụ huấn luyện với AI tự động đánh giá trong các bài học trực tuyến. Cung cấp trải nghiệm học tập cá nhân hóa và hỗ trợ phát triển kỹ năng hiệu quả.",
+      "tags": ["Giáo dục", "AI", "Học trực tuyến", "Huấn luyện"]
+    },
+    "edumate": {
+      "name": "EduMate",
+      "description": "Dịch vụ giúp bạn bè cùng nhau ôn tập bài học và học nhóm, đồng thời tạo báo cáo cho phụ huynh. Nâng cao hiểu biết thông qua học tập hợp tác.",
+      "tags": ["Giáo dục", "Học tập hợp tác", "Báo cáo", "Quản lý học tập"]
+    },
+    "officebrain": {
+      "name": "OfficeBrain",
+      "description": "Hệ thống RAG để chia sẻ tệp và quản lý quyền trong tổ chức. Thực hiện chia sẻ thông tin an toàn và cải thiện hiệu quả hoạt động.",
+      "tags": ["Doanh nghiệp", "RAG", "Quản lý tệp", "Bảo mật"]
+    },
+    "enterprise-llm": {
+      "name": "Enterprise LLM",
+      "description": "Nền tảng doanh nghiệp tất cả trong một tích hợp quản lý dự án, chia sẻ kiến thức và trợ lý AI. Giải pháp toàn diện tối đa hóa tiềm năng nhóm.",
+      "tags": ["Doanh nghiệp", "LLM", "Nền tảng tích hợp", "Quản lý dự án"]
+    },
+    "aigen-one": {
+      "name": "AiGen-One",
+      "description": "Nền tảng vận hành AI biến ngôn ngữ hiện trường thành hệ thống nghiệp vụ và phân phối tính năng AI qua cổng nội bộ.",
+      "tags": ["Doanh nghiệp", "Cổng AI", "Plugin", "Hệ thống nghiệp vụ"]
+    },
+    "bayd-system": {
+      "name": "Bayd-System",
+      "description": "Hệ thống quản lý studio tập nhạc. Tìm kiếm studio tối ưu dựa trên điều kiện với AI, hỗ trợ toàn diện từ đặt phòng đến quản lý thiết bị.",
+      "tags": ["Âm nhạc", "Studio", "Hệ thống quản lý", "Quản lý đặt phòng"]
+    }
+  }
+}

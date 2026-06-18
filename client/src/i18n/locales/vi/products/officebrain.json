@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Office Brain - Nền Tảng AI Doanh Nghiệp | D'auchy.Studio",
+    "description": "Office Brain - Trợ lý AI doanh nghiệp tích hợp kết hợp chat AI, quản lý tệp, chia sẻ an toàn, tìm kiếm và tạo hình ảnh. Thực hiện ứng dụng AI trong khi duy trì bảo mật và quản lý."
+  },
+  "hero": {
+    "title": "OfficeBrain",
+    "subtitle": "Hệ thống RAG cho phép chia sẻ tệp và quản lý quyền trong tổ chức. Thực hiện chia sẻ thông tin an toàn và nâng cao hiệu quả công việc.",
+    "badge": "Nền Tảng AI Doanh Nghiệp",
+    "mainTitle": "Office Brain",
+    "tagline": "Mở rộng \"bộ não\" công ty bằng AI",
+    "description": "Trợ lý AI doanh nghiệp tích hợp kết hợp chat AI, quản lý tệp, chia sẻ an toàn, tìm kiếm và tạo hình ảnh",
+    "buttons": {
+      "contact": "Liên Hệ",
+      "demo": "Xem Demo"
+    }
+  },
+  "whatIs": {
+    "title": "Office Brain là gì?",
+    "description": "Office Brain là nền tảng tích hợp để các công ty sử dụng AI thuận tiện và an toàn hơn trong doanh nghiệp. Nó tập hợp các chức năng mà doanh nghiệp cần vào một hệ thống, bao gồm chat đa AI engine, tìm kiếm ngữ nghĩa tài liệu nội bộ, quản lý tệp an toàn và chia sẻ thông tin với quy trình phê duyệt.",
+    "note": "💡 Thực hiện hiệu quả kinh doanh được hỗ trợ bởi AI trong khi duy trì bảo mật và quản lý"
+  },
+  "benefits": {
+    "title": "Tại sao chọn Office Brain?",
+    "items": [
+      {
+        "title": "Bảo Mật Cấp Doanh Nghiệp",
+        "description": "Quản lý thông tin bí mật an toàn với kiểm soát truy cập theo phòng ban và quy trình phê duyệt"
+      },
+      {
+        "title": "Cải Thiện Hiệu Quả Đáng Kể",
+        "description": "Tối ưu hóa hoạt động hàng ngày với chat AI, tìm kiếm ngữ nghĩa và tạo hình ảnh"
+      },
+      {
+        "title": "Vận Hành Minh Bạch",
+        "description": "Thúc đẩy quản lý chi phí và sử dụng phù hợp thông qua trực quan hóa việc sử dụng"
+      }
+    ]
+  },
+  "howToUse": {
+    "title": "Cách Sử Dụng (3 Bước)",
+    "steps": [
+      {
+        "title": "Đăng Ký & Đăng Nhập Người Dùng",
+        "description": "Quản trị viên tạo tài khoản nhân viên, mỗi nhân viên đăng nhập an toàn"
+      },
+      {
+        "title": "Chat AI & Sử Dụng Tệp",
+        "description": "Tương tác với nhiều AI, tải lên tài liệu nội bộ và sử dụng với tìm kiếm ngữ nghĩa"
+      },
+      {
+        "title": "Phê Duyệt, Chia Sẻ & Phân Tích",
+        "description": "Chia sẻ tệp thông qua quy trình phê duyệt, phân tích việc sử dụng để tối ưu chi phí"
+      }
+    ]
+  },
+  "features": {
+    "title": "Tính Năng Chính",
+    "items": [
+      {
+        "title": "Quản Lý Người Dùng & Bảo Mật",
+        "description": "Quản lý tài khoản cho từng nhân viên, kiểm soát truy cập theo phòng ban/vai trò, tính năng chỉnh sửa hồ sơ.",
+        "details": [
+          "Tạo tài khoản riêng cho từng nhân viên",
+          "Quản lý quyền theo phòng ban/vai trò",
+          "Chức năng đổi mật khẩu an toàn",
+          "Quản lý thông tin hồ sơ"
+        ]
+      },
+      {
+        "title": "Chat Đa AI",
+        "description": "Chọn từ nhiều AI như ChatGPT, Google Gemini. Bao gồm tính năng lưu lịch sử và tìm kiếm.",
+        "details": [
+          "Lựa chọn từ nhiều AI engine",
+          "Tự động lưu lịch sử cuộc trò chuyện và tìm kiếm",
+          "Hỗ trợ tiếng Nhật, tiếng Anh và tiếng Việt",
+          "Phản hồi thời gian thực"
+        ]
+      },
+      {
+        "title": "Quản Lý Tệp An Toàn",
+        "description": "Tải lên PDF, Word, Excel, hình ảnh lên đến 50MB. Chia sẻ an toàn với quy trình phê duyệt.",
+        "details": [
+          "Hỗ trợ nhiều định dạng tệp",
+          "Cài đặt hiển thị phòng ban/công ty/cá nhân",
+          "Chia sẻ an toàn thông qua quy trình phê duyệt",
+          "Tải lên tối đa 50MB"
+        ]
+      },
+      {
+        "title": "Tìm Kiếm Ngữ Nghĩa AI (RAG)",
+        "description": "Tìm kiếm tài liệu theo ý nghĩa thay vì từ khóa. Tìm kiếm nâng cao hiển thị tài liệu tham khảo cùng.",
+        "details": [
+          "Tìm kiếm thông minh dựa trên ý nghĩa",
+          "Hiển thị tự động tài liệu liên quan",
+          "Trích xuất thông tin từ tập dữ liệu lớn",
+          "Lấy kết quả theo kiểu chat"
+        ]
+      },
+      {
+        "title": "Tạo Hình Ảnh AI",
+        "description": "AI tự động tạo minh họa và sơ đồ dựa trên hướng dẫn. Hoàn hảo cho việc tạo tài liệu thuyết trình.",
+        "details": [
+          "Tạo hình ảnh từ văn bản",
+          "Tạo sơ đồ cho bài thuyết trình",
+          "Tạo minh họa cho hướng dẫn",
+          "Hỗ trợ nhiều phong cách"
+        ]
+      },
+      {
+        "title": "Phân Tích Sử Dụng",
+        "description": "Theo dõi việc sử dụng AI ở cấp nhân viên, phòng ban và công ty. Quản lý chi phí với giám sát thời gian thực.",
+        "details": [
+          "Thống kê sử dụng cá nhân và phòng ban",
+          "Giám sát sử dụng thời gian thực",
+          "Quản lý chi phí và cảnh báo",
+          "Tính năng báo cáo chi tiết"
+        ]
+      },
+      {
+        "title": "Quản Lý Hệ Thống",
+        "description": "Kiểm soát của quản trị viên về điều chỉnh cài đặt tìm kiếm vector, xử lý hàng loạt và cài đặt tổng thể.",
+        "details": [
+          "Cấu hình công cụ tìm kiếm vector",
+          "Xử lý hàng loạt và lập lịch",
+          "Quản lý cài đặt toàn hệ thống",
+          "Tối ưu hóa hiệu suất"
+        ]
+      },
+      {
+        "title": "Hệ Thống Phê Duyệt & Thông Báo",
+        "description": "Chia sẻ tệp bao gồm quy trình phê duyệt, với tính năng thông báo để thực hiện quy trình làm việc mượt mà.",
+        "details": [
+          "Quy trình phê duyệt đa cấp",
+          "Hệ thống thông báo thời gian thực",
+          "Quản lý danh sách chờ phê duyệt",
+          "Tính năng leo thang tự động"
+        ]
+      },
+      {
+        "title": "Hỗ Trợ Đa Ngôn Ngữ & Đa Thiết Bị",
+        "description": "Hỗ trợ tiếng Nhật, tiếng Anh, tiếng Việt, trải nghiệm người dùng giống nhau trên điện thoại thông minh, máy tính bảng, PC, với chế độ tối.",
+        "details": [
+          "Hỗ trợ tiếng Nhật, tiếng Anh, tiếng Việt",
+          "Thiết kế responsive",
+          "Chuyển đổi chế độ tối",
+          "Hỗ trợ đa nền tảng"
+        ]
+      }
+    ]
+  },
+  "useCases": {
+    "title": "Trường Hợp Sử Dụng",
+    "items": [
+      {
+        "title": "Phòng Bán Hàng",
+        "description": "Tạo tài liệu đề xuất khách hàng, phân tích cạnh tranh, tạo hình ảnh thuyết trình"
+      },
+      {
+        "title": "Phòng Nhân Sự",
+        "description": "Tìm kiếm quy định nội bộ, tạo tài liệu đào tạo, hỗ trợ nhân viên"
+      },
+      {
+        "title": "Phòng Phát Triển",
+        "description": "Tìm kiếm tài liệu kỹ thuật, hỗ trợ đánh giá mã, tạo tài liệu đặc tả"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Câu Hỏi Thường Gặp",
+    "items": [
+      {
+        "question": "Những định dạng tệp nào được hỗ trợ?",
+        "answer": "Hỗ trợ các định dạng chính bao gồm PDF, Word, Excel, PowerPoint, tệp hình ảnh (JPG, PNG). Tải lên tối đa 50MB."
+      },
+      {
+        "question": "Quy trình phê duyệt có thể tùy chỉnh không?",
+        "answer": "Có. Người phê duyệt và các giai đoạn phê duyệt có thể được cấu hình linh hoạt theo phòng ban và mức độ bảo mật thông tin."
+      },
+      {
+        "question": "Có giới hạn sử dụng không?",
+        "answer": "Giới hạn sử dụng hàng tháng được thiết lập theo gói doanh nghiệp. Giám sát sử dụng thời gian thực với cảnh báo khi gần đạt giới hạn."
+      },
+      {
+        "question": "Có thể tích hợp với hệ thống hiện có không?",
+        "answer": "Tích hợp với hệ thống HR hiện có và máy chủ tệp có thể thông qua API. Vui lòng liên hệ đội ngũ bán hàng để biết chi tiết."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Sẵn sàng phát triển bộ não công ty?",
+    "description": "Trải nghiệm cách làm việc mới với AI thông qua Office Brain. Nền tảng AI doanh nghiệp mang lại cả bảo mật và hiệu quả vận hành.",
+    "buttons": {
+      "contact": "Liên Hệ",
+      "trial": "Dùng Thử Miễn Phí"
+    }
+  }
+}

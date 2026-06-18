@@ -1,0 +1,62 @@
+{
+  "buttons": {
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "contact": "Contact",
+    "learnMore": "Learn More",
+    "viewAllProducts": "View All Products",
+    "viewDetails": "View Details",
+    "readMore": "Read More",
+    "viewAllNews": "View All News"
+  },
+  "chat": {
+    "tagline": "AI is not the goal",
+    "subtitle": "Feel free to ask anything below",
+    "placeholder": "Ask us anything about AI or system development...",
+    "send": "Send",
+    "goHome": "Go to Homepage",
+    "error": "Sorry, an error occurred. Please try again.",
+    "introLines": [
+      "Welcome to D'auchy.Studio.",
+      "",
+      "We harness every form of AI",
+      "to make your business \"faster and easier\"",
+      "at an astonishing speed.",
+      "",
+      "What do you want to change with AI?",
+      "What work do you want to simplify?",
+      "Feel free to start a conversation."
+    ]
+  },
+  "status": {
+    "loading": "Loading...",
+    "saving": "Saving...",
+    "submitting": "Submitting...",
+    "success": "Success",
+    "error": "Error",
+    "notFound": "Not Found"
+  },
+  "labels": {
+    "name": "Name",
+    "email": "Email Address",
+    "message": "Message",
+    "company": "Company/Organization",
+    "required": "Required",
+    "optional": "Optional",
+    "externalLink": "External Link"
+  },
+  "productStatus": {
+    "released": "Released",
+    "beta": "Beta",
+    "coming_soon": "Coming Soon"
+  },
+  "loading": "Loading...",
+  "error": "Error",
+  "success": "Success"
+}

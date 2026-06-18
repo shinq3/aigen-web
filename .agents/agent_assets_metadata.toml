@@ -1,0 +1,32 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "QhaBmaF8AfEMYebwsgeYG"
+uri = "file://client/src/assets/generated_images/AIGenOne_hero_office_conversation.png"
+type = "image"
+title = "AIGenOne hero office staff conversation system"
+
+[[generated]]
+id = "KIsh6LKz4W_5K43LKw9NH"
+uri = "file://attached_assets/generated_images/AIGenOne_problems_frustration.png"
+type = "image"
+title = "AIGenOne problems frustrated office worker"
+
+[[generated]]
+id = "nsILqv0f8g_DCwlYG4EI0"
+uri = "file://attached_assets/generated_images/AIGenOne_howitworks_conversation.png"
+type = "image"
+title = "AIGenOne how it works voice to system"
+
+[[generated]]
+id = "UVOOV0wKxwDMvPR9a3xex"
+uri = "file://attached_assets/generated_images/AIGenOne_features_dashboard.png"
+type = "image"
+title = "AIGenOne features enterprise dashboard team"
+
+[[generated]]
+id = "4xu0oYNdO7tGZIvFhJ58D"
+uri = "file://attached_assets/generated_images/AIGenOne_security_shield.png"
+type = "image"
+title = "AIGenOne security data protection shield"

@@ -1,0 +1,132 @@
+{
+  "hero": {
+    "title": "AIに任せて作ったMVPに、\n意味はありません。",
+    "subtitleLines": [
+      "AIで速く作る時代に、システムの価値は「人の判断」で決まります。",
+      "コードはAIが書く。",
+      "業務を理解するのは、人の仕事です。"
+    ],
+    "features": {
+      "rapid": "お打ち合わせ当日に動作するプロトタイプをお見せし、ご要望を即座に形にします",
+      "development": "プロトタイプから本格システムまで一貫した開発体制で、スムーズな移行を実現します",
+      "expertise": "実際のビジネス課題に即したAIソリューションで、実用性の高いシステムを構築します"
+    }
+  },
+  "manifesto": {
+    "heading": "AIがあれば、",
+    "headingLine2": "プロトタイプもMVPも、コードも、一瞬で作れる時代になりました。",
+    "headingSub": "もう「作れること」自体に、特別な価値はありません。",
+    "problem": {
+      "badge": "Problem",
+      "title": "問題は、何を作るかではなく、",
+      "titleHighlight": "何を作らないかを判断できるか",
+      "titleSuffix": "です。",
+      "description": "業務を知らないままAIに任せて作られたMVPは、一見それっぽく動きます。しかしその多くは、現場の前提や人の動きを誤解したまま作られた「均一的な業務システム」になります。"
+    },
+    "approach": {
+      "badge": "Our Approach",
+      "title": "要望をそのまま機能に落とさない。",
+      "titleHighlight": "業務を誤解しないために、AIを使う。",
+      "description": "私たちは、お客様が語る要望をそのまま機能に落としません。言葉の裏にある業務の流れ、立場の違い、言語化されていない制約や\"詰まる未来\"を先に見ます。そのためにAIを使います。機能を増やすためではなく、業務を誤解しないために。"
+    },
+    "judgment": {
+      "badge": "Human Judgment",
+      "title": "AIは無数の選択肢を提示する。",
+      "titleHighlight": "だからこそ、人の経験が必要です。",
+      "description": "どの案を捨てるのか、どこをシステムにせず運用に残すのか。その判断は、実際に現場で働き、業務システムを作ってきた人間にしかできません。"
+    },
+    "pairCoding": {
+      "badge": "AI Pair Coding",
+      "title": "速く作るための手法ではない。",
+      "titleHighlight": "正しい方向に修正するための開発プロセス。",
+      "description": "AIペアコーディングとは、間違いに早く気づき、正しい方向に修正するための開発プロセスです。私たちは、AIに仕事を任せるのではなく、AIと一緒に業務を深く理解し、本当に使われるシステムだけを作ります。"
+    },
+    "ctaButton": "AIペアコーディングについて詳しく見る"
+  },
+  "sections": {
+    "products": {
+      "title": "私たちのプロダクト",
+      "subtitle": "日常からビジネスまで、人に寄り添うAIソリューション"
+    },
+    "vision": {
+      "title": "プロトタイプ作成からシステム開発",
+      "description": "私たちは幅広い業界において、プロトタイプ作成から本格的なシステム開発まで、包括的なソリューションを提供しています。"
+    },
+    "achievements": {
+      "categories": {
+        "healthcare": {
+          "title": "医療・ヘルスケア",
+          "systems": [
+            "医療材料管理システム（トレーサビリティ対応）",
+            "電子カルテ連携システム",
+            "スマホ診療（遠隔医療）システム",
+            "会員・文書管理システム（例：県医師会）"
+          ]
+        },
+        "business": {
+          "title": "ブランド・顧客サービス",
+          "systems": [
+            "飲料メーカーアミューズメントサイト",
+            "自動車メーカー顧客サービスアプリ",
+            "買い取り業会員サービスシステム",
+            "通信業者会員情報管理システム"
+          ]
+        },
+        "culture": {
+          "title": "文化・教育・その他",
+          "systems": [
+            "美術館（ビーコン展示案内システム）",
+            "美術館ECサイト連携在庫管理システム"
+          ]
+        }
+      }
+    },
+    "news": {
+      "title": "最新ニュース",
+      "subtitle": "AIとテクノロジーの最新動向をお届けします"
+    },
+    "aiPairCoding": {
+      "badge": "NEW",
+      "title": "AIペアコーディング開発",
+      "description": "会話からアプリが動き出す、新しい開発モデル",
+      "button": "詳しく見る"
+    }
+  },
+  "cta": {
+    "title": "AIの可能性を一緒に探求しませんか？"
+  },
+  "news": {
+    "items": [
+      {
+        "id": "ai-news-1",
+        "title": "生成AIの教育分野への応用が急速に拡大",
+        "summary": "OpenAIのGPT-4やGoogle Bardなどの大規模言語モデルが教育現場で活用され、個別指導やカリキュラム作成の効率化が進んでいます。",
+        "source": "AI News Japan",
+        "publishedAt": "2024-12-27",
+        "thumbnail": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop",
+        "isExternal": true,
+        "href": "https://example.com/ai-education-news"
+      },
+      {
+        "id": "ai-news-2",
+        "title": "企業向けRAGシステムの導入が加速",
+        "summary": "Retrieval-Augmented Generation技術を活用した企業内検索システムが注目を集め、情報管理の効率化が期待されています。",
+        "source": "Tech Review",
+        "publishedAt": "2024-12-26",
+        "thumbnail": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop",
+        "isExternal": false,
+        "href": "/news/rag-systems-enterprise"
+      },
+      {
+        "id": "ai-news-3",
+        "title": "音楽制作AIツールの新たな可能性",
+        "summary": "AIを活用した音楽制作ツールが進化し、アーティストとAIの協創による新しい表現手法が生まれています。",
+        "source": "Music Tech Today",
+        "publishedAt": "2024-12-25",
+        "thumbnail": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop",
+        "isExternal": true,
+        "href": "https://example.com/ai-music-tools"
+      }
+    ]
+  }
+}

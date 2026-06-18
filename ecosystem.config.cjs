@@ -1,0 +1,68 @@
+module.exports = {
+  apps: [
+    {
+      name: "dauchy-studio",
+      script: "./dist/index.js",
+      instances: 1,
+      exec_mode: "fork",
+      watch: false,
+      max_memory_restart: "1G",
+      env: {
+        NODE_ENV: "production",
+        PORT: 5010,
+      },
+      error_file: "./logs/err.log",
+      out_file: "./logs/out.log",
+      log_file: "./logs/combined.log",
+      time: true,
+      autorestart: true,
+      max_restarts: 10,
+      min_uptime: "10s",
+      listen_timeout: 3000,
+      kill_timeout: 5000,
+    },
+  ],
+  deploy: {
+    production: {
+      user: "admin",
+      host: "52.196.136.76",
+      ssh_options: "StrictHostKeyChecking=no",
+      key: "/Users/shin/.ssh/id_rsa",
+      ref: "origin/main",
+      repo: "https://github.com/shinq3/DauchyStudio.git",
+      path: "/var/www/d-auchy",
+      share: [".env"],
+      "pre-setup": [
+        "sudo apt-get update",
+        "sudo apt-get install -y git",
+        "curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -",
+        "sudo apt-get install -y nodejs",
+        "sudo npm install -g pm2",
+      ].join(" && "),
+      "post-setup": [
+        "npm ci",
+        "npm run build",
+        "mkdir -p logs",
+        "pm2 start ecosystem.config.cjs --env production",
+        "pm2 startup systemd",
+        "pm2 save",
+      ].join(" && "),
+      "pre-deploy-local": [
+        'echo "Deploying DauchyStudio to AWS Lightsail..."',
+        "git status",
+        "git log -1 --oneline",
+      ].join(" && "),
+      "post-deploy": [
+        "ln -sf /var/www/d-auchy/shared/.env /var/www/d-auchy/current/.env",
+        "npm ci",
+        "npm run build",
+        "pm2 reload ecosystem.config.cjs --env production",
+        "pm2 save",
+      ].join(" && "),
+      env: {
+        NODE_ENV: "production",
+        PORT: 5010,
+      },
+    },
+  },
+};

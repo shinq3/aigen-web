@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "title": "Đề xuất AI | D'auchy.Studio",
+    "description": "AI là đối tác tối đa hóa kiến thức và kinh nghiệm của bạn. Chúng tôi hỗ trợ xây dựng hệ thống lấy con người làm trung tâm."
+  },
+  "hero": {
+    "badge": "Giải pháp AI",
+    "title": "AI là Đối Tác Tối Đa Hóa Kiến Thức và Kinh Nghiệm",
+    "description1": "Triển khai AI không phải là mục tiêu cuối cùng.",
+    "description2": "Điều quan trọng là tận dụng kiến thức và kinh nghiệm tích lũy trong tổ chức của bạn."
+  },
+  "paradigmShift": {
+    "title": "Chuyển Đổi Tư Duy: AI Không Phải Là Mục Tiêu",
+    "description1": "Triển khai AI không phải là mục tiêu cuối cùng.",
+    "description2": "Điều quan trọng là tận dụng {strong1}kiến thức và kinh nghiệm tích lũy trong tổ chức{strong1End},",
+    "description3": "và tạo ra {strong2}hệ thống phù hợp với cảm nhận của con người{strong2End}.",
+    "objectiveData": {
+      "title": "Dữ liệu Khách quan",
+      "description": "Số liệu, kết quả, sự thật"
+    },
+    "subjectiveData": {
+      "title": "Dữ liệu Chủ quan",
+      "description": "Tiện lợi, thoải mái, trải nghiệm"
+    },
+    "conclusion": "Bằng cách kết hợp cả hai, chúng tôi hướng đến một hệ thống lấy con người làm trung tâm hơn."
+  },
+  "uiux": {
+    "title": "Vượt Qua Định Kiến UI/UX",
+    "description1": "Các thao tác truyền thống như \"nhập bàn phím\" và \"chạm hoặc vuốt\"",
+    "description2": "đã hạn chế tương tác tự nhiên của con người.",
+    "description3": "AI cho phép {strong}các phương thức nhập liệu trực quan và đa dạng{strongEnd}.",
+    "examplesTitle": "Ví dụ",
+    "examples": {
+      "chat": "Trò chuyện hỏi đáp: Câu trả lời ngay lập tức bằng ngôn ngữ tự nhiên",
+      "voice": "Nhận dạng giọng nói: Tự động ghi biên bản cuộc họp từ hội thoại",
+      "handwriting": "Chụp chữ viết tay: Số hóa ghi chú và bảng trắng bằng ảnh",
+      "video": "Phân tích video: Phát hiện bất thường và đề xuất cải tiến từ cảnh quay",
+      "image": "Hướng dẫn bằng hình ảnh: Tải ảnh lên để nhận các hành động cần thiết",
+      "iot": "Tích hợp IoT: Kết hợp dữ liệu cảm biến với nhận thức con người để phân tích"
+    },
+    "keyMessage": "Giao diện mới dựa trên \"cảm nhận và đặt câu hỏi như thế nào\" thay vì \"cách thao tác\" đang mở rộng."
+  },
+  "rag": {
+    "title": "Tận Dụng Kiến Thức Nội Bộ với RAG",
+    "description1": "Thay vì đưa dữ liệu nội bộ trực tiếp vào AI,",
+    "description2": "điều quan trọng là {strong}tìm kiếm và rút ra câu trả lời từ kiến thức và kinh nghiệm tích lũy{strongEnd}.",
+    "description3": "Điều này đạt được thông qua {strong}RAG (Retrieval-Augmented Generation){strongEnd}.",
+    "description4": "Bạn có thể rút ra {strong}giải pháp cụ thể dựa trên kiến thức độc đáo của công ty{strongEnd} thay vì thông tin chung chung.",
+    "examplesTitle": "Ví dụ",
+    "examples": {
+      "dictionary": "Từ điển thuật ngữ: Hiểu chính xác các thuật ngữ riêng của công ty",
+      "knowledge": "Tận dụng kiến thức: Tham khảo các trường hợp và bí quyết trong quá khứ",
+      "analytics": "Phân tích thống kê: Phân tích nhanh kết hợp tìm kiếm và tạo AI",
+      "faq": "Câu trả lời FAQ tự động: Trả lời ngay các câu hỏi nội bộ phổ biến",
+      "regulations": "Tham chiếu chính sách: Giải thích theo ngữ cảnh để hỗ trợ công việc",
+      "minutes": "Tìm kiếm biên bản: Áp dụng các cuộc thảo luận trước đây để giải quyết vấn đề"
+    },
+    "hallucination1": "Hơn nữa, RAG ngăn chặn {strong}\"ảo giác (đầu ra không dựa trên sự thật)\"{strongEnd}, một thách thức với LLM.",
+    "hallucination2": "Bằng cách sử dụng các nguồn kiến thức đã được xác minh, bạn có thể cung cấp thông tin chính xác và đáng tin cậy."
+  },
+  "conclusion": {
+    "title": "Kết Luận: AI Là Cầu Nối, Không Phải Công Cụ",
+    "description": "Ý nghĩa thực sự của việc triển khai AI là",
+    "keyMessage": "\"tận dụng tối đa kiến thức và kinh nghiệm độc đáo, và tái cấu trúc các hệ thống lấy con người làm trung tâm\"",
+    "keyMessageSuffix": ".",
+    "points": {
+      "efficiency": "Cân bằng hiệu quả với sự thoải mái",
+      "system": "Hiện thực hóa hệ thống kinh doanh mới phù hợp với nhân viên và khách hàng",
+      "partner": "AI là một {strong}\"đối tác\"{strongEnd} cho mục đích đó"
+    }
+  }
+}

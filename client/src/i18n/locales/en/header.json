@@ -1,0 +1,13 @@
+{
+  "navigation": {
+    "home": "Home",
+    "products": "Products",
+    "aiProposal": "AI Proposal",
+    "about": "About Us",
+    "news": "News",
+    "contact": "Contact"
+  },
+  "company": {
+    "name": "D'auchy.Studio"
+  }
+}

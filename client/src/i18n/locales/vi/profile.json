@@ -1,0 +1,14 @@
+{
+  "creator": {
+    "name": "Shin Uchida",
+    "nameJapanese": "内田 伸",
+    "title": "Người sáng lập & Giám đốc D'auchy.Studio",
+    "about": "Shin Uchida là người sáng lập D'auchy.Studio và là nhà phát triển đứng sau tất cả các dự án và sản phẩm được giới thiệu trên trang web này. D'auchy.Studio là sáng kiến phát triển sản phẩm AI cá nhân của Shin Uchida.",
+    "vision": "AI không phải là mục tiêu mà là phương tiện. Sứ mệnh của chúng tôi là nâng cao sự sáng tạo và năng suất của mọi người thông qua công nghệ.",
+    "projects": "Các sản phẩm được phát triển và vận hành bởi Shin Uchida: LingaLink (nền tảng học ngôn ngữ AI), EduMate (nền tảng học tập cộng tác), OfficeBrain (hệ thống RAG doanh nghiệp), Bayd-System (hệ thống quản lý phòng thu âm)",
+    "background": "Một kỹ sư phần mềm và doanh nhân hoạt động trong lĩnh vực AI và công nghệ giáo dục. Có trụ sở tại Nhật Bản, phát triển sản phẩm cho người dùng toàn cầu.",
+    "company": "D'auchy.Studio là một công ty đổi mới sản phẩm AI của Nhật Bản được thành lập bởi Shin Uchida. Chúng tôi phát triển các giải pháp AI tiên tiến cho giáo dục, doanh nghiệp và các ngành công nghiệp sáng tạo.",
+    "chatbot": "Chatbot này sử dụng hệ thống RAG (Retrieval-Augmented Generation) được phát triển bởi Shin Uchida. Nó trả lời các câu hỏi về sản phẩm và dịch vụ của D'auchy.Studio.",
+    "contact": "Để liên hệ với D'auchy.Studio, vui lòng sử dụng trang liên hệ trên trang web của chúng tôi."
+  }
+}

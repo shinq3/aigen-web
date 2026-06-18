@@ -1,0 +1,13 @@
+{
+  "navigation": {
+    "home": "Trang chủ",
+    "products": "Sản phẩm",
+    "aiProposal": "Đề xuất AI",
+    "about": "Về Chúng Tôi",
+    "news": "Tin tức",
+    "contact": "Liên hệ"
+  },
+  "company": {
+    "name": "D'auchy.Studio"
+  }
+}

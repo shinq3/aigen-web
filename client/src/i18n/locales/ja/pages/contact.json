@@ -1,0 +1,56 @@
+{
+  "title": "お問い合わせ",
+  "subtitle": "お気軽にお問い合わせください。私たちがお手伝いできることをお聞かせください。",
+  "form": {
+    "name": {
+      "label": "お名前",
+      "placeholder": "山田太郎"
+    },
+    "email": {
+      "label": "メールアドレス",
+      "placeholder": "your.email@example.com"
+    },
+    "company": {
+      "label": "会社名・組織名",
+      "placeholder": "ABC株式会社"
+    },
+    "inquiryType": {
+      "label": "お問い合わせの種類",
+      "placeholder": "お問い合わせの種類を選択してください",
+      "options": {
+        "product-inquiry": "プロダクトに関するお問い合わせ",
+        "pricing": "料金に関するお問い合わせ",
+        "partnership": "パートナーシップ",
+        "support": "サポート",
+        "other": "その他"
+      }
+    },
+    "message": {
+      "label": "メッセージ",
+      "placeholder": "詳細なご質問やご要望をお書きください"
+    }
+  },
+  "contactInfo": {
+    "title": "お問い合わせ先",
+    "email": "メール",
+    "phone": "電話",
+    "address": "住所",
+    "addressValue": "千葉県船橋市上山町3-531-9",
+    "hours": "営業時間",
+    "hoursValue": "平日 9:00-18:00"
+  },
+  "submit": "送信する",
+  "submitting": "送信中...",
+  "success": "メッセージを送信しました。お問い合わせありがとうございます。",
+  "error": "メッセージの送信に失敗しました。しばらくしてから再度お試しください。",
+  "response": {
+    "title": "レスポンス時間",
+    "description": "通常、24時間以内にご返信いたします。緊急のお問い合わせの場合は、お電話でご連絡ください。"
+  },
+  "quickLinks": {
+    "title": "関連リンク",
+    "products": "プロダクト一覧",
+    "about": "会社概要",
+    "news": "最新ニュース"
+  }
+}
