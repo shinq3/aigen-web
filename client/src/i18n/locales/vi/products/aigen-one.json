@@ -17,6 +17,33 @@
     },
     "mockupLabel": "Đưa nghiệp vụ AI vào cổng nội bộ"
   },
+  "concept": {
+    "eyebrow": "WHAT AIGEN-ONE DOES",
+    "title": "Tạo nghiệp vụ AI, thêm ứng dụng AI,\nvà dùng ngay.",
+    "description": "Biến cuộc trao đổi tại hiện trường thành hệ thống nghiệp vụ, thêm các ứng dụng AI cần thiết bằng plugin, rồi cho nhân viên sử dụng từ một cổng duy nhất.",
+    "steps": [
+      {
+        "label": "Tạo bằng trò chuyện",
+        "title": "Chỉ cần nói, hệ thống nghiệp vụ AI được hình thành.",
+        "description": "Mô tả công việc muốn cải thiện bằng ngôn ngữ tự nhiên. AiGen-One sắp xếp trường dữ liệu, màn hình, quy trình và hỗ trợ AI thành hệ thống có thể dùng.",
+        "exampleTitle": "Ví dụ",
+        "example": "Tạo đề xuất từ ghi chú bán hàng. Quản lý yêu cầu trong danh sách. Tìm kiếm tài liệu nội bộ.",
+        "response": "Tôi sẽ sắp xếp màn hình và trường dữ liệu."
+      },
+      {
+        "label": "Mở rộng bằng plugin",
+        "title": "Thêm ứng dụng AI ngay bằng plugin.",
+        "description": "Biên bản họp, bản nháp đề xuất, tìm kiếm tệp, chat đa ngôn ngữ và các nghiệp vụ AI phổ biến có thể được thêm như ứng dụng."
+      },
+      {
+        "label": "Dùng từ cổng chung",
+        "title": "Nhân viên dùng nghiệp vụ AI từ một cổng.",
+        "description": "Các hệ thống đã tạo và ứng dụng plugin được tập trung trong AiGen-One. Nhân viên có thể dùng AI như một phần công việc hằng ngày mà không cần nhớ tên từng công cụ.",
+        "portalLabel": "Hệ thống nghiệp vụ và ứng dụng AI ở một nơi",
+        "items": ["Quản lý yêu cầu", "Biên bản họp", "Tạo đề xuất", "Tìm kiếm nội bộ"]
+      }
+    ]
+  },
   "problem": {
     "eyebrow": "Điều đang xảy ra trong doanh nghiệp",
     "title": "Công cụ AI nhiều hơn.\nCông việc vẫn bị phân mảnh.",

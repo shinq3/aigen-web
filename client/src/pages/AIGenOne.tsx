@@ -25,6 +25,7 @@ import {
   Mic,
   Presentation,
   Puzzle,
+  Plus,
   Rocket,
   Search,
   Settings,
@@ -37,6 +38,7 @@ import {
 } from "lucide-react";
 import { useLocale } from "@/lib/i18n-utils";
 import heroImage from "@assets/generated_images/AIGenOne_hero_office_conversation.png";
+import talkToSystemImage from "@assets/generated_images/AIGenOne_talk_to_system.png";
 import previewImage from "@assets/preview_1779667793783.png";
 import editorImage from "@assets/editor_1779667793781.png";
 import featuresImage from "@assets/generated_images/AIGenOne_features_dashboard.png";
@@ -80,6 +82,7 @@ export default function AIGenOne() {
   }, [t]);
 
   const heroProofs = t("hero.proofs", { returnObjects: true }) as string[];
+  const conceptSteps = t("concept.steps", { returnObjects: true }) as any[];
   const problemItems = t("problem.items", { returnObjects: true }) as any[];
   const values = t("values.items", { returnObjects: true }) as any[];
   const flowSteps = t("flow.steps", { returnObjects: true }) as any[];
@@ -172,6 +175,217 @@ export default function AIGenOne() {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      <section className="border-b border-border bg-white py-20 sm:py-24">
+        <div className="container mx-auto max-w-6xl px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto mb-12 max-w-3xl text-center"
+          >
+            <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-primary">
+              {t("concept.eyebrow")}
+            </p>
+            <h2 className="mb-5 whitespace-pre-line text-3xl font-bold leading-tight sm:text-4xl">
+              {t("concept.title")}
+            </h2>
+            <p className="mx-auto max-w-2xl leading-relaxed text-muted-foreground">
+              {t("concept.description")}
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1, transition: { staggerChildren: 0.28, delayChildren: 0.08 } },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="relative mx-auto max-w-6xl"
+          >
+            <div className="grid gap-5 lg:grid-cols-2">
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 28, scale: 0.985 },
+                  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.62, ease: "easeOut" } },
+                }}
+              >
+                <Card className="h-full overflow-hidden border-orange-100 bg-white shadow-xl">
+                  <div className="relative min-h-[360px] overflow-hidden bg-slate-950 p-5 text-white sm:min-h-[390px]">
+                    <img
+                      src={talkToSystemImage}
+                      alt="A business user speaks while AiGen-One creates a business system"
+                      className="absolute inset-0 h-full w-full object-cover object-center"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-slate-950/86 via-slate-950/34 to-slate-950/62" />
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_22%_18%,rgba(249,115,22,0.24),transparent_30%)]" />
+                    <div className="absolute left-5 top-5 rounded-full bg-white/95 px-3 py-1 text-xs font-bold text-slate-900 shadow-sm">01</div>
+                    <div className="absolute left-[8%] top-[17%] w-[50%] max-w-md origin-top-left -skew-y-[1.5deg] rounded-lg border border-white/10 bg-slate-950/78 p-3 shadow-2xl backdrop-blur-sm sm:p-4">
+                      <div className="mb-3 flex items-center justify-between border-b border-white/10 pb-2">
+                        <div className="flex items-center gap-2">
+                          <span className="h-2 w-2 rounded-full bg-orange-300" />
+                          <span className="h-2 w-2 rounded-full bg-sky-300" />
+                          <span className="h-2 w-2 rounded-full bg-emerald-300" />
+                        </div>
+                        <span className="text-xs font-semibold text-slate-300">AiGen-One Builder</span>
+                      </div>
+                      <div className="mb-3 space-y-2">
+                        <div className="ml-auto max-w-[78%] rounded-md rounded-tr-sm bg-orange-400 px-3 py-2 text-xs font-semibold text-white shadow">
+                          {conceptSteps[0]?.example}
+                        </div>
+                        <div className="max-w-[74%] rounded-md rounded-tl-sm bg-white px-3 py-2 text-xs font-semibold text-slate-800 shadow">
+                          {conceptSteps[0]?.response}
+                        </div>
+                      </div>
+                      <div className="rounded-md bg-white/96 p-3 text-slate-900 shadow-lg">
+                        <div className="mb-3 flex items-center justify-between">
+                          <div>
+                            <div className="h-2.5 w-24 rounded bg-slate-900" />
+                            <div className="mt-2 h-2 w-36 rounded bg-slate-200" />
+                          </div>
+                          <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary/10">
+                            <Bot className="h-4 w-4 text-primary" />
+                          </div>
+                        </div>
+                        <div className="grid gap-2 sm:grid-cols-3">
+                          <div className="rounded border border-slate-200 p-2">
+                            <div className="mb-2 h-2 w-10 rounded bg-slate-300" />
+                            <div className="h-7 rounded bg-slate-100" />
+                          </div>
+                          <div className="rounded border border-slate-200 p-2">
+                            <div className="mb-2 h-2 w-12 rounded bg-slate-300" />
+                            <div className="h-7 rounded bg-slate-100" />
+                          </div>
+                          <div className="rounded border border-slate-200 p-2">
+                            <div className="mb-2 h-2 w-8 rounded bg-slate-300" />
+                            <div className="h-7 rounded bg-orange-100" />
+                          </div>
+                        </div>
+                        <div className="mt-3 grid gap-2">
+                          <div className="h-2 rounded bg-slate-100" />
+                          <div className="h-2 w-5/6 rounded bg-slate-100" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <CardContent className="p-5 sm:p-6">
+                    <div className="mb-4 flex items-center gap-3">
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-primary text-white">
+                        <Mic className="h-5 w-5" />
+                      </div>
+                      <p className="text-sm font-semibold text-primary">{conceptSteps[0]?.label}</p>
+                    </div>
+                    <h3 className="mb-3 text-xl font-bold leading-tight text-slate-950">{conceptSteps[0]?.title}</h3>
+                    <p className="text-sm leading-relaxed text-slate-600">{conceptSteps[0]?.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 28, scale: 0.985 },
+                  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.62, ease: "easeOut" } },
+                }}
+              >
+                <Card className="h-full overflow-hidden border-sky-100 bg-white shadow-xl">
+                  <div className="relative min-h-[360px] overflow-hidden bg-slate-950 p-5 sm:min-h-[390px]">
+                    <img
+                      src={featuresImage}
+                      alt="Plugin apps are added to AiGen-One"
+                      className="absolute inset-0 h-full w-full object-cover object-center"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/82 via-white/48 to-slate-950/44" />
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_82%_18%,rgba(14,165,233,0.24),transparent_26%)]" />
+                    <div className="absolute left-5 top-5 rounded-full bg-slate-950 px-3 py-1 text-xs font-bold text-white shadow-sm">02</div>
+                    <div className="relative mx-auto mt-10 max-w-md rounded-lg border border-white/60 bg-white/88 p-4 shadow-2xl backdrop-blur-md">
+                      <div className="mb-4 flex items-center justify-between border-b border-slate-200 pb-3">
+                        <div>
+                          <div className="h-3 w-28 rounded bg-slate-900" />
+                          <div className="mt-2 h-2 w-40 rounded bg-slate-200" />
+                        </div>
+                        <div className="flex h-9 w-9 items-center justify-center rounded-md bg-sky-100">
+                          <Store className="h-4 w-4 text-sky-700" />
+                        </div>
+                      </div>
+                      <div className="grid gap-3 sm:grid-cols-2">
+                        {pluginExamples.slice(0, 4).map((item, i) => {
+                          const Icon = pluginIcons[i % pluginIcons.length];
+                          return (
+                            <div key={item.title} className="group rounded-md border border-slate-200 bg-slate-50 p-3 transition-colors hover:border-sky-200 hover:bg-sky-50">
+                              <div className="mb-3 flex items-center justify-between gap-3">
+                                <div className="flex h-9 w-9 items-center justify-center rounded bg-white shadow-sm">
+                                  <Icon className="h-4 w-4 text-sky-700" />
+                                </div>
+                                <div className="flex h-7 w-7 items-center justify-center rounded-full bg-slate-950 text-white shadow-sm">
+                                  <Plus className="h-4 w-4" />
+                                </div>
+                              </div>
+                              <p className="truncate text-sm font-semibold text-slate-900">{item.title}</p>
+                              <p className="text-xs text-slate-500">{item.category}</p>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                  <CardContent className="p-5 sm:p-6">
+                    <div className="mb-4 flex items-center gap-3">
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-sky-600 text-white">
+                        <Store className="h-5 w-5" />
+                      </div>
+                      <p className="text-sm font-semibold text-sky-700">{conceptSteps[1]?.label}</p>
+                    </div>
+                    <h3 className="mb-3 text-xl font-bold leading-tight text-slate-950">{conceptSteps[1]?.title}</h3>
+                    <p className="text-sm leading-relaxed text-slate-600">{conceptSteps[1]?.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 28, scale: 0.985 },
+                visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.62, ease: "easeOut" } },
+              }}
+              className="mx-auto mt-5 max-w-4xl"
+            >
+              <Card className="overflow-hidden border-slate-200 bg-white shadow-xl">
+                <div className="grid lg:grid-cols-[1.18fr_0.82fr]">
+                  <div className="relative min-h-[330px] overflow-hidden bg-slate-950">
+                    <img
+                      src={heroImage}
+                      alt="Employees use generated AI workflows from the AiGen-One portal"
+                      className="h-full w-full object-cover object-center"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-slate-950/36 via-slate-950/8 to-slate-950/60" />
+                    <div className="absolute left-5 top-5 rounded-full bg-white/92 px-3 py-1 text-xs font-bold text-slate-900 shadow-sm">03</div>
+                  </div>
+                  <CardContent className="flex flex-col justify-center p-5 sm:p-7">
+                    <div className="mb-4 flex items-center gap-3">
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-orange-500 text-white">
+                        <Users className="h-5 w-5" />
+                      </div>
+                      <p className="text-sm font-semibold text-orange-600">{conceptSteps[2]?.label}</p>
+                    </div>
+                    <h3 className="mb-3 text-xl font-bold leading-tight text-slate-950">{conceptSteps[2]?.title}</h3>
+                    <p className="mb-5 text-sm leading-relaxed text-slate-600">{conceptSteps[2]?.description}</p>
+                    <div className="grid gap-2 sm:grid-cols-2">
+                      {conceptSteps[2]?.items?.map((item: string) => (
+                        <div key={item} className="flex items-center gap-2 rounded-md bg-slate-100 p-3 text-sm font-semibold text-slate-700">
+                          <CheckCircle className="h-4 w-4 shrink-0 text-orange-500" />
+                          <span>{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </div>
+              </Card>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 

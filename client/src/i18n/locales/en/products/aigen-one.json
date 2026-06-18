@@ -17,6 +17,33 @@
     },
     "mockupLabel": "Place AI work inside the portal"
   },
+  "concept": {
+    "eyebrow": "WHAT AIGEN-ONE DOES",
+    "title": "Create AI workflows, add AI apps,\nand start using them right away.",
+    "description": "Turn field conversations into business systems, add the AI apps you need as plugins, and let teams use everything from one portal.",
+    "steps": [
+      {
+        "label": "Create by talking",
+        "title": "Talk, and an AI business system takes shape.",
+        "description": "Describe the work you want to improve in everyday language. AiGen-One organizes fields, screens, workflows, and AI assistance into a usable system.",
+        "exampleTitle": "For example",
+        "example": "Create proposals from sales notes. Manage inquiries in a list. Search internal documents.",
+        "response": "I will organize the screens and fields."
+      },
+      {
+        "label": "Expand with plugins",
+        "title": "Add AI apps instantly with plugins.",
+        "description": "Meeting notes, proposal drafts, file search, multilingual chat, and other common AI workflows can be added like apps."
+      },
+      {
+        "label": "Use from the portal",
+        "title": "Teams use the AI workflows from one portal.",
+        "description": "Generated systems and plugin apps are gathered in AiGen-One. Teams can use AI as part of daily work without learning each model or tool name.",
+        "portalLabel": "Business systems and AI apps in one place",
+        "items": ["Inquiry management", "Meeting notes", "Proposal creation", "Internal search"]
+      }
+    ]
+  },
   "problem": {
     "eyebrow": "What is happening in companies",
     "title": "AI tools increased.\nWork is still fragmented.",
