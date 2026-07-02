@@ -349,7 +349,7 @@
     "send": "Send",
     "error": "We could not retrieve an answer. Please wait a moment and try again.",
     "disclaimer": "Answers are based on public Aigen One product information",
-    "basedOn": "Based on {{count}} Aigen One product sources",
+    "basedOn": "Based on {count} Aigen One product sources",
     "status": {
       "connecting": "Checking product information",
       "answering": "Preparing an answer"

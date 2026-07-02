@@ -349,7 +349,7 @@
     "send": "Gửi",
     "error": "Không thể nhận câu trả lời. Vui lòng đợi một chút rồi thử lại.",
     "disclaimer": "Câu trả lời dựa trên thông tin sản phẩm Aigen One công khai",
-    "basedOn": "Tham khảo {{count}} nguồn thông tin sản phẩm Aigen One",
+    "basedOn": "Tham khảo {count} nguồn thông tin sản phẩm Aigen One",
     "status": {
       "connecting": "Đang kiểm tra thông tin sản phẩm",
       "answering": "Đang tạo câu trả lời"

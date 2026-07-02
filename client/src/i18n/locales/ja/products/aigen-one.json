@@ -349,7 +349,7 @@
     "send": "送信",
     "error": "回答を取得できませんでした。少し時間を置いて再度お試しください。",
     "disclaimer": "公開されている製品情報をもとに回答します",
-    "basedOn": "Aigen One製品情報 {{count}}件を参照",
+    "basedOn": "Aigen One製品情報 {count}件を参照",
     "status": {
       "connecting": "製品情報を確認しています",
       "answering": "回答を作成しています"
