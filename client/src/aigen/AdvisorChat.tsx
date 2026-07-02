@@ -1,7 +1,9 @@
 import { FormEvent, useMemo, useRef, useState } from "react";
-import { Bot, MessageCircleQuestion, RotateCcw, Send, Sparkles, X } from "lucide-react";
+import { Bot, Maximize2, MessageCircleQuestion, Minimize2, RotateCcw, Send, Sparkles, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useLocale } from "@/lib/i18n-utils";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 type ChatMessage = {
   id: string;
@@ -16,18 +18,29 @@ const apiBase = import.meta.env.VITE_AIGEN_ADVISOR_API_BASE
     : "https://aigen-one.d-auchy.studio/api");
 
 function RichText({ content }: { content: string }) {
-  const blocks = content.split("\n");
   return (
-    <div className="space-y-2 text-sm leading-6 text-slate-700">
-      {blocks.map((line, index) => {
-        const value = line.trim();
-        if (!value) return <div key={index} className="h-1" />;
-        if (value.startsWith("### ")) return <h4 key={index} className="pt-1 font-bold text-slate-950">{value.slice(4)}</h4>;
-        if (value.startsWith("## ")) return <h3 key={index} className="pt-1 text-base font-bold text-slate-950">{value.slice(3)}</h3>;
-        if (/^[-*] /.test(value)) return <p key={index} className="pl-4 before:-ml-3 before:mr-2 before:content-['•']">{value.slice(2)}</p>;
-        const segments = value.split(/(\*\*[^*]+\*\*)/g);
-        return <p key={index}>{segments.map((segment, part) => segment.startsWith("**") && segment.endsWith("**") ? <strong key={part} className="font-semibold text-slate-950">{segment.slice(2, -2)}</strong> : segment)}</p>;
-      })}
+    <div className="text-sm leading-6 text-slate-700">
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        components={{
+          h1: ({ children }) => <h1 className="mb-3 mt-5 text-lg font-bold text-slate-950 first:mt-0">{children}</h1>,
+          h2: ({ children }) => <h2 className="mb-2 mt-5 text-base font-bold text-slate-950 first:mt-0">{children}</h2>,
+          h3: ({ children }) => <h3 className="mb-2 mt-4 font-bold text-slate-950 first:mt-0">{children}</h3>,
+          p: ({ children }) => <p className="mb-3 last:mb-0">{children}</p>,
+          strong: ({ children }) => <strong className="font-semibold text-slate-950">{children}</strong>,
+          ul: ({ children }) => <ul className="mb-3 list-disc space-y-1 pl-5">{children}</ul>,
+          ol: ({ children }) => <ol className="mb-3 list-decimal space-y-1 pl-5">{children}</ol>,
+          li: ({ children }) => <li className="pl-1">{children}</li>,
+          a: ({ children, href }) => <a href={href} target="_blank" rel="noreferrer" className="font-medium text-orange-700 underline underline-offset-2">{children}</a>,
+          blockquote: ({ children }) => <blockquote className="mb-3 border-l-2 border-orange-300 bg-orange-50 px-3 py-2 text-slate-600">{children}</blockquote>,
+          code: ({ children }) => <code className="rounded bg-slate-100 px-1 py-0.5 font-mono text-xs text-slate-900">{children}</code>,
+          table: ({ children }) => <div className="mb-3 overflow-x-auto"><table className="w-full border-collapse text-left text-xs">{children}</table></div>,
+          th: ({ children }) => <th className="border border-slate-200 bg-slate-100 px-2 py-1.5 font-semibold text-slate-900">{children}</th>,
+          td: ({ children }) => <td className="border border-slate-200 px-2 py-1.5 align-top">{children}</td>,
+        }}
+      >
+        {content}
+      </ReactMarkdown>
     </div>
   );
 }
@@ -36,6 +49,7 @@ export default function AdvisorChat() {
   const { t } = useTranslation("aigen-one");
   const { locale } = useLocale();
   const [open, setOpen] = useState(false);
+  const [fullscreen, setFullscreen] = useState(false);
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [streaming, setStreaming] = useState(false);
@@ -129,7 +143,10 @@ export default function AdvisorChat() {
   return (
     <div className="fixed bottom-4 right-4 z-[80] sm:bottom-6 sm:right-6">
       {open && (
-        <section className="mb-3 flex h-[min(680px,calc(100vh-7rem))] w-[calc(100vw-2rem)] flex-col overflow-hidden rounded-lg border border-slate-200 bg-white shadow-2xl sm:w-[430px]" aria-label={t("advisor.title")}>
+        <section className={fullscreen
+          ? "fixed inset-0 z-[90] flex h-[100dvh] w-screen flex-col overflow-hidden bg-white"
+          : "mb-3 flex h-[min(680px,calc(100vh-7rem))] w-[calc(100vw-2rem)] flex-col overflow-hidden rounded-lg border border-slate-200 bg-white shadow-2xl sm:w-[430px]"
+        } aria-label={t("advisor.title")}>
           <header className="flex items-center justify-between border-b border-slate-200 bg-slate-950 px-4 py-3 text-white">
             <div className="flex min-w-0 items-center gap-3">
               <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-orange-500"><Sparkles className="h-4 w-4" /></span>
@@ -140,11 +157,15 @@ export default function AdvisorChat() {
             </div>
             <div className="flex items-center gap-1">
               <button type="button" onClick={reset} className="rounded-md p-2 text-slate-300 hover:bg-white/10 hover:text-white" aria-label={t("advisor.reset")} title={t("advisor.reset")}><RotateCcw className="h-4 w-4" /></button>
-              <button type="button" onClick={() => setOpen(false)} className="rounded-md p-2 text-slate-300 hover:bg-white/10 hover:text-white" aria-label={t("advisor.close")}><X className="h-4 w-4" /></button>
+              <button type="button" onClick={() => setFullscreen((value) => !value)} className="rounded-md p-2 text-slate-300 hover:bg-white/10 hover:text-white" aria-label={fullscreen ? t("advisor.exitFullscreen") : t("advisor.fullscreen")} title={fullscreen ? t("advisor.exitFullscreen") : t("advisor.fullscreen")}>
+                {fullscreen ? <Minimize2 className="h-4 w-4" /> : <Maximize2 className="h-4 w-4" />}
+              </button>
+              <button type="button" onClick={() => { setOpen(false); setFullscreen(false); }} className="rounded-md p-2 text-slate-300 hover:bg-white/10 hover:text-white" aria-label={t("advisor.close")}><X className="h-4 w-4" /></button>
             </div>
           </header>
 
           <div className="min-h-0 flex-1 overflow-y-auto bg-slate-50 px-4 py-4">
+            <div className={fullscreen ? "mx-auto w-full max-w-4xl" : ""}>
             {messages.length === 0 && (
               <div>
                 <div className="mb-5 flex gap-3">
@@ -172,14 +193,17 @@ export default function AdvisorChat() {
             </div>
             {error && <p className="mt-3 rounded-md bg-red-50 px-3 py-2 text-xs text-red-700">{error}</p>}
             <div ref={endRef} />
+            </div>
           </div>
 
           <form onSubmit={onSubmit} className="border-t border-slate-200 bg-white p-3">
+            <div className={fullscreen ? "mx-auto w-full max-w-4xl" : ""}>
             <div className="flex items-end gap-2 rounded-lg border border-slate-300 bg-white p-2 focus-within:border-orange-400 focus-within:ring-2 focus-within:ring-orange-100">
               <textarea value={input} onChange={(event) => setInput(event.target.value)} onKeyDown={(event) => { if (event.key === "Enter" && !event.shiftKey && !event.nativeEvent.isComposing) { event.preventDefault(); void submit(); } }} rows={1} placeholder={t("advisor.placeholder")} className="max-h-28 min-h-10 flex-1 resize-none border-0 bg-transparent px-2 py-2 text-sm text-slate-900 outline-none placeholder:text-slate-400" disabled={streaming} />
               <button type="submit" disabled={streaming || !input.trim()} className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-orange-500 text-white transition hover:bg-orange-600 disabled:cursor-not-allowed disabled:bg-slate-200 disabled:text-slate-400" aria-label={t("advisor.send")}><Send className="h-4 w-4" /></button>
             </div>
             <p className="mt-2 text-center text-[11px] text-slate-400">{t("advisor.disclaimer")}</p>
+            </div>
           </form>
         </section>
       )}
@@ -191,4 +215,3 @@ export default function AdvisorChat() {
     </div>
   );
 }
-

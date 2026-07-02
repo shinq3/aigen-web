@@ -335,6 +335,8 @@
     "subtitle": "Product, adoption, and technical guidance",
     "open": "Ask Aigen",
     "close": "Close",
+    "fullscreen": "Open full screen",
+    "exitFullscreen": "Exit full screen",
     "reset": "New conversation",
     "welcome": "Ask anything about what Aigen One can do, how to adopt it, how it differs from Claude, or how it works technically.",
     "tryAsking": "Try asking",

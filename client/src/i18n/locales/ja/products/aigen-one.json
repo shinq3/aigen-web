@@ -335,6 +335,8 @@
     "subtitle": "製品・導入・技術について相談",
     "open": "Aigenに相談",
     "close": "閉じる",
+    "fullscreen": "全画面で表示",
+    "exitFullscreen": "全画面表示を終了",
     "reset": "新しい会話",
     "welcome": "Aigen Oneで何ができるか、導入方法、Claudeとの違い、技術構成まで何でも質問してください。",
     "tryAsking": "例えば",

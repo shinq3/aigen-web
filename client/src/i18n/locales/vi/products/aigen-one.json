@@ -335,6 +335,8 @@
     "subtitle": "Tư vấn sản phẩm, triển khai và kỹ thuật",
     "open": "Hỏi Aigen",
     "close": "Đóng",
+    "fullscreen": "Mở toàn màn hình",
+    "exitFullscreen": "Thoát toàn màn hình",
     "reset": "Cuộc trò chuyện mới",
     "welcome": "Hãy hỏi bất kỳ điều gì về khả năng, cách triển khai, sự khác biệt với Claude hoặc kiến trúc kỹ thuật của Aigen One.",
     "tryAsking": "Câu hỏi gợi ý",
