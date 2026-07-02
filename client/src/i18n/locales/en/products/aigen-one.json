@@ -330,6 +330,29 @@
       "In larger organizations, Workspace Users and Organization Admins can be separated for safer development, approval, and operation."
     ]
   },
+  "advisor": {
+    "title": "Aigen Advisor",
+    "subtitle": "Product, adoption, and technical guidance",
+    "open": "Ask Aigen",
+    "close": "Close",
+    "reset": "New conversation",
+    "welcome": "Ask anything about what Aigen One can do, how to adopt it, how it differs from Claude, or how it works technically.",
+    "tryAsking": "Try asking",
+    "suggestions": [
+      "What makes Aigen One useful?",
+      "How is it different from building apps with Claude?",
+      "Why does Aigen manage work by project?"
+    ],
+    "placeholder": "Ask about Aigen One",
+    "send": "Send",
+    "error": "We could not retrieve an answer. Please wait a moment and try again.",
+    "disclaimer": "Answers are based on public Aigen One product information",
+    "basedOn": "Based on {{count}} Aigen One product sources",
+    "status": {
+      "connecting": "Checking product information",
+      "answering": "Preparing an answer"
+    }
+  },
   "cta": {
     "badge": "AI work as company infrastructure",
     "title": "Before adding more AI tools,\nembed AI into work.",

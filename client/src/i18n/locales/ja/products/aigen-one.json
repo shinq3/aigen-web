@@ -330,6 +330,29 @@
       "大規模組織では、Workspaceユーザーと組織管理者を分けて、安全に開発・承認・運用できます。"
     ]
   },
+  "advisor": {
+    "title": "Aigen Advisor",
+    "subtitle": "製品・導入・技術について相談",
+    "open": "Aigenに相談",
+    "close": "閉じる",
+    "reset": "新しい会話",
+    "welcome": "Aigen Oneで何ができるか、導入方法、Claudeとの違い、技術構成まで何でも質問してください。",
+    "tryAsking": "例えば",
+    "suggestions": [
+      "Aigen Oneは何が便利なの？",
+      "Claudeでアプリを作るのと何が違う？",
+      "なぜプロジェクト単位で管理するの？"
+    ],
+    "placeholder": "Aigen Oneについて質問する",
+    "send": "送信",
+    "error": "回答を取得できませんでした。少し時間を置いて再度お試しください。",
+    "disclaimer": "公開されている製品情報をもとに回答します",
+    "basedOn": "Aigen One製品情報 {{count}}件を参照",
+    "status": {
+      "connecting": "製品情報を確認しています",
+      "answering": "回答を作成しています"
+    }
+  },
   "cta": {
     "badge": "AI業務を会社の基盤へ",
     "title": "AIツールを増やす前に、\n業務にAIを組み込みませんか。",

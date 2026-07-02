@@ -330,6 +330,29 @@
       "Trong tổ chức lớn, có thể tách Workspace User và Organization Admin để phát triển, phê duyệt và vận hành an toàn."
     ]
   },
+  "advisor": {
+    "title": "Aigen Advisor",
+    "subtitle": "Tư vấn sản phẩm, triển khai và kỹ thuật",
+    "open": "Hỏi Aigen",
+    "close": "Đóng",
+    "reset": "Cuộc trò chuyện mới",
+    "welcome": "Hãy hỏi bất kỳ điều gì về khả năng, cách triển khai, sự khác biệt với Claude hoặc kiến trúc kỹ thuật của Aigen One.",
+    "tryAsking": "Câu hỏi gợi ý",
+    "suggestions": [
+      "Aigen One hữu ích ở điểm nào?",
+      "Khác gì so với việc tạo ứng dụng bằng Claude?",
+      "Tại sao Aigen quản lý theo dự án?"
+    ],
+    "placeholder": "Hỏi về Aigen One",
+    "send": "Gửi",
+    "error": "Không thể nhận câu trả lời. Vui lòng đợi một chút rồi thử lại.",
+    "disclaimer": "Câu trả lời dựa trên thông tin sản phẩm Aigen One công khai",
+    "basedOn": "Tham khảo {{count}} nguồn thông tin sản phẩm Aigen One",
+    "status": {
+      "connecting": "Đang kiểm tra thông tin sản phẩm",
+      "answering": "Đang tạo câu trả lời"
+    }
+  },
   "cta": {
     "badge": "AI nghiệp vụ thành hạ tầng công ty",
     "title": "Trước khi thêm công cụ AI,\nhãy đưa AI vào công việc.",

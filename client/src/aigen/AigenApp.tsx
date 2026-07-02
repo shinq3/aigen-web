@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Button } from "@/components/ui/button";
 import { localeNames, locales, type Locale } from "@shared/i18n";
 import { useLocale } from "@/lib/i18n-utils";
+import AdvisorChat from "./AdvisorChat";
 
 const demoUrl = "https://youtu.be/QnKgrSrNcmo";
 const mainSiteUrl = "https://d-auchy.studio";
@@ -113,6 +114,7 @@ export default function AigenApp() {
           <AIGenOne />
         </main>
         <AigenFooter />
+        <AdvisorChat />
       </div>
     </ThemeProvider>
   );
