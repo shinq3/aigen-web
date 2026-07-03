@@ -86,6 +86,7 @@
   --font-sans: Inter, "Noto Sans JP", sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
+  --font-display: "Space Grotesk", sans-serif;
   --radius: .5rem; /* 8px */
   --shadow-2xs: 0px 2px 0px 0px hsl(220 13% 91% / 0.00);
   --shadow-xs: 0px 2px 0px 0px hsl(220 13% 91% / 0.00);

@@ -1,25 +1,6 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import {
-  ArrowDown,
-  ArrowRight,
-  BarChart3,
-  Bot,
-  BrainCircuit,
-  Check,
-  Database,
-  FileText,
-  Gauge,
-  LayoutDashboard,
-  LockKeyhole,
-  MessageSquareText,
-  Network,
-  Plug,
-  ShieldCheck,
-  Users,
-  WandSparkles,
-  Workflow,
-} from "lucide-react";
+import { ArrowDown, ArrowRight, Check, WandSparkles } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { useLocale } from "@/lib/i18n-utils";
@@ -33,10 +14,6 @@ import governanceImage from "@assets/generated_images/AIGenOne_governance_review
 const mainSiteUrl = "https://d-auchy.studio";
 const demoUrl = "https://youtu.be/QnKgrSrNcmo";
 
-const platformIcons = [LayoutDashboard, MessageSquareText, BrainCircuit, Bot, Workflow];
-const fdeIcons = [Users, Network, Gauge];
-const outcomeIcons = [FileText, BarChart3, Database];
-const governanceIcons = [LockKeyhole, ShieldCheck, Plug];
 const outcomeImages = [builderImage, fieldDiscoveryImage, teamAdoptionImage];
 
 const reveal = {
@@ -44,9 +21,55 @@ const reveal = {
   visible: { opacity: 1, y: 0 },
 };
 
+function JourneyIconListen(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M4 5h16v10H9l-4 4V5z" />
+      <path d="M8.5 9.2h7M8.5 12h4.5" />
+    </svg>
+  );
+}
+function JourneyIconBreakdown(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <rect x="3.5" y="3.5" width="7" height="7" rx="1" />
+      <rect x="13.5" y="3.5" width="7" height="7" rx="1" />
+      <rect x="3.5" y="13.5" width="7" height="7" rx="1" />
+      <rect x="13.5" y="13.5" width="7" height="7" rx="1" />
+    </svg>
+  );
+}
+function JourneyIconBuild(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M14.5 6.5a3 3 0 0 1-3.9 3.9L5 16v3h3l5.6-5.6a3 3 0 0 1 3.9-3.9L21 6l-3-3z" />
+    </svg>
+  );
+}
+function JourneyIconLaunch(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M12 3c2.8 1.8 4.5 4.9 4.5 8.5 0 2-.5 3.7-1.2 5H8.7c-.7-1.3-1.2-3-1.2-5C7.5 7.9 9.2 4.8 12 3z" />
+      <circle cx="12" cy="10.5" r="1.6" />
+      <path d="M8.7 16.5 6 21l3.2-1.4M15.3 16.5 18 21l-3.2-1.4" />
+    </svg>
+  );
+}
+function JourneyIconImprove(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M4 12a8 8 0 0 1 13.7-5.7L20 8" />
+      <path d="M20 4v4h-4" />
+      <path d="M20 12a8 8 0 0 1-13.7 5.7L4 16" />
+      <path d="M4 20v-4h4" />
+    </svg>
+  );
+}
+const journeyIcons = [JourneyIconListen, JourneyIconBreakdown, JourneyIconBuild, JourneyIconLaunch, JourneyIconImprove];
+
 function SectionLabel({ children, inverse = false }: { children: React.ReactNode; inverse?: boolean }) {
   return (
-    <p className={`mb-4 text-xs font-bold uppercase tracking-[0.18em] ${inverse ? "text-orange-300" : "text-orange-700"}`}>
+    <p className={`mb-4 font-display text-xs font-bold uppercase tracking-[0.2em] ${inverse ? "text-[#34E1FF]" : "text-[#2D6BFF]"}`}>
       {children}
     </p>
   );
@@ -54,15 +77,38 @@ function SectionLabel({ children, inverse = false }: { children: React.ReactNode
 
 function DashboardVisual() {
   return (
-    <figure className="overflow-hidden rounded-lg border border-slate-700 bg-slate-900 shadow-2xl">
-      <div className="flex h-10 items-center gap-2 border-b border-slate-700 px-4">
-        <span className="h-2.5 w-2.5 rounded-full bg-orange-400" />
-        <span className="h-2.5 w-2.5 rounded-full bg-slate-600" />
-        <span className="h-2.5 w-2.5 rounded-full bg-slate-600" />
-        <span className="ml-3 text-[10px] font-semibold text-slate-400">AiGen-One / Actual Dashboard</span>
+    <figure className="overflow-hidden rounded-2xl border border-[rgba(234,242,255,.15)] bg-[#0A1120] shadow-2xl">
+      <div className="flex h-11 items-center gap-2.5 border-b border-[rgba(234,242,255,.15)] px-4">
+        <span className="h-2.5 w-2.5 rounded-full bg-[#34E1FF]" />
+        <span className="h-2.5 w-2.5 rounded-full bg-[#2b3854]" />
+        <span className="h-2.5 w-2.5 rounded-full bg-[#2b3854]" />
+        <span className="ml-2.5 font-display text-[10px] font-bold text-[#7488a8]">AiGen-One / Dashboard</span>
       </div>
       <img src={dashboardImage} alt="AiGen-One dashboard" className="block h-auto w-full bg-white" />
     </figure>
+  );
+}
+
+function TitleLines({ text }: { text: string }) {
+  const lines = text.split("\n");
+  return (
+    <>
+      {lines.map((line, i) => {
+        const isLast = i === lines.length - 1;
+        return (
+          <span key={i} className={isLast ? "sm:whitespace-nowrap" : undefined}>
+            {line.split(/(AI)/g).map((part, j) =>
+              part === "AI" ? (
+                <span key={j} className="text-[#34E1FF]">AI</span>
+              ) : (
+                <span key={j}>{part}</span>
+              )
+            )}
+            {!isLast && <br />}
+          </span>
+        );
+      })}
+    </>
   );
 }
 
@@ -80,27 +126,27 @@ export default function AIGenOne() {
   }, [t]);
 
   return (
-    <div className="overflow-hidden bg-white text-slate-950">
-      <section className="relative flex h-[calc(100svh-7rem)] min-h-[620px] max-h-[760px] items-end overflow-hidden text-white">
+    <div className="overflow-hidden bg-[#EEF2F8] text-[#0B1220]" style={{ fontFamily: '"Noto Sans JP", Inter, sans-serif' }}>
+      <section className="relative flex min-h-[820px] items-center overflow-hidden text-[#EAF2FF]">
         <img src={heroImage} alt="" className="absolute inset-0 h-full w-full object-cover object-[63%_center]" />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,6,23,.98)_0%,rgba(2,6,23,.88)_34%,rgba(2,6,23,.28)_70%,rgba(2,6,23,.12)_100%)]" />
-        <div className="relative mx-auto w-full max-w-6xl px-4 pb-20 pt-24 sm:pb-24">
-          <motion.div initial="hidden" animate="visible" transition={{ staggerChildren: 0.12 }} className="max-w-[680px]">
-            <motion.div variants={reveal} transition={{ duration: 0.55 }} className="mb-7 inline-flex items-center gap-2 border-l-2 border-orange-400 pl-3 text-xs font-bold uppercase tracking-[0.18em] text-orange-200">
+        <div className="absolute inset-0" style={{ background: "linear-gradient(100deg, rgba(6,10,22,.97) 0%, rgba(6,10,22,.9) 38%, rgba(6,10,22,.35) 72%, rgba(6,10,22,.1) 100%)" }} />
+        <div className="relative mx-auto w-full max-w-6xl px-4 py-24">
+          <motion.div initial="hidden" animate="visible" transition={{ staggerChildren: 0.12 }} className="max-w-[760px]">
+            <motion.div variants={reveal} transition={{ duration: 0.55 }} className="mb-7 inline-flex items-center gap-2.5 border-l-[3px] border-[#34E1FF] pl-3.5 font-display text-xs font-bold uppercase tracking-[0.2em] text-[#34E1FF]">
               {t("hero.eyebrow")}
             </motion.div>
-            <motion.p variants={reveal} transition={{ duration: 0.55 }} className="mb-3 text-xl font-bold text-white sm:text-2xl">AiGen-One</motion.p>
-            <motion.h1 variants={reveal} transition={{ duration: 0.65 }} className="whitespace-pre-line text-[clamp(2.6rem,6vw,5.4rem)] font-bold leading-[1.04] tracking-[0]">
-              {t("hero.title")}
+            <motion.p variants={reveal} transition={{ duration: 0.55 }} className="mb-2.5 text-xl font-bold text-[#EAF2FF]">AiGen-One</motion.p>
+            <motion.h1 variants={reveal} transition={{ duration: 0.65 }} className="text-[clamp(2.4rem,6vw,4.75rem)] font-extrabold leading-[1.05] tracking-[-0.02em]">
+              <TitleLines text={t("hero.title")} />
             </motion.h1>
-            <motion.p variants={reveal} transition={{ duration: 0.6 }} className="mt-7 max-w-xl text-base font-medium leading-8 text-slate-200 sm:text-lg">
+            <motion.p variants={reveal} transition={{ duration: 0.6 }} className="mt-7 max-w-[560px] text-base leading-[1.9] text-[#B9C6DE] sm:text-lg">
               {t("hero.description")}
             </motion.p>
-            <motion.div variants={reveal} transition={{ duration: 0.6 }} className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Button size="lg" className="h-12 rounded-md bg-orange-500 px-6 text-white hover:bg-orange-600" asChild>
+            <motion.div variants={reveal} transition={{ duration: 0.6 }} className="mt-9 flex flex-col gap-3.5 sm:flex-row">
+              <Button size="lg" className="h-12 rounded-lg bg-[#34E1FF] px-7 text-[#060A16] hover:bg-[#34E1FF]/90" asChild>
                 <a href={contactUrl}>{t("hero.primaryCta")}<ArrowRight className="ml-2 h-4 w-4" /></a>
               </Button>
-              <Button size="lg" variant="outline" className="h-12 rounded-md border-white/35 bg-white/5 px-6 text-white hover:bg-white hover:text-slate-950" asChild>
+              <Button size="lg" variant="outline" className="h-12 rounded-lg border-white/35 bg-transparent px-7 text-[#EAF2FF] hover:bg-white/10" asChild>
                 <a href="#platform">{t("hero.secondaryCta")}<ArrowDown className="ml-2 h-4 w-4" /></a>
               </Button>
             </motion.div>
@@ -108,9 +154,16 @@ export default function AIGenOne() {
         </div>
       </section>
 
-      <section className="border-b border-slate-200 bg-white py-8">
+      <section className="border-b border-[rgba(11,18,32,.1)] bg-[#EEF2F8] py-8">
         <div className="mx-auto grid max-w-6xl gap-5 px-4 sm:grid-cols-3">
-          {list("hero.proofs").map((proof) => <div key={proof} className="flex items-center gap-3 text-sm font-semibold text-slate-700"><Check className="h-4 w-4 shrink-0 text-orange-600" />{proof}</div>)}
+          {list("hero.proofs").map((proof) => (
+            <div key={proof} className="flex items-center gap-3 text-sm font-semibold text-[#28374f]">
+              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#2D6BFF]">
+                <Check className="h-3 w-3 text-white" />
+              </span>
+              {proof}
+            </div>
+          ))}
         </div>
       </section>
 
@@ -119,48 +172,55 @@ export default function AIGenOne() {
           <div className="grid gap-12 lg:grid-cols-[.95fr_1.05fr] lg:items-end">
             <div>
               <SectionLabel>{t("fde.eyebrow")}</SectionLabel>
-              <h2 className="whitespace-pre-line text-3xl font-bold leading-tight sm:text-5xl">{t("fde.title")}</h2>
+              <h2 className="whitespace-pre-line text-3xl font-extrabold leading-[1.2] tracking-[-0.01em] sm:text-5xl">{t("fde.title")}</h2>
             </div>
             <div>
-              <p className="text-lg leading-8 text-slate-600">{t("fde.description")}</p>
-              <p className="mt-5 border-l-2 border-orange-500 pl-4 text-sm font-semibold leading-7 text-slate-800">{t("fde.note")}</p>
+              <p className="text-lg leading-[1.9] text-[#41506b]">{t("fde.description")}</p>
+              <p className="mt-5 border-l-[3px] border-[#2D6BFF] pl-4 text-sm font-bold leading-7 text-[#0B1220]">{t("fde.note")}</p>
             </div>
           </div>
           <div className="mt-14 grid gap-10 lg:grid-cols-[1.05fr_.95fr] lg:items-stretch">
-            <figure className="relative min-h-[420px] overflow-hidden rounded-lg">
+            <figure className="relative min-h-[420px] overflow-hidden rounded-2xl">
               <img src={fieldDiscoveryImage} alt="" className="absolute inset-0 h-full w-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/65 via-transparent to-transparent" />
-              <figcaption className="absolute bottom-5 left-5 right-5 text-sm font-semibold leading-6 text-white">{t("fde.photoCaption")}</figcaption>
+              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(6,10,22,.7)] via-transparent to-transparent" />
+              <figcaption className="absolute bottom-6 left-6 right-6 text-sm font-semibold leading-[1.7] text-white">{t("fde.photoCaption")}</figcaption>
             </figure>
-            <div className="divide-y divide-slate-200 border-y border-slate-200">
-              {objects("fde.steps").map((step, index) => {
-                const Icon = fdeIcons[index];
-                return <motion.div key={step.title} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ delay: index * 0.12 }} className="grid grid-cols-[48px_1fr] gap-4 py-7">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-md bg-orange-50 text-orange-700"><Icon className="h-5 w-5" /></span>
-                  <div><div className="flex items-center justify-between"><h3 className="text-xl font-bold">{step.title}</h3><span className="text-xs font-bold text-slate-300">0{index + 1}</span></div><p className="mt-3 text-sm leading-7 text-slate-600">{step.description}</p></div>
-                </motion.div>;
-              })}
+            <div className="divide-y divide-[rgba(11,18,32,.1)] border-y border-[rgba(11,18,32,.1)]">
+              {objects("fde.steps").map((step, index) => (
+                <motion.div key={step.title} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ delay: index * 0.12 }} className="grid grid-cols-[64px_1fr] gap-5 py-7">
+                  <span className="font-display text-3xl font-bold text-[#c6d2e6]">0{index + 1}</span>
+                  <div>
+                    <h3 className="text-xl font-bold">{step.title}</h3>
+                    <p className="mt-2.5 text-sm leading-[1.8] text-[#41506b]">{step.description}</p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      <section id="platform" className="scroll-mt-16 bg-slate-950 py-20 text-white sm:py-28">
+      <section id="platform" className="scroll-mt-16 bg-[#060A16] py-20 text-[#EAF2FF] sm:py-28">
         <div className="mx-auto max-w-6xl px-4">
           <div className="grid gap-12 lg:grid-cols-[.95fr_1.05fr] lg:items-end">
             <div>
               <SectionLabel inverse>{t("platform.eyebrow")}</SectionLabel>
-              <h2 className="whitespace-pre-line text-3xl font-bold leading-tight sm:text-5xl">{t("platform.title")}</h2>
+              <h2 className="whitespace-pre-line text-3xl font-extrabold leading-[1.2] tracking-[-0.01em] sm:text-5xl">{t("platform.title")}</h2>
             </div>
-            <p className="text-lg leading-8 text-slate-300">{t("platform.description")}</p>
+            <p className="text-lg leading-[1.9] text-[#9DAEC9]">{t("platform.description")}</p>
           </div>
           <div className="mt-14 grid gap-10 lg:grid-cols-[1.5fr_.75fr] lg:items-center">
             <DashboardVisual />
-            <div className="divide-y divide-slate-800 border-y border-slate-800">
-              {objects("platform.layers").map((layer, index) => {
-                const Icon = platformIcons[index];
-                return <div key={layer.title} className="flex gap-4 py-5"><span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white/5 text-orange-300"><Icon className="h-4 w-4" /></span><div><h3 className="font-bold">{layer.title}</h3><p className="mt-1 text-sm leading-6 text-slate-400">{layer.description}</p></div></div>;
-              })}
+            <div className="divide-y divide-[rgba(234,242,255,.12)] border-y border-[rgba(234,242,255,.12)]">
+              {objects("platform.layers").map((layer, index) => (
+                <div key={layer.title} className="flex gap-4 py-5">
+                  <span className="flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-lg bg-[rgba(52,225,255,.12)] font-display text-[13px] font-bold text-[#34E1FF]">0{index + 1}</span>
+                  <div>
+                    <h3 className="font-bold">{layer.title}</h3>
+                    <p className="mt-1.5 text-sm leading-[1.7] text-[#8496b3]">{layer.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -169,74 +229,108 @@ export default function AIGenOne() {
       <section id="build" className="scroll-mt-16 py-20 sm:py-28">
         <div className="mx-auto max-w-6xl px-4">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <div className="relative overflow-hidden rounded-lg bg-slate-950">
-              <img src={builderImage} alt="" className="aspect-[4/3] h-full w-full object-cover opacity-70" />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/10 to-transparent" />
-              <div className="absolute inset-x-5 bottom-5 rounded-md border border-white/15 bg-slate-950/90 p-4 text-white backdrop-blur-sm sm:inset-x-8 sm:bottom-8">
-                <div className="flex items-start gap-3"><MessageSquareText className="mt-0.5 h-5 w-5 shrink-0 text-orange-300" /><p className="text-sm font-medium leading-6">{t("build.prompt")}</p></div>
+            <div className="relative overflow-hidden rounded-2xl bg-[#060A16]">
+              <img src={builderImage} alt="" className="aspect-[4/3] h-full w-full object-cover opacity-85" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#060A16] via-[#060A16]/10 to-transparent" />
+              <div className="absolute inset-x-5 bottom-5 rounded-[10px] border border-[rgba(234,242,255,.15)] bg-[rgba(6,10,22,.9)] p-4 text-[#EAF2FF] sm:inset-x-6 sm:bottom-6">
+                <p className="text-sm font-medium leading-[1.7]">{t("build.prompt")}</p>
               </div>
             </div>
             <div>
               <SectionLabel>{t("build.eyebrow")}</SectionLabel>
-              <h2 className="whitespace-pre-line text-3xl font-bold leading-tight sm:text-5xl">{t("build.title")}</h2>
-              <p className="mt-6 text-lg leading-8 text-slate-600">{t("build.description")}</p>
-              <div className="mt-9 divide-y divide-slate-200 border-y border-slate-200">
-                {objects("build.outputs").map((output, index) => {
-                  const Icon = [BrainCircuit, Bot, Workflow][index];
-                  return <div key={output.title} className="grid grid-cols-[42px_1fr] gap-3 py-5"><span className="flex h-9 w-9 items-center justify-center rounded-md bg-orange-50 text-orange-700"><Icon className="h-4 w-4" /></span><div><h3 className="font-bold">{output.title}</h3><p className="mt-1 text-sm leading-6 text-slate-600">{output.description}</p></div></div>;
-                })}
+              <h2 className="whitespace-pre-line text-3xl font-extrabold leading-[1.2] tracking-[-0.01em] sm:text-5xl">{t("build.title")}</h2>
+              <p className="mt-6 text-lg leading-[1.9] text-[#41506b]">{t("build.description")}</p>
+              <div className="mt-5 divide-y divide-[rgba(11,18,32,.1)] border-y border-[rgba(11,18,32,.1)]">
+                {objects("build.outputs").map((output, index) => (
+                  <div key={output.title} className="flex gap-3.5 py-5">
+                    <span className="flex h-[30px] w-[30px] shrink-0 items-center justify-center rounded-md border border-[rgba(11,18,32,.1)] bg-[#EEF2F8] font-display text-xs font-bold text-[#2D6BFF]">0{index + 1}</span>
+                    <div>
+                      <h3 className="font-bold">{output.title}</h3>
+                      <p className="mt-1.5 text-sm leading-[1.7] text-[#41506b]">{output.description}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="relative overflow-hidden border-y border-slate-800 py-20 text-white sm:py-28">
+      <section className="relative overflow-hidden border-y border-[rgba(11,18,32,.08)] py-20 text-[#EAF2FF] sm:py-28">
         <img src={teamAdoptionImage} alt="" className="absolute inset-0 h-full w-full object-cover object-center" />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,6,23,.96)_0%,rgba(2,6,23,.78)_55%,rgba(2,6,23,.42)_100%)]" />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(100deg, rgba(6,10,22,.97) 0%, rgba(6,10,22,.8) 55%, rgba(6,10,22,.4) 100%)" }} />
         <div className="relative mx-auto max-w-6xl px-4">
           <SectionLabel inverse>{t("journey.eyebrow")}</SectionLabel>
-          <div className="grid gap-8 lg:grid-cols-[1.1fr_.9fr]">
-            <h2 className="whitespace-pre-line text-3xl font-bold leading-tight sm:text-5xl">{t("journey.title")}</h2>
-            <p className="text-lg leading-8 text-slate-200">{t("journey.description")}</p>
+          <div className="grid gap-10 lg:grid-cols-[1.1fr_.9fr]">
+            <h2 className="whitespace-pre-line text-3xl font-extrabold leading-[1.2] sm:text-5xl">{t("journey.title")}</h2>
+            <p className="text-lg leading-[1.9] text-[#B9C6DE]">{t("journey.description")}</p>
           </div>
-          <div className="mt-14 grid gap-px overflow-hidden rounded-lg border border-white/15 bg-white/15 md:grid-cols-5">
-            {objects("journey.steps").map((step, index) => <div key={step.title} className="bg-slate-950/80 p-6 backdrop-blur-sm"><span className="text-xs font-bold text-orange-300">0{index + 1}</span><h3 className="mt-8 font-bold">{step.title}</h3><p className="mt-3 text-sm leading-6 text-slate-300">{step.description}</p></div>)}
+          <div className="relative mt-14">
+            <div className="absolute left-20 right-20 top-[87px] hidden h-px md:block" style={{ background: "repeating-linear-gradient(90deg, rgba(52,225,255,.5) 0 8px, transparent 8px 16px)" }} />
+            <div className="relative z-10 grid gap-px overflow-hidden rounded-xl border border-[rgba(234,242,255,.15)] bg-[rgba(234,242,255,.15)] sm:grid-cols-2 md:grid-cols-5">
+              {objects("journey.steps").map((step, index) => {
+                const Icon = journeyIcons[index];
+                return (
+                  <div key={step.title} className="flex flex-col items-center bg-[rgba(6,10,22,.9)] p-6 text-center">
+                    <span className="font-display text-[11px] font-bold tracking-[0.1em] text-[#34E1FF]">STEP 0{index + 1}</span>
+                    <span className="mt-3.5 flex h-16 w-16 items-center justify-center rounded-2xl border border-[rgba(52,225,255,.35)] bg-[rgba(52,225,255,.1)] text-[#34E1FF]">
+                      <Icon className="h-[30px] w-[30px]" />
+                    </span>
+                    <h3 className="mt-5 font-bold">{step.title}</h3>
+                    <p className="mt-2.5 text-xs leading-[1.7] text-[#9DAEC9]">{step.description}</p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
 
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-6xl px-4">
-          <div className="max-w-3xl">
+          <div className="max-w-[640px]">
             <SectionLabel>{t("outcomes.eyebrow")}</SectionLabel>
-            <h2 className="whitespace-pre-line text-3xl font-bold leading-tight sm:text-5xl">{t("outcomes.title")}</h2>
-            <p className="mt-6 text-lg leading-8 text-slate-600">{t("outcomes.description")}</p>
+            <h2 className="whitespace-pre-line text-3xl font-extrabold leading-[1.2] sm:text-5xl">{t("outcomes.title")}</h2>
+            <p className="mt-6 text-lg leading-[1.9] text-[#41506b]">{t("outcomes.description")}</p>
           </div>
-          <div className="mt-14 grid gap-5 md:grid-cols-3">
-            {objects("outcomes.items").map((item, index) => {
-              const Icon = outcomeIcons[index];
-              return <article key={item.title} className="overflow-hidden rounded-lg border border-slate-200 bg-white"><div className="relative aspect-[16/9] overflow-hidden"><img src={outcomeImages[index]} alt="" className="h-full w-full object-cover transition duration-500 hover:scale-[1.02]" /><div className="absolute inset-0 bg-gradient-to-t from-slate-950/45 to-transparent" /><Icon className="absolute bottom-4 left-4 h-6 w-6 text-white" /></div><div className="p-6"><p className="text-xs font-bold uppercase text-orange-700">{item.label}</p><h3 className="mt-2 text-xl font-bold">{item.title}</h3><p className="mt-3 text-sm leading-7 text-slate-600">{item.description}</p></div></article>;
-            })}
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
+            {objects("outcomes.items").map((item, index) => (
+              <article key={item.title} className="overflow-hidden rounded-2xl border border-[rgba(11,18,32,.1)] bg-white">
+                <div className="relative aspect-[16/9] overflow-hidden">
+                  <img src={outcomeImages[index]} alt="" className="h-full w-full object-cover transition duration-500 hover:scale-[1.02]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[rgba(6,10,22,.5)] to-transparent" />
+                </div>
+                <div className="p-6">
+                  <p className="font-display text-[11px] font-bold uppercase tracking-[0.15em] text-[#2D6BFF]">{item.label}</p>
+                  <h3 className="mt-2.5 text-xl font-bold">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-[1.8] text-[#41506b]">{item.description}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-slate-950 py-20 text-white sm:py-28">
-        <img src={governanceImage} alt="" className="absolute inset-0 h-full w-full object-cover object-center opacity-55" />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,6,23,.98)_0%,rgba(2,6,23,.88)_52%,rgba(2,6,23,.55)_100%)]" />
+      <section className="relative overflow-hidden bg-[#060A16] py-20 text-[#EAF2FF] sm:py-28">
+        <img src={governanceImage} alt="" className="absolute inset-0 h-full w-full object-cover object-center opacity-40" />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(100deg, rgba(6,10,22,.98) 0%, rgba(6,10,22,.9) 52%, rgba(6,10,22,.55) 100%)" }} />
         <div className="relative mx-auto max-w-6xl px-4">
           <div className="grid gap-12 lg:grid-cols-2">
             <div>
               <SectionLabel inverse>{t("governance.eyebrow")}</SectionLabel>
-              <h2 className="whitespace-pre-line text-3xl font-bold leading-tight sm:text-5xl">{t("governance.title")}</h2>
-              <p className="mt-6 text-lg leading-8 text-slate-300">{t("governance.description")}</p>
+              <h2 className="whitespace-pre-line text-3xl font-extrabold leading-[1.2] sm:text-5xl">{t("governance.title")}</h2>
+              <p className="mt-6 text-lg leading-[1.9] text-[#9DAEC9]">{t("governance.description")}</p>
             </div>
-            <div className="divide-y divide-white/15 border-y border-white/15 bg-slate-950/55 px-5 backdrop-blur-sm">
-              {objects("governance.items").map((item, index) => {
-                const Icon = governanceIcons[index];
-                return <div key={item.title} className="flex gap-4 py-6"><Icon className="mt-1 h-5 w-5 shrink-0 text-orange-300" /><div><h3 className="font-bold">{item.title}</h3><p className="mt-2 text-sm leading-6 text-slate-400">{item.description}</p></div></div>;
-              })}
+            <div className="divide-y divide-[rgba(234,242,255,.12)] border-y border-[rgba(234,242,255,.15)]">
+              {objects("governance.items").map((item) => (
+                <div key={item.title} className="flex gap-4 py-6">
+                  <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#34E1FF]" />
+                  <div>
+                    <h3 className="font-bold">{item.title}</h3>
+                    <p className="mt-2 text-sm leading-[1.7] text-[#8496b3]">{item.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -247,27 +341,45 @@ export default function AIGenOne() {
           <div className="grid gap-8 lg:grid-cols-[.7fr_1.3fr]">
             <div>
               <SectionLabel>{t("pricing.eyebrow")}</SectionLabel>
-              <h2 className="text-3xl font-bold sm:text-5xl">{t("pricing.title")}</h2>
-              <p className="mt-5 text-base leading-7 text-slate-600">{t("pricing.description")}</p>
+              <h2 className="text-3xl font-extrabold sm:text-4xl">{t("pricing.title")}</h2>
+              <p className="mt-5 text-base leading-7 text-[#41506b]">{t("pricing.description")}</p>
             </div>
-            <div className="overflow-hidden rounded-lg border border-slate-200">
-              {objects("pricing.plans").map((plan, index) => <div key={plan.name} className={`grid gap-3 border-b border-slate-200 p-5 last:border-b-0 sm:grid-cols-[1fr_1.6fr_auto] sm:items-center ${index === 1 ? "bg-orange-50" : "bg-white"}`}><div><p className="font-bold">{plan.name}</p><p className="mt-1 text-xs text-slate-500">{plan.target}</p></div><p className="text-sm leading-6 text-slate-600">{plan.features}</p><p className="whitespace-nowrap font-bold text-slate-900">{plan.price}</p></div>)}
+            <div className="overflow-hidden rounded-2xl border border-[rgba(11,18,32,.1)]">
+              {objects("pricing.plans").map((plan) => (
+                <div key={plan.name} className="grid gap-3 border-b border-[rgba(11,18,32,.1)] bg-white p-5 last:border-b-0 sm:grid-cols-[1fr_1.6fr_auto] sm:items-center">
+                  <div>
+                    <p className="font-bold">{plan.name}</p>
+                    <p className="mt-1 text-xs text-[#7488a8]">{plan.target}</p>
+                  </div>
+                  <p className="text-sm leading-[1.7] text-[#41506b]">{plan.features}</p>
+                  <p className="whitespace-nowrap font-bold text-[#0B1220]">{plan.price}</p>
+                </div>
+              ))}
             </div>
           </div>
-          <div className="mt-6 flex flex-col justify-between gap-4 border-t border-slate-200 pt-6 sm:flex-row sm:items-center"><p className="text-sm leading-6 text-slate-600">{t("pricing.note")}</p><Button variant="outline" className="rounded-md" asChild><a href={contactUrl}>{t("pricing.cta")}<ArrowRight className="ml-2 h-4 w-4" /></a></Button></div>
+          <div className="mt-6 flex flex-col justify-between gap-4 border-t border-[rgba(11,18,32,.1)] pt-6 sm:flex-row sm:items-center">
+            <p className="text-sm leading-6 text-[#41506b]">{t("pricing.note")}</p>
+            <Button variant="outline" className="rounded-lg border-[rgba(11,18,32,.2)]" asChild>
+              <a href={contactUrl}>{t("pricing.cta")}<ArrowRight className="ml-2 h-4 w-4" /></a>
+            </Button>
+          </div>
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-orange-500 py-20 text-slate-950 sm:py-24">
-        <div className="absolute right-0 top-0 h-full w-1/3 bg-orange-400/40" />
+      <section className="relative overflow-hidden bg-[#060A16] py-20 text-[#EAF2FF] sm:py-24">
+        <div className="absolute right-0 top-0 h-full w-1/3" style={{ background: "radial-gradient(circle at 70% 30%, rgba(52,225,255,.25), transparent 70%)" }} />
         <div className="relative mx-auto max-w-6xl px-4">
-          <div className="max-w-4xl">
-            <p className="mb-5 text-xs font-bold uppercase tracking-[0.18em]">{t("cta.eyebrow")}</p>
-            <h2 className="whitespace-pre-line text-3xl font-bold leading-tight sm:text-5xl">{t("cta.title")}</h2>
-            <p className="mt-6 max-w-2xl text-lg font-medium leading-8 text-slate-900/75">{t("cta.description")}</p>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Button size="lg" className="h-12 rounded-md bg-slate-950 px-6 text-white hover:bg-slate-800" asChild><a href={contactUrl}>{t("cta.primary")}<ArrowRight className="ml-2 h-4 w-4" /></a></Button>
-              <Button size="lg" variant="outline" className="h-12 rounded-md border-slate-950/30 bg-transparent px-6 text-slate-950 hover:bg-white" asChild><a href={demoUrl} target="_blank" rel="noreferrer">{t("cta.secondary")}<WandSparkles className="ml-2 h-4 w-4" /></a></Button>
+          <div className="max-w-[760px]">
+            <SectionLabel inverse>{t("cta.eyebrow")}</SectionLabel>
+            <h2 className="whitespace-pre-line text-3xl font-extrabold leading-[1.2] sm:text-5xl">{t("cta.title")}</h2>
+            <p className="mt-6 max-w-2xl text-lg leading-[1.9] text-[#9DAEC9]">{t("cta.description")}</p>
+            <div className="mt-9 flex flex-col gap-3.5 sm:flex-row">
+              <Button size="lg" className="h-12 rounded-lg bg-[#34E1FF] px-7 text-[#060A16] hover:bg-[#34E1FF]/90" asChild>
+                <a href={contactUrl}>{t("cta.primary")}<ArrowRight className="ml-2 h-4 w-4" /></a>
+              </Button>
+              <Button size="lg" variant="outline" className="h-12 rounded-lg border-white/30 bg-transparent px-7 text-[#EAF2FF] hover:bg-white/10" asChild>
+                <a href={demoUrl} target="_blank" rel="noreferrer">{t("cta.secondary")}<WandSparkles className="ml-2 h-4 w-4" /></a>
+              </Button>
             </div>
           </div>
         </div>

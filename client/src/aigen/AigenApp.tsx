@@ -17,30 +17,24 @@ function AigenHeader() {
   const contactUrl = `${mainSiteUrl}/${locale}/contact`;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
+    <header className="sticky top-0 z-50 border-b border-[rgba(11,18,32,.08)] bg-[rgba(238,242,248,.85)] backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4">
-        <a href={`/${locale}`} className="flex min-w-0 items-center gap-3" aria-label="AiGen-One">
-          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-slate-950 text-sm font-bold text-white">
-            A1
-          </span>
-          <span className="min-w-0">
-            <span className="block text-base font-bold leading-tight text-slate-950">AiGen-One</span>
-            <span className="hidden text-xs font-medium text-slate-500 sm:block">FDE × AI Business Platform</span>
-          </span>
+        <a href={`/${locale}`} className="flex min-w-0 items-center font-display text-lg font-bold tracking-[-0.02em] text-[#0B1220]" aria-label="AiGen-One">
+          AiGen<span className="text-[#2D6BFF]">-</span>One
         </a>
 
-        <nav className="hidden items-center gap-6 text-sm font-medium text-slate-600 md:flex">
-          <a href="#fde" className="hover:text-slate-950">{t("nav.fde")}</a>
-          <a href="#platform" className="hover:text-slate-950">{t("nav.platform")}</a>
-          <a href="#pricing" className="hover:text-slate-950">{t("nav.pricing")}</a>
-          <a href={demoUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 hover:text-slate-950">
+        <nav className="hidden items-center gap-8 text-sm font-medium text-[#41506b] md:flex">
+          <a href="#fde" className="hover:text-[#0B1220]">{t("nav.fde")}</a>
+          <a href="#platform" className="hover:text-[#0B1220]">{t("nav.platform")}</a>
+          <a href="#pricing" className="hover:text-[#0B1220]">{t("nav.pricing")}</a>
+          <a href={demoUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 hover:text-[#0B1220]">
             {t("nav.demo")}
             <ExternalLink className="h-3.5 w-3.5" />
           </a>
         </nav>
 
         <div className="flex items-center gap-2">
-          <div className="flex rounded-md border border-slate-200 p-1">
+          <div className="flex rounded-lg border border-[rgba(11,18,32,.1)] p-1">
             {locales.map((item) => (
               <a
                 key={item}
@@ -48,15 +42,15 @@ function AigenHeader() {
                 aria-label={localeNames[item]}
                 className={`rounded px-1.5 py-1 text-[11px] font-semibold transition-colors sm:px-2 sm:text-xs ${
                   locale === item
-                    ? "bg-slate-950 text-white"
-                    : "text-slate-600 hover:bg-slate-100 hover:text-slate-950"
+                    ? "bg-[#060A16] text-white"
+                    : "text-[#41506b] hover:bg-black/5 hover:text-[#0B1220]"
                 }`}
               >
                 {item.toUpperCase()}
               </a>
             ))}
           </div>
-          <Button className="hidden bg-primary text-white hover:bg-primary/90 sm:inline-flex" asChild>
+          <Button className="hidden rounded-lg bg-[#060A16] text-[#EAF2FF] hover:bg-[#060A16]/90 sm:inline-flex" asChild>
             <a href={contactUrl}>
               {t("hero.primaryCta")}
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -74,19 +68,19 @@ function AigenFooter() {
   const contactUrl = `${mainSiteUrl}/${locale}/contact`;
 
   return (
-    <footer className="border-t border-slate-800 bg-slate-950 text-white">
+    <footer className="border-t border-[rgba(234,242,255,.15)] bg-[#060A16] text-[#EAF2FF]">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-10 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p className="text-lg font-bold">AiGen-One</p>
-          <p className="mt-2 max-w-md text-sm leading-relaxed text-slate-400">
+          <p className="font-display text-lg font-bold">AiGen-One</p>
+          <p className="mt-2 max-w-md text-sm leading-relaxed text-[#7488a8]">
             {t("footer.description")}
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-4 text-sm">
-          <a href={contactUrl} className="font-semibold text-white hover:text-orange-200">
+          <a href={contactUrl} className="font-semibold text-[#EAF2FF] hover:text-[#34E1FF]">
             Contact
           </a>
-          <a href={mainSiteUrl} className="text-slate-400 hover:text-white">
+          <a href={mainSiteUrl} className="text-[#7488a8] hover:text-[#EAF2FF]">
             D&apos;auchy.Studio
           </a>
         </div>
@@ -111,7 +105,7 @@ export default function AigenApp() {
 
   return (
     <ThemeProvider defaultTheme="light">
-      <div className="min-h-screen bg-background text-foreground">
+      <div className="min-h-screen bg-background text-foreground" style={{ fontFamily: '"Noto Sans JP", Inter, sans-serif' }}>
         <AigenHeader />
         <main>
           <AIGenOne />
