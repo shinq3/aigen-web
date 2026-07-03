@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useLocale } from "@/lib/i18n-utils";
 import heroImage from "@assets/generated_images/AIGenOne_FDE_workshop_v2.jpg";
 import builderImage from "@assets/generated_images/AIGenOne_talk_to_system.jpg";
+import builderChatImage from "@assets/generated_images/AIGenOne_builder_chat_actual.jpg";
 import dashboardImage from "@assets/generated_images/AIGenOne_dashboard_actual_v2.png";
 import fieldDiscoveryImage from "@assets/generated_images/AIGenOne_FDE_field_discovery_v2.jpg";
 import teamAdoptionImage from "@assets/generated_images/AIGenOne_team_adoption_v2.jpg";
@@ -229,12 +230,17 @@ export default function AIGenOne() {
       <section id="build" className="scroll-mt-16 py-20 sm:py-28">
         <div className="mx-auto max-w-6xl px-4">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <div className="relative overflow-hidden rounded-2xl bg-[#060A16]">
-              <img src={builderImage} alt="" className="aspect-[4/3] h-full w-full object-cover opacity-85" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#060A16] via-[#060A16]/10 to-transparent" />
-              <div className="absolute inset-x-5 bottom-5 rounded-[10px] border border-[rgba(234,242,255,.15)] bg-[rgba(6,10,22,.9)] p-4 text-[#EAF2FF] sm:inset-x-6 sm:bottom-6">
-                <p className="text-sm font-medium leading-[1.7]">{t("build.prompt")}</p>
-              </div>
+            <div>
+              <figure className="overflow-hidden rounded-2xl border border-[rgba(234,242,255,.15)] bg-[#0A1120] shadow-2xl">
+                <div className="flex h-11 items-center gap-2.5 border-b border-[rgba(234,242,255,.15)] px-4">
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#34E1FF]" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#2b3854]" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#2b3854]" />
+                  <span className="ml-2.5 font-display text-[10px] font-bold text-[#7488a8]">AiGen-One / Builder Chat</span>
+                </div>
+                <img src={builderChatImage} alt="" className="block h-auto w-full" />
+              </figure>
+              <p className="mt-4 rounded-[10px] border border-[rgba(11,18,32,.1)] bg-white p-4 text-sm font-medium leading-[1.7] text-[#41506b]">{t("build.prompt")}</p>
             </div>
             <div>
               <SectionLabel>{t("build.eyebrow")}</SectionLabel>
