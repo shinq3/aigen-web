@@ -1,367 +1,115 @@
 {
   "meta": {
-    "title": "AiGen-One - AI業務ポータル | D'auchy.Studio",
-    "description": "話すだけで業務システムを作り、AI機能を社内ポータルから配布・管理できるAI業務プラットフォーム。"
+    "title": "AiGen-One | FDEとつくるAI業務プラットフォーム",
+    "description": "専門FDEが現場業務を理解し、Skills・Agents・業務アプリとして設計・実装。AI導入から現場定着、継続改善まで支援します。"
+  },
+  "nav": {
+    "platform": "プラットフォーム",
+    "fde": "FDE支援",
+    "pricing": "料金",
+    "demo": "デモ"
   },
   "hero": {
-    "badge": "AI業務ポータル",
-    "eyebrow": "FROM AI TOOLS TO AI OPERATIONS",
-    "productName": "AiGen-One",
-    "title": "AIツールを配る時代から\nAI業務を配る時代へ",
-    "subtitle": "話すだけで業務システムを作る",
-    "description": "AiGen-Oneは、議事録、提案資料作成、社内資料検索、多言語チャットなどのAI業務機能を、社内ポータルからすぐ使える形で導入します。AIツールを学ばせるのではなく、業務そのものにAIを組み込みます。",
-    "proofs": ["プリセットAI機能をすぐ導入", "現場の言葉から業務システム化", "権限・ログ・更新を会社で管理"],
-    "buttons": {
-      "contact": "相談する",
-      "demo": "デモを見る"
-    },
-    "mockupLabel": "業務AIをポータルに配置"
+    "eyebrow": "FDE × AI BUSINESS PLATFORM",
+    "title": "現場の業務を、\n使われるAI\nシステムへ。",
+    "description": "専門FDEが現場に入り、業務と課題を理解。AiGen-One上でSkills・Agents・業務アプリを設計し、導入から定着、改善まで伴走します。",
+    "primaryCta": "FDEに業務を相談する",
+    "secondaryCta": "AiGen-Oneを見る",
+    "proofs": ["業務理解から設計・実装まで伴走", "Skills・Agents・業務アプリを統合", "権限・承認・監査まで企業向けに管理"]
   },
-  "concept": {
-    "eyebrow": "WHAT AIGEN-ONE DOES",
-    "title": "AI業務は、作って、追加して、\nすぐ使える。",
-    "description": "現場の言葉から業務システムを作り、必要なAIアプリをプラグインで追加。社員はひとつのポータルから日常業務として使えます。",
+  "fde": {
+    "eyebrow": "FORWARD DEPLOYED ENGINEERING",
+    "title": "AIを入れる前に、\n業務を深く理解する。",
+    "description": "ツールを渡すだけでは、現場の仕事は変わりません。FDEは担当者と同じ目線で業務を見て、判断基準、データ、例外、承認の流れまで整理します。",
+    "note": "Forward Deployed Engineer（FDE）は、現場に入り込んで課題を発見し、使われるシステムになるまで実装と改善を担うAI導入の専門エンジニアです。",
+    "photoCaption": "会議室だけでなく、実際の仕事が行われる場所で業務の流れと判断を理解します。",
     "steps": [
-      {
-        "label": "話すだけで作れる",
-        "title": "話すだけで、AI業務システムができる。",
-        "description": "作りたい業務や困りごとを普段の言葉で伝えるだけ。AiGen-Oneが項目、画面、ワークフロー、AI支援を整理して形にします。",
-        "exampleTitle": "たとえば",
-        "example": "商談メモから提案書を作りたい。問い合わせを一覧で管理したい。社内資料を検索したい。",
-        "response": "必要な画面と項目を整理します。"
-      },
-      {
-        "label": "プラグインで増やせる",
-        "title": "プラグインで、AIアプリをすぐ追加できる。",
-        "description": "議事録、提案資料作成、ファイル検索、多言語チャットなど、よく使うAI業務をアプリのように追加できます。"
-      },
-      {
-        "label": "社員がそのまま使える",
-        "title": "作ったAI業務を、ポータルから使う。",
-        "description": "作成した業務システムと追加したAIアプリは、AiGen-Oneのポータルに集約。社員はAIツール名を覚えなくても、日常業務として使えます。",
-        "portalLabel": "業務システムとAIアプリを一か所に",
-        "items": ["問い合わせ管理", "議事録作成", "提案資料作成", "社内資料検索"]
-      }
+      {"title": "業務を理解する", "description": "ヒアリングと現場観察から、属人化した判断や手作業、既存システムとのつながりを把握します。"},
+      {"title": "最適な形を設計する", "description": "単一の能力はSkill、複数工程はAgent、画面とデータが必要な業務はアプリとして設計します。"},
+      {"title": "現場で定着させる", "description": "権限や承認を整えて導入し、利用状況と現場の声を見ながら継続的に改善します。"}
     ]
   },
-  "problem": {
-    "eyebrow": "いま企業で起きていること",
-    "title": "AIは増えた。\nでも、業務はまだ分断されている。",
-    "description": "ChatGPT、Gemini、NotebookLM、Claude、Copilot。便利なAIツールは増えましたが、現場ではツールの使い分け、転記、整理、共有を人間が担い続けています。",
-    "items": [
-      {
-        "title": "使い方が社員ごとにバラバラ",
-        "description": "プロンプト、設定、便利な使い方が属人化し、チームや会社の資産になりにくい。"
-      },
-      {
-        "title": "AIの結果を業務に戻す作業が残る",
-        "description": "要約や資料作成は速くなっても、最後は人が業務システムへ転記・整理している。"
-      },
-      {
-        "title": "社内データや権限とつながらない",
-        "description": "誰がどの情報を見られるか、どのファイルを参照したかを会社として管理しづらい。"
-      },
-      {
-        "title": "新機能の学び直しが続く",
-        "description": "AIモデルやツールが進化するたび、現場が新しい使い方を覚え直す必要がある。"
-      }
-    ]
-  },
-  "values": {
-    "eyebrow": "AiGen-Oneの考え方",
-    "title": "AiGen-Oneは、AI業務を作り、\n配り、運用する仕組みです。",
-    "description": "AiGen-OneはAIの使い方を教えるサービスではありません。\n業務に合わせたAI機能と業務システムを、会社が作り、配り、運用するための仕組みです。",
-    "items": [
-      {
-        "title": "話すだけで業務システムを作る",
-        "description": "現場ユーザーが困りごとを話すと、AIが必要な項目や権限を聞き返し、画面・データ・ワークフローに変換します。"
-      },
-      {
-        "title": "AI機能をプラグインで追加する",
-        "description": "議事録、提案資料作成、ファイルRAG、多言語チャットなど、よく使う業務AIをポータルに追加できます。"
-      },
-      {
-        "title": "会社として配布・更新・管理する",
-        "description": "部署や役職ごとの公開範囲、利用ログ、バージョン、プロンプトやモデル更新を管理できます。"
-      }
-    ]
-  },
-  "flow": {
-    "eyebrow": "利用イメージ",
-    "title": "現場の言葉を、\n業務システムの形へ。",
-    "description": "要件定義書や設計書を書く必要はありません。AiGen-Oneが対話しながら、業務の入力、出力、参照ファイル、権限、通知、AI支援の要否を整理します。",
-    "steps": [
-      {
-        "number": "Step 1",
-        "title": "業務の困りごとを話す",
-        "description": "問い合わせをExcelから移行したい、商談メモから提案書を作りたい、社内資料を検索したいなど、普段の言葉で相談します。"
-      },
-      {
-        "number": "Step 2",
-        "title": "AIが必要な要件を聞く",
-        "description": "誰が使うのか、どんな項目が必要か、承認や通知はあるか、どのファイルを参照するかを確認します。"
-      },
-      {
-        "number": "Step 3",
-        "title": "業務システムやAI機能を生成",
-        "description": "一覧、入力フォーム、詳細画面、検索、要約、資料生成、AI回答支援などを業務に合わせて作ります。"
-      },
-      {
-        "number": "Step 4",
-        "title": "社内ポータルに配置して使う",
-        "description": "作った機能はAiGen-Oneの業務メニューに配置。社員はAIツール名やモデル名を意識せず利用できます。"
-      }
-    ]
-  },
-  "marketplace": {
-    "eyebrow": "Plugin Marketplace",
-    "title": "よく使うAI業務は、\nプラグインとして追加。",
-    "description": "すべてのユーザーがゼロから業務システムを作る必要はありません。よく使われるAI業務機能をマーケットからインストールし、管理者が社内に配布できます。",
-    "noteTitle": "プリセットAI機能から、すぐに業務へ",
-    "note": "議事録、提案資料作成、ファイル検索、多言語チャットなど、基幹DB連携がなくても効果を出しやすい機能は即導入可能。既存システムを改修せず、AI業務の入口をすばやく作れます。"
-  },
-  "plugins": {
-    "items": [
-      {
-        "category": "Meeting",
-        "title": "議事録プラグイン",
-        "description": "会議音声、文字起こし、メモから、要点、決定事項、TODO、担当者、期限を整理します。"
-      },
-      {
-        "category": "Sales",
-        "title": "メモから提案資料作成",
-        "description": "商談メモやヒアリング内容から、顧客課題、提案方針、構成案、スライド原稿を作成します。"
-      },
-      {
-        "category": "Knowledge",
-        "title": "ファイル共有RAG",
-        "description": "PDF、Word、Excel、PowerPointを横断検索し、根拠付きで回答します。"
-      },
-      {
-        "category": "Global",
-        "title": "多言語同時通訳チャット",
-        "description": "異なる言語を使うメンバー同士が、チャット上で自然にコミュニケーションできます。"
-      },
-      {
-        "category": "Agent",
-        "title": "Skills・エージェント",
-        "description": "複数ステップの業務を実行するAIエージェントを、将来的にマーケットへ追加できます。"
-      }
-    ]
-  },
-  "architecture": {
-    "eyebrow": "Technical Structure",
-    "title": "AIモデルではなく、\n業務として使える形を提供する。",
-    "description": "AiGen-Oneは、AIモデル、プロンプト、RAG、ファイル処理、画面生成、権限管理、ログ管理を組み合わせ、業務AIとして運用できる形にします。",
+  "platform": {
+    "eyebrow": "ONE PLATFORM FOR WORK & AI",
+    "title": "業務とAIを、\nひとつの仕事場に。",
+    "description": "日々の仕事を始めるDashboardから、AIへの相談、専門能力、業務実行、独自システムまで。同じ組織・権限・データ・承認の基盤でつながります。",
     "layers": [
-      {
-        "title": "ポータルUI",
-        "description": "業務メニュー、チャット、生成された業務画面をひとつの入口に集約。"
-      },
-      {
-        "title": "業務アプリ生成",
-        "description": "要件ヒアリング、画面設計、データ設計、ワークフロー設計を支援。"
-      },
-      {
-        "title": "AI実行",
-        "description": "LLM、RAG、要約、翻訳、資料生成、エージェント実行を機能単位で制御。"
-      },
-      {
-        "title": "データ基盤",
-        "description": "アップロードファイル、共有資料、業務データ、ベクトル検索、参照元を管理。"
-      },
-      {
-        "title": "管理レイヤー",
-        "description": "ユーザー、権限、プラグイン、利用ログ、バージョンを管理。"
-      }
+      {"title": "Dashboard", "description": "予定、通知、承認、プロジェクト、よく使う業務を一画面に集約。"},
+      {"title": "AiGen Chat", "description": "社内ナレッジと業務データを理解し、相談から実行まで支援。"},
+      {"title": "Skills", "description": "翻訳、資料作成、分析など、再利用できる専門能力。"},
+      {"title": "Agents", "description": "Skills・API・MCPを組み合わせ、確認を挟みながら業務を実行。"},
+      {"title": "業務アプリ", "description": "画面、データ、ワークフローが必要な固有業務をシステム化。"}
     ]
   },
-  "useCases": {
-    "eyebrow": "Use Cases",
-    "title": "部署ごとに、すぐ使えるAI業務へ。",
-    "description": "基幹システム連携を待たず、小さく始めて効果を確認しながら全社展開できます。",
+  "build": {
+    "eyebrow": "BUILD BY CONVERSATION",
+    "title": "導入後は、現場も\n話しながら育てられる。",
+    "description": "FDEが基盤を整えた後は、現場の管理者や担当者もAIとの対話から機能を追加できます。専門知識ではなく、普段の業務の言葉が開発の入口です。",
+    "prompt": "商談メモから提案書を作り、上長確認後に案件へ保存する仕組みにしたい。",
+    "outputs": [
+      {"title": "Skill Creator", "description": "業務の判断基準や出力形式を、AI Chatから呼び出せる専門能力にします。"},
+      {"title": "Agent Creator", "description": "複数のSkillや外部サービスを、実行順序と人の確認を含む業務フローにします。"},
+      {"title": "業務アプリ生成", "description": "一覧、入力、検索、承認など、画面とデータを持つシステムを会話から作ります。"}
+    ]
+  },
+  "journey": {
+    "eyebrow": "FROM DISCOVERY TO ADOPTION",
+    "title": "作って終わらない。\n現場で育て続ける。",
+    "description": "業務理解、設計、実装、展開、改善を分断しません。FDEとAiGen-Oneが同じサイクルを回し、AIを一時的な実証実験で終わらせません。",
+    "steps": [
+      {"title": "業務を聞く", "description": "困りごとと理想の仕事の流れを共有。"},
+      {"title": "業務を分解", "description": "判断、データ、例外、承認を整理。"},
+      {"title": "設計・実装", "description": "Skill・Agent・アプリへ落とし込む。"},
+      {"title": "現場へ展開", "description": "Dashboardから迷わず使える状態に。"},
+      {"title": "継続改善", "description": "利用状況と現場の声から育てる。"}
+    ]
+  },
+  "outcomes": {
+    "eyebrow": "WHAT TEAMS CAN BUILD",
+    "title": "会社ごとの仕事に、\n会社専用のAIシステムを。",
+    "description": "汎用AIの使い方を覚えるのではなく、いつもの業務そのものをAI化・システム化します。",
     "items": [
-      {
-        "title": "営業",
-        "points": ["商談メモから提案書作成", "過去提案資料の検索", "営業日報の要約"]
-      },
-      {
-        "title": "管理部門",
-        "points": ["社内規程の検索", "稟議文の下書き", "契約書チェック補助"]
-      },
-      {
-        "title": "人事",
-        "points": ["面接メモの要約", "求人票作成", "評価コメント整理"]
-      },
-      {
-        "title": "サポート",
-        "points": ["問い合わせ分類", "回答案作成", "FAQ改善案作成"]
-      },
-      {
-        "title": "グローバル業務",
-        "points": ["多言語チャット", "海外拠点との会議要約", "翻訳付き資料共有"]
-      }
-    ]
-  },
-  "roadmap": {
-    "eyebrow": "導入ステップ",
-    "title": "小さく始めて、\nAI業務基盤へ育てる。",
-    "description": "まずは既存システム改修なしで使えるAI業務から始め、現場業務のシステム化、社内ポータル化、エージェント化へ段階的に拡張します。",
-    "phases": [
-      {
-        "label": "Phase 1",
-        "title": "すぐ使えるAI業務プラグイン",
-        "description": "議事録、提案資料作成、ファイル共有RAG、多言語チャットなどから導入します。"
-      },
-      {
-        "label": "Phase 2",
-        "title": "現場業務のシステム化",
-        "description": "問い合わせ管理、日報管理、タスク管理、チェックリスト管理などを会話から作成します。"
-      },
-      {
-        "label": "Phase 3",
-        "title": "社内ポータル化",
-        "description": "作成した業務システムやプラグインを、部署別・役職別の業務メニューとして整理します。"
-      },
-      {
-        "label": "Phase 4",
-        "title": "エージェント化",
-        "description": "単発のAI機能だけでなく、複数ステップの業務を実行するAIエージェントを追加します。"
-      },
-      {
-        "label": "Phase 5",
-        "title": "外部マーケット化",
-        "description": "外部開発者やパートナーが、プラグインやエージェントを公開できるマーケットへ拡張します。"
-      }
+      {"label": "Sales", "title": "提案・案件業務", "description": "商談メモから提案資料を作成し、案件情報へ保存。進捗と次の対応をDashboardで共有します。"},
+      {"label": "Operations", "title": "判断・承認業務", "description": "社内基準をSkill化し、Agentが確認と承認を挟みながら定型業務を進めます。"},
+      {"label": "Knowledge", "title": "社内データ活用", "description": "規程、議事録、業務DBを横断し、権限に沿って回答・集計・資料化します。"}
     ]
   },
   "governance": {
-    "eyebrow": "Security & Operations",
-    "title": "便利さだけでなく、\n管理できることを前提に。",
-    "description": "業務AIでは、誰がどの情報を見て、何を生成し、どの機能を使ったかを追えることが重要です。AiGen-Oneは会社としてAI活用を管理できる形を前提に設計します。",
+    "eyebrow": "ENTERPRISE GOVERNANCE",
+    "title": "自由に作れる。\n会社として管理できる。",
+    "description": "AIが便利であることと、企業が安全に運用できることを両立。FDEが既存ルールに合わせて導入設計します。",
     "items": [
-      {
-        "title": "見られない情報はAIにも見せない",
-        "description": "部署、役職、ユーザーごとに参照できるファイルや機能の範囲を制御します。"
-      },
-      {
-        "title": "回答根拠を機能単位で管理",
-        "description": "RAGでどのファイルを参照するか、根拠をどう表示するかを業務機能ごとに設定します。"
-      },
-      {
-        "title": "利用ログを追跡",
-        "description": "誰が、いつ、どの機能で、どの情報を参照したかを管理者が確認できます。"
-      },
-      {
-        "title": "プラグインをバージョン管理",
-        "description": "プロンプト、モデル設定、画面、処理ロジックを一元的に更新できます。"
-      }
+      {"title": "組織・権限・承認", "description": "部署や役割に応じて、使えるデータ、Skill、Agent、アプリを制御します。"},
+      {"title": "監査・利用状況", "description": "誰が何を使い、何を生成・実行したかを記録し、改善にも活用します。"},
+      {"title": "既存システム連携", "description": "API、MCP、Google Workspace、Gitなどと接続し、現在の業務資産を活かします。"}
     ]
   },
   "pricing": {
-    "eyebrow": "Pricing",
+    "eyebrow": "PLANS",
     "title": "料金プラン",
-    "description": "AiGen-Oneは、業務アプリを使う人、AIを活用する人、アプリを作る人、組織を管理する人に合わせて、必要な機能だけを選べる料金体系です。",
-    "tableHeaders": {
-      "plan": "プラン",
-      "monthly": "月額",
-      "target": "主な対象",
-      "features": "主な機能"
-    },
+    "description": "利用する機能と役割に応じて構成します。FDEによる業務設計・導入支援は、対象業務と連携範囲を確認して個別にご提案します。",
     "plans": [
-      {
-        "plan": "業務ユーザー",
-        "monthly": "800円 / 人",
-        "target": "業務アプリを利用するスタッフ",
-        "features": "業務メニュー利用、本番公開済みアプリの利用、入力・検索・編集・確認"
-      },
-      {
-        "plan": "AIユーザー",
-        "monthly": "2,800円 / 人",
-        "target": "AIで調べる・相談するスタッフ",
-        "features": "業務ユーザー機能、AiGen-One Chat、一般LLMチャット機能、社内ナレッジ検索、業務データ問い合わせ、操作案内、MCP Access"
-      },
-      {
-        "plan": "Workspaceユーザー",
-        "monthly": "5,800円 / 人",
-        "target": "業務アプリを作成・改善する担当者",
-        "features": "AIユーザー機能、アプリ生成、既存アプリを元にした改修、プレビュー確認、チャットによるリファイン、共有申請"
-      },
-      {
-        "plan": "組織管理者",
-        "monthly": "6,800円 / 人",
-        "target": "部門管理者・業務責任者",
-        "features": "AIユーザー機能、アプリ生成、スタッフ管理、権限管理、利用上限管理、共有承認、業務メニュー管理"
-      },
-      {
-        "plan": "システム管理者",
-        "monthly": "基本料込み / 追加課金",
-        "target": "情報システム・全体管理者",
-        "features": "組織管理、DB接続、外部連携、Git / API / MCP / OAuth管理、本番反映、プラグイン管理、セキュリティ、監査ログ"
-      }
+      {"name": "業務ユーザー", "target": "業務アプリを使う方", "features": "Dashboard、公開済み業務アプリの利用", "price": "800円 / 人月"},
+      {"name": "AIユーザー", "target": "AIを業務で使う方", "features": "業務ユーザー機能、AiGen Chat、Knowledge、Skills、Agents", "price": "2,800円 / 人月"},
+      {"name": "Workspaceユーザー", "target": "業務を作る・改善する方", "features": "AIユーザー機能、Skill・Agent・業務アプリの作成と改善", "price": "5,800円 / 人月"},
+      {"name": "組織管理者", "target": "導入・運用を管理する方", "features": "権限、承認、利用上限、業務メニュー、連携管理", "price": "6,800円 / 人月"}
     ],
-    "aiUserTitle": "AIユーザーに含まれるもの",
-    "aiUserDescription": "AiGen-One Chat は、一般的なLLMチャットとしての文章作成・要約・相談に加え、社内ナレッジ検索、業務データ問い合わせ、操作案内、アプリ生成支援まで行える業務専用AIです。さらに MCP Access により、Claude / Codex など現在利用中のMCP対応LLMチャットからも、AiGen-Oneの社内ナレッジ・業務データ・アプリ生成機能を安全に利用できます。",
-    "aiUserQuote": "使い慣れたAIはそのまま。業務データと社内ナレッジはAiGen-Oneで安全に接続。",
-    "baseTitle": "基本料金",
-    "baseFees": [
-      {
-        "item": "初期導入費",
-        "price": "50万〜150万円"
-      },
-      {
-        "item": "プラットフォーム基本料",
-        "price": "15万円 / 月"
-      },
-      {
-        "item": "プラグイン利用料",
-        "price": "3万〜15万円 / 月 / 本"
-      },
-      {
-        "item": "業界特化プラグインセット",
-        "price": "20万〜50万円 / 月"
-      }
-    ],
-    "policyTitle": "プランの考え方",
-    "notes": [
-      "業務アプリを使うだけのスタッフは低コストに。",
-      "AI活用、アプリ生成、組織管理、プラグイン導入は必要な分だけ追加できます。",
-      "小規模組織では、組織管理者がアプリ生成まで担当できます。",
-      "大規模組織では、Workspaceユーザーと組織管理者を分けて、安全に開発・承認・運用できます。"
-    ]
+    "note": "別途、プラットフォーム基本料、初期導入・FDE支援、個別開発費が発生します。",
+    "cta": "料金と導入範囲を相談する"
   },
   "advisor": {
-    "title": "Aigen Advisor",
-    "subtitle": "製品・導入・技術について相談",
-    "open": "Aigenに相談",
-    "close": "閉じる",
-    "fullscreen": "全画面で表示",
-    "exitFullscreen": "全画面表示を終了",
-    "reset": "新しい会話",
-    "welcome": "Aigen Oneで何ができるか、導入方法、Claudeとの違い、技術構成まで何でも質問してください。",
-    "tryAsking": "例えば",
-    "suggestions": [
-      "Aigen Oneは何が便利なの？",
-      "Claudeでアプリを作るのと何が違う？",
-      "なぜプロジェクト単位で管理するの？"
-    ],
-    "placeholder": "Aigen Oneについて質問する",
-    "send": "送信",
-    "error": "回答を取得できませんでした。少し時間を置いて再度お試しください。",
-    "disclaimer": "公開されている製品情報をもとに回答します",
-    "basedOn": "Aigen One製品情報 {count}件を参照",
-    "status": {
-      "connecting": "製品情報を確認しています",
-      "answering": "回答を作成しています"
-    }
+    "title": "Aigen Advisor", "subtitle": "製品・導入・技術について相談", "open": "Aigenに相談", "close": "閉じる", "fullscreen": "全画面で表示", "exitFullscreen": "全画面表示を終了", "reset": "新しい会話",
+    "welcome": "AiGen-Oneで何ができるか、FDEによる導入支援、Skills・Agents・業務アプリについて何でも質問してください。", "tryAsking": "例えば",
+    "suggestions": ["FDEは何をしてくれるの？", "SkillとAgentと業務アプリの違いは？", "現場へのAI導入はどう進める？"],
+    "placeholder": "AiGen-Oneについて質問する", "send": "送信", "error": "回答を取得できませんでした。少し時間を置いて再度お試しください。", "disclaimer": "公開されている製品情報をもとに回答します", "basedOn": "AiGen-One製品情報 {count}件を参照",
+    "status": {"connecting": "製品情報を確認しています", "answering": "回答を作成しています"}
   },
   "cta": {
-    "badge": "AI業務を会社の基盤へ",
-    "title": "AIツールを増やす前に、\n業務にAIを組み込みませんか。",
-    "description": "AiGen-Oneは、現場の言葉から業務システムを作り、AI機能を社内に配り、AIの進化を業務価値に変えるプラットフォームです。",
-    "buttons": {
-      "contact": "導入について相談する",
-      "demo": "オンラインデモを見る"
-    }
-  }
+    "eyebrow": "START WITH YOUR WORK",
+    "title": "まず、いまの業務を\n聞かせてください。",
+    "description": "AIで何をするかが決まっていなくても構いません。FDEが業務と課題を一緒に整理し、最初に作るべき仕組みをご提案します。",
+    "primary": "FDEに相談する",
+    "secondary": "デモを見る"
+  },
+  "footer": {"description": "FDEとつくる、企業向けAI業務プラットフォーム。"}
 }

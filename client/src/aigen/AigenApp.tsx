@@ -17,7 +17,7 @@ function AigenHeader() {
   const contactUrl = `${mainSiteUrl}/${locale}/contact`;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/92 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4">
         <a href={`/${locale}`} className="flex min-w-0 items-center gap-3" aria-label="AiGen-One">
           <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-slate-950 text-sm font-bold text-white">
@@ -25,26 +25,28 @@ function AigenHeader() {
           </span>
           <span className="min-w-0">
             <span className="block text-base font-bold leading-tight text-slate-950">AiGen-One</span>
-            <span className="hidden text-xs font-medium text-slate-500 sm:block">AI Business Portal</span>
+            <span className="hidden text-xs font-medium text-slate-500 sm:block">FDE × AI Business Platform</span>
           </span>
         </a>
 
         <nav className="hidden items-center gap-6 text-sm font-medium text-slate-600 md:flex">
-          <a href="#pricing" className="hover:text-slate-950">Pricing</a>
+          <a href="#fde" className="hover:text-slate-950">{t("nav.fde")}</a>
+          <a href="#platform" className="hover:text-slate-950">{t("nav.platform")}</a>
+          <a href="#pricing" className="hover:text-slate-950">{t("nav.pricing")}</a>
           <a href={demoUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 hover:text-slate-950">
-            Demo
+            {t("nav.demo")}
             <ExternalLink className="h-3.5 w-3.5" />
           </a>
         </nav>
 
         <div className="flex items-center gap-2">
-          <div className="hidden rounded-md border border-slate-200 p-1 sm:flex">
+          <div className="flex rounded-md border border-slate-200 p-1">
             {locales.map((item) => (
               <a
                 key={item}
                 href={`/${item}`}
                 aria-label={localeNames[item]}
-                className={`rounded px-2 py-1 text-xs font-semibold transition-colors ${
+                className={`rounded px-1.5 py-1 text-[11px] font-semibold transition-colors sm:px-2 sm:text-xs ${
                   locale === item
                     ? "bg-slate-950 text-white"
                     : "text-slate-600 hover:bg-slate-100 hover:text-slate-950"
@@ -56,7 +58,7 @@ function AigenHeader() {
           </div>
           <Button className="hidden bg-primary text-white hover:bg-primary/90 sm:inline-flex" asChild>
             <a href={contactUrl}>
-              {t("hero.buttons.contact")}
+              {t("hero.primaryCta")}
               <ArrowRight className="ml-2 h-4 w-4" />
             </a>
           </Button>
@@ -67,6 +69,7 @@ function AigenHeader() {
 }
 
 function AigenFooter() {
+  const { t } = useTranslation("aigen-one");
   const { locale } = useLocale();
   const contactUrl = `${mainSiteUrl}/${locale}/contact`;
 
@@ -76,7 +79,7 @@ function AigenFooter() {
         <div>
           <p className="text-lg font-bold">AiGen-One</p>
           <p className="mt-2 max-w-md text-sm leading-relaxed text-slate-400">
-            AI業務を作り、配り、運用するためのAI業務ポータル。
+            {t("footer.description")}
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-4 text-sm">
