@@ -45,7 +45,7 @@
     "eyebrow": "BUILD BY CONVERSATION",
     "title": "導入後は、現場も\n話しながら育てられる。",
     "description": "FDEが基盤を整えた後は、現場の管理者や担当者もAIとの対話から機能を追加できます。専門知識ではなく、普段の業務の言葉が開発の入口です。",
-    "prompt": "商談メモから提案書を作り、上長確認後に案件へ保存する仕組みにしたい。",
+    "prompt": "過去の売上推移からトレンドを分析する画面がほしい。",
     "outputs": [
       {"title": "Skill Creator", "description": "業務の判断基準や出力形式を、AI Chatから呼び出せる専門能力にします。"},
       {"title": "Agent Creator", "description": "複数のSkillや外部サービスを、実行順序と人の確認を含む業務フローにします。"},

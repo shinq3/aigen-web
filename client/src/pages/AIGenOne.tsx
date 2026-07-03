@@ -329,7 +329,10 @@ export default function AIGenOne() {
                 </div>
                 <img src={builderChatImage} alt="" className="block h-auto w-full" />
               </figure>
-              <p className="mt-4 rounded-[10px] border border-[rgba(11,18,32,.1)] bg-white p-4 text-sm font-medium leading-[1.7] text-[#41506b]">{t("build.prompt")}</p>
+              <p className="relative ml-3 mt-4 rounded-2xl rounded-tl-sm border border-[rgba(45,107,255,.22)] bg-[#EEF4FF] px-5 py-4 text-sm font-semibold leading-[1.7] text-[#24324a] shadow-sm">
+                <span aria-hidden="true" className="absolute -left-2 top-5 h-4 w-4 rotate-45 border-b border-l border-[rgba(45,107,255,.22)] bg-[#EEF4FF]" />
+                {t("build.prompt")}
+              </p>
             </div>
             <div>
               <SectionLabel>{t("build.eyebrow")}</SectionLabel>
