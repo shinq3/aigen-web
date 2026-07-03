@@ -1,4 +1,4 @@
-import { FormEvent, useMemo, useRef, useState } from "react";
+import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { Bot, Maximize2, MessageCircleQuestion, Minimize2, RotateCcw, Send, Sparkles, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useLocale } from "@/lib/i18n-utils";
@@ -126,6 +126,20 @@ export default function AdvisorChat() {
       scrollToEnd();
     }
   }
+
+  const submitRef = useRef(submit);
+  submitRef.current = submit;
+
+  useEffect(() => {
+    function handleExternalAsk(event: Event) {
+      const message = (event as CustomEvent<{ message: string }>).detail?.message;
+      if (!message) return;
+      setOpen(true);
+      void submitRef.current(message);
+    }
+    window.addEventListener("aigen-advisor:ask", handleExternalAsk);
+    return () => window.removeEventListener("aigen-advisor:ask", handleExternalAsk);
+  }, []);
 
   function reset() {
     abortRef.current?.abort();

@@ -1,6 +1,23 @@
-import { useEffect } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, ArrowRight, Check, WandSparkles } from "lucide-react";
+import {
+  AppWindow,
+  ArrowDown,
+  ArrowRight,
+  Bot,
+  Check,
+  FileSearch,
+  LayoutDashboard,
+  LayoutGrid,
+  MessageSquareText,
+  Plug,
+  Send,
+  ShieldCheck,
+  Sparkles,
+  Wand2,
+  WandSparkles,
+  Workflow,
+} from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { useLocale } from "@/lib/i18n-utils";
@@ -16,6 +33,18 @@ const mainSiteUrl = "https://d-auchy.studio";
 const demoUrl = "https://youtu.be/QnKgrSrNcmo";
 
 const outcomeImages = [builderImage, fieldDiscoveryImage, teamAdoptionImage];
+
+const capabilityIcons = [
+  LayoutDashboard, MessageSquareText, Sparkles, Bot, AppWindow,
+  Wand2, Workflow, LayoutGrid,
+  ShieldCheck, FileSearch, Plug,
+];
+
+function askAdvisor(message: string) {
+  const trimmed = message.trim();
+  if (!trimmed) return;
+  window.dispatchEvent(new CustomEvent("aigen-advisor:ask", { detail: { message: trimmed } }));
+}
 
 const reveal = {
   hidden: { opacity: 0, y: 24 },
@@ -119,12 +148,20 @@ export default function AIGenOne() {
   const contactUrl = `${mainSiteUrl}/${locale}/contact`;
   const list = (key: string) => t(key, { returnObjects: true }) as string[];
   const objects = (key: string) => t(key, { returnObjects: true }) as Array<Record<string, string>>;
+  const [heroQuery, setHeroQuery] = useState("");
+  const capabilities = [...objects("platform.layers"), ...objects("build.outputs"), ...objects("governance.items")];
 
   useEffect(() => {
     document.title = t("meta.title");
     const description = document.querySelector('meta[name="description"]');
     description?.setAttribute("content", t("meta.description"));
   }, [t]);
+
+  function handleHeroAsk(event: FormEvent) {
+    event.preventDefault();
+    askAdvisor(heroQuery);
+    setHeroQuery("");
+  }
 
   return (
     <div className="overflow-hidden bg-[#EEF2F8] text-[#0B1220]" style={{ fontFamily: '"Noto Sans JP", Inter, sans-serif' }}>
@@ -143,13 +180,46 @@ export default function AIGenOne() {
             <motion.p variants={reveal} transition={{ duration: 0.6 }} className="mt-7 max-w-[560px] text-base leading-[1.9] text-[#B9C6DE] sm:text-lg">
               {t("hero.description")}
             </motion.p>
-            <motion.div variants={reveal} transition={{ duration: 0.6 }} className="mt-9 flex flex-col gap-3.5 sm:flex-row">
-              <Button size="lg" className="h-12 rounded-lg bg-[#34E1FF] px-7 text-[#060A16] hover:bg-[#34E1FF]/90" asChild>
-                <a href={contactUrl}>{t("hero.primaryCta")}<ArrowRight className="ml-2 h-4 w-4" /></a>
-              </Button>
-              <Button size="lg" variant="outline" className="h-12 rounded-lg border-white/35 bg-transparent px-7 text-[#EAF2FF] hover:bg-white/10" asChild>
-                <a href="#platform">{t("hero.secondaryCta")}<ArrowDown className="ml-2 h-4 w-4" /></a>
-              </Button>
+            <motion.form
+              variants={reveal}
+              transition={{ duration: 0.6 }}
+              onSubmit={handleHeroAsk}
+              className="mt-9 flex items-center gap-2 rounded-2xl border border-white/15 bg-white/[0.07] p-2 shadow-[0_20px_60px_rgba(0,0,0,.35)] backdrop-blur-md transition focus-within:border-[#34E1FF]/60 sm:gap-3 sm:p-2.5"
+            >
+              <input
+                value={heroQuery}
+                onChange={(event) => setHeroQuery(event.target.value)}
+                placeholder={t("advisor.placeholder")}
+                className="min-w-0 flex-1 bg-transparent px-3 py-2.5 text-sm text-[#EAF2FF] outline-none placeholder:text-white/40 sm:text-base"
+              />
+              <button
+                type="submit"
+                aria-label={t("advisor.send")}
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#34E1FF] text-[#060A16] transition hover:bg-[#34E1FF]/90 sm:h-11 sm:w-11"
+              >
+                <Send className="h-4 w-4" />
+              </button>
+            </motion.form>
+            <motion.div variants={reveal} transition={{ duration: 0.6 }} className="mt-4 flex flex-wrap items-center gap-2 text-xs">
+              <span className="font-display font-bold uppercase tracking-[0.15em] text-white/40">{t("advisor.tryAsking")}</span>
+              {list("advisor.suggestions").map((suggestion) => (
+                <button
+                  key={suggestion}
+                  type="button"
+                  onClick={() => askAdvisor(suggestion)}
+                  className="rounded-full border border-white/15 px-3 py-1.5 text-white/70 transition hover:border-[#34E1FF]/50 hover:text-white"
+                >
+                  {suggestion}
+                </button>
+              ))}
+            </motion.div>
+            <motion.div variants={reveal} transition={{ duration: 0.6 }} className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
+              <a href={contactUrl} className="inline-flex items-center gap-1.5 font-semibold text-[#EAF2FF] hover:text-[#34E1FF]">
+                {t("hero.primaryCta")}<ArrowRight className="h-3.5 w-3.5" />
+              </a>
+              <a href="#platform" className="inline-flex items-center gap-1.5 text-white/55 hover:text-white">
+                {t("hero.secondaryCta")}<ArrowDown className="h-3.5 w-3.5" />
+              </a>
             </motion.div>
           </motion.div>
         </div>
@@ -165,6 +235,25 @@ export default function AIGenOne() {
               {proof}
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="border-b border-[rgba(11,18,32,.08)] bg-white py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+            {capabilities.map((item, index) => {
+              const Icon = capabilityIcons[index];
+              return (
+                <div key={item.title} className="rounded-xl border border-[rgba(11,18,32,.08)] bg-[#EEF2F8]/60 p-5 transition hover:border-[#2D6BFF]/30 hover:bg-white">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-[rgba(45,107,255,.1)] text-[#2D6BFF]">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <h3 className="mt-4 text-sm font-bold">{item.title}</h3>
+                  <p className="mt-1.5 line-clamp-2 text-xs leading-[1.6] text-[#41506b]">{item.description}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
