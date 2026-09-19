@@ -15,10 +15,27 @@
     <div id="root"></div>
     <script>
       (() => {
-        const addDemoVideo = () => {
-          const main = document.querySelector("main");
+        const root = document.getElementById("root");
+        const retryIntervalMs = 250;
+        const maxAttempts = 80;
+        let attempts = 0;
+
+        const ensureDemoVideo = () => {
+          attempts += 1;
+
+          const main = root.querySelector("main");
           const hero = main && main.querySelector("section");
-          if (!hero || document.querySelector(".demo-video-section")) return false;
+          if (!hero) return;
+
+          const existingSection = root.querySelector(".demo-video-section");
+          const existingIframe = existingSection && existingSection.querySelector(
+            'iframe[src*="RSjTnCubr6U"]'
+          );
+          if (existingIframe) return;
+
+          // If React left only part of the injected section, replace that
+          // incomplete node instead of creating a duplicate.
+          if (existingSection) existingSection.remove();
 
           const section = document.createElement("section");
           section.className = "demo-video-section";
@@ -38,15 +55,14 @@
               </div>
             </div>`;
           hero.insertAdjacentElement("afterend", section);
-          return true;
         };
 
-        addDemoVideo();
-
-        // Keep this CMS addition outside React's lifecycle: insert it after the
-        // app renders and restore it if a later React render replaces the DOM.
-        const observer = new MutationObserver(addDemoVideo);
-        observer.observe(document.getElementById("root"), { childList: true, subtree: true });
+        // Wait for React to create <main>, then keep checking for a bounded
+        // period so a later render cannot permanently remove the video.
+        const retryTimer = window.setInterval(() => {
+          ensureDemoVideo();
+          if (attempts >= maxAttempts) window.clearInterval(retryTimer);
+        }, retryIntervalMs);
       })();
     </script>
   </body>
