@@ -2,8 +2,52 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=/aigen.html" />
-    <script>location.replace("/aigen.html");</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700&family=Noto+Sans+JP:wght@400;500;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <title>AiGen-One | FDEとつくるAI業務プラットフォーム</title>
+    <meta name="description" content="専門FDEが現場業務を理解し、Skills・Agents・業務アプリとして設計・実装。AI導入から現場定着、継続改善まで支援します。">
+    <script type="module" crossorigin src="./assets/aigen-CQcV8yge.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/site.css">
   </head>
-  <body></body>
+  <body>
+    <div id="root"></div>
+    <script>
+      (() => {
+        const addDemoVideo = () => {
+          const main = document.querySelector("main");
+          const hero = main && main.querySelector("section");
+          if (!hero || document.querySelector(".demo-video-section")) return false;
+
+          const section = document.createElement("section");
+          section.className = "demo-video-section";
+          section.setAttribute("aria-labelledby", "demo-video-title");
+          section.innerHTML = `
+            <div class="demo-video-inner">
+              <p class="demo-video-eyebrow">PRODUCT MOVIE</p>
+              <h2 id="demo-video-title">AiGen-Oneを動画で見る</h2>
+              <div class="demo-video-frame">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/RSjTnCubr6U?rel=0"
+                  title="AiGen-One 紹介動画"
+                  loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+              </div>
+            </div>`;
+          hero.insertAdjacentElement("afterend", section);
+          return true;
+        };
+
+        addDemoVideo();
+
+        // Keep this CMS addition outside React's lifecycle: insert it after the
+        // app renders and restore it if a later React render replaces the DOM.
+        const observer = new MutationObserver(addDemoVideo);
+        observer.observe(document.getElementById("root"), { childList: true, subtree: true });
+      })();
+    </script>
+  </body>
 </html>
