@@ -31,7 +31,10 @@
           const existingIframe = existingSection && existingSection.querySelector(
             'iframe[src*="RSjTnCubr6U"]'
           );
-          if (existingIframe) return;
+          const existingShorts = existingSection && existingSection.querySelector(
+            '.demo-shorts-grid'
+          );
+          if (existingIframe && existingShorts) return;
 
           // If React left only part of the injected section, replace that
           // incomplete node instead of creating a duplicate.
@@ -52,6 +55,20 @@
                   referrerpolicy="strict-origin-when-cross-origin"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen></iframe>
+              </div>
+              <div class="demo-shorts" aria-labelledby="demo-shorts-title">
+                <div class="demo-shorts-heading">
+                  <p class="demo-video-eyebrow">SHORT MOVIES</p>
+                  <h3 id="demo-shorts-title">ショート動画</h3>
+                </div>
+                <ul class="demo-shorts-grid" role="list">
+                  <li><a class="demo-short-card" href="https://youtube.com/shorts/FRvYDCeY4sc?feature=share" target="_blank" rel="noopener noreferrer" aria-label="AiGen-One ショート動画 1をYouTubeで見る"><span class="demo-short-thumbnail"><img src="https://i.ytimg.com/vi/FRvYDCeY4sc/hqdefault.jpg" alt="AiGen-One ショート動画 1のサムネイル" loading="lazy"><span class="demo-short-play" aria-hidden="true">▶</span></span><span class="demo-short-label">Short movie 01</span></a></li>
+                  <li><a class="demo-short-card" href="https://youtube.com/shorts/crTaPI7aDSs?feature=share" target="_blank" rel="noopener noreferrer" aria-label="AiGen-One ショート動画 2をYouTubeで見る"><span class="demo-short-thumbnail"><img src="https://i.ytimg.com/vi/crTaPI7aDSs/hqdefault.jpg" alt="AiGen-One ショート動画 2のサムネイル" loading="lazy"><span class="demo-short-play" aria-hidden="true">▶</span></span><span class="demo-short-label">Short movie 02</span></a></li>
+                  <li><a class="demo-short-card" href="https://youtube.com/shorts/s6rt-ZhfYBo?feature=share" target="_blank" rel="noopener noreferrer" aria-label="AiGen-One ショート動画 3をYouTubeで見る"><span class="demo-short-thumbnail"><img src="https://i.ytimg.com/vi/s6rt-ZhfYBo/hqdefault.jpg" alt="AiGen-One ショート動画 3のサムネイル" loading="lazy"><span class="demo-short-play" aria-hidden="true">▶</span></span><span class="demo-short-label">Short movie 03</span></a></li>
+                  <li><a class="demo-short-card" href="https://youtube.com/shorts/NF4y8nVA6Cs?feature=share" target="_blank" rel="noopener noreferrer" aria-label="AiGen-One ショート動画 4をYouTubeで見る"><span class="demo-short-thumbnail"><img src="https://i.ytimg.com/vi/NF4y8nVA6Cs/hqdefault.jpg" alt="AiGen-One ショート動画 4のサムネイル" loading="lazy"><span class="demo-short-play" aria-hidden="true">▶</span></span><span class="demo-short-label">Short movie 04</span></a></li>
+                  <li><a class="demo-short-card" href="https://youtube.com/shorts/oB5WKp0E4jw?feature=share" target="_blank" rel="noopener noreferrer" aria-label="AiGen-One ショート動画 5をYouTubeで見る"><span class="demo-short-thumbnail"><img src="https://i.ytimg.com/vi/oB5WKp0E4jw/hqdefault.jpg" alt="AiGen-One ショート動画 5のサムネイル" loading="lazy"><span class="demo-short-play" aria-hidden="true">▶</span></span><span class="demo-short-label">Short movie 05</span></a></li>
+                  <li><a class="demo-short-card" href="https://youtube.com/shorts/VPtGVQ6d1FM?feature=share" target="_blank" rel="noopener noreferrer" aria-label="AiGen-One ショート動画 6をYouTubeで見る"><span class="demo-short-thumbnail"><img src="https://i.ytimg.com/vi/VPtGVQ6d1FM/hqdefault.jpg" alt="AiGen-One ショート動画 6のサムネイル" loading="lazy"><span class="demo-short-play" aria-hidden="true">▶</span></span><span class="demo-short-label">Short movie 06</span></a></li>
+                </ul>
               </div>
             </div>`;
           hero.insertAdjacentElement("afterend", section);
