@@ -1,15 +1,370 @@
 {
-  "meta": {"title": "AiGen-One | AI operations built with FDEs", "description": "Expert FDEs understand your operations and design Skills, Agents, and business apps in AiGen-One, from implementation through adoption and continuous improvement."},
-  "nav": {"platform": "Platform", "fde": "FDE Service", "pricing": "Pricing", "demo": "Demo"},
-  "hero": {"eyebrow": "FDE × AI BUSINESS PLATFORM", "title": "Turn field operations into\nAI systems people use.", "description": "Our expert FDEs work inside your operation to understand the work and its constraints. They design Skills, Agents, and business apps in AiGen-One and stay through adoption and improvement.", "primaryCta": "Talk to an FDE", "secondaryCta": "Explore AiGen-One", "proofs": ["From discovery through implementation", "Skills, Agents, and apps in one platform", "Enterprise permissions, approvals, and audit"]},
-  "fde": {"eyebrow": "FORWARD DEPLOYED ENGINEERING", "title": "Understand the work\nbefore adding AI.", "description": "Handing over another tool does not change operations. FDEs work alongside your people to map decisions, data, exceptions, and approval paths.", "note": "A Forward Deployed Engineer is an AI implementation specialist who works directly with the field and owns delivery and iteration until the system is genuinely used.", "photoCaption": "We learn the workflow and decisions where the work actually happens, not only in a meeting room.", "steps": [{"title": "Understand operations", "description": "Interviews and observation reveal manual work, tacit decisions, and links to existing systems."}, {"title": "Design the right form", "description": "A single capability becomes a Skill, a multi-step process an Agent, and work requiring screens and data an app."}, {"title": "Drive adoption", "description": "We configure access and approvals, deploy to the field, and improve continuously from real usage."}]},
-  "platform": {"eyebrow": "ONE PLATFORM FOR WORK & AI", "title": "Work and AI,\nin one workspace.", "description": "From the daily Dashboard to AI consultation, specialist capabilities, automated execution, and custom systems, everything shares one organization, permission, data, and approval foundation.", "layers": [{"title": "Dashboard", "description": "Schedules, alerts, approvals, projects, and frequent work in one view."}, {"title": "AiGen Chat", "description": "Uses company knowledge and business data to advise and act."}, {"title": "Skills", "description": "Reusable specialist capabilities for translation, documents, analysis, and more."}, {"title": "Agents", "description": "Combine Skills, APIs, and MCP with human confirmation to execute work."}, {"title": "Business apps", "description": "Systemize unique work that needs interfaces, data, and workflows."}]},
-  "build": {"eyebrow": "BUILD BY CONVERSATION", "title": "After launch, teams can\nkeep building by talking.", "description": "Once the FDE has established the foundation, field managers and operators can add functions through conversation with AI. Everyday operational language becomes the entry point to development.", "prompt": "I want a screen that analyzes trends from historical sales data.", "outputs": [{"title": "Skill Creator", "description": "Turn decision criteria and output formats into specialist capabilities available in AI Chat."}, {"title": "Agent Creator", "description": "Combine Skills and external services into an operating flow with sequence and human approval."}, {"title": "Business app generation", "description": "Create systems with lists, forms, search, and approvals through conversation."}]},
-  "journey": {"eyebrow": "FROM DISCOVERY TO ADOPTION", "title": "Not just delivered.\nContinuously improved.", "description": "Discovery, design, implementation, rollout, and iteration stay connected. FDEs and AiGen-One keep AI from ending as a temporary proof of concept.", "steps": [{"title": "Listen", "description": "Share the problem and the ideal way of working."}, {"title": "Decompose", "description": "Map decisions, data, exceptions, and approvals."}, {"title": "Build", "description": "Implement as Skills, Agents, and apps."}, {"title": "Deploy", "description": "Make it easy to use from the Dashboard."}, {"title": "Improve", "description": "Iterate from usage and field feedback."}]},
-  "outcomes": {"eyebrow": "WHAT TEAMS CAN BUILD", "title": "AI systems shaped\nfor how your company works.", "description": "Instead of teaching everyone a generic AI tool, turn the work itself into AI-assisted systems.", "items": [{"label": "Sales", "title": "Proposals and opportunities", "description": "Generate proposals from meeting notes, save them to opportunities, and share next actions on the Dashboard."}, {"label": "Operations", "title": "Decisions and approvals", "description": "Encode internal standards as Skills and let Agents move work forward with checks and approvals."}, {"label": "Knowledge", "title": "Company data", "description": "Use policies, minutes, and business databases to answer, aggregate, and create documents within access rules."}]},
-  "governance": {"eyebrow": "ENTERPRISE GOVERNANCE", "title": "Flexible to build.\nGoverned by the company.", "description": "AiGen-One balances useful AI with responsible enterprise operations. FDEs design deployment around your existing controls.", "items": [{"title": "Organization, access, approval", "description": "Control available data, Skills, Agents, and apps by department and role."}, {"title": "Audit and usage", "description": "Record who used, generated, and executed what, and use that insight to improve."}, {"title": "Existing system connections", "description": "Connect APIs, MCP, Google Workspace, Git, and other current business assets."}]},
-  "pricing": {"eyebrow": "PLANS", "title": "Pricing", "description": "Plans reflect each user's role. FDE discovery and implementation are scoped to your target workflows and integrations.", "plans": [{"name": "Business User", "target": "People using business apps", "features": "Dashboard and published business apps", "price": "¥800 / user mo"}, {"name": "AI User", "target": "People using AI at work", "features": "Business User, AiGen Chat, Knowledge, Skills, Agents", "price": "¥2,800 / user mo"}, {"name": "Workspace User", "target": "People building and improving work", "features": "AI User plus creation of Skills, Agents, and business apps", "price": "¥5,800 / user mo"}, {"name": "Organization Admin", "target": "People managing rollout", "features": "Access, approval, limits, business menus, and integrations", "price": "¥6,800 / user mo"}], "note": "Platform base fees, onboarding and FDE services, and custom development are priced separately.", "cta": "Discuss scope and pricing"},
-  "advisor": {"title": "Aigen Advisor", "subtitle": "Ask about product, adoption, and technology", "open": "Ask Aigen", "close": "Close", "fullscreen": "Open full screen", "exitFullscreen": "Exit full screen", "reset": "New conversation", "welcome": "Ask anything about AiGen-One, FDE implementation, Skills, Agents, and business apps.", "tryAsking": "Try asking", "suggestions": ["What does an FDE do?", "How are Skills, Agents, and apps different?", "How do you introduce AI to field teams?"], "placeholder": "Ask about AiGen-One", "send": "Send", "error": "We could not retrieve an answer. Please try again shortly.", "disclaimer": "Answers use published product information", "basedOn": "Based on {count} AiGen-One sources", "status": {"connecting": "Checking product information", "answering": "Preparing an answer"}},
-  "cta": {"eyebrow": "START WITH YOUR WORK", "title": "Start by telling us\nhow the work happens today.", "description": "You do not need a finished AI plan. An FDE will map the work and the problem with you, then propose the right first system to build.", "primary": "Talk to an FDE", "secondary": "Watch the demo"},
-  "footer": {"description": "The enterprise AI operations platform built with FDEs."}
+  "meta": {
+    "title": "AiGen-One | AI that moves work forward",
+    "description": "An AI workspace connecting chat, company knowledge, Skills, Agents, and business apps. From everyday AI use to workflows designed for your team."
+  },
+  "nav": {
+    "platform": "Features",
+    "fde": "Getting started",
+    "pricing": "Pricing",
+    "demo": "Films",
+    "practice": "Our practice",
+    "menu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "eyebrow": "AIGEN-ONE / AI BUSINESS WORKSPACE",
+    "title": "From asking AI.\nTo moving work forward.",
+    "description": "Connect conversations, company knowledge, and everyday operations.\nGrow from everyday AI to workflows built for your company.",
+    "primaryCta": "Explore it for your team",
+    "secondaryCta": "Watch the films",
+    "proofs": [
+      "From discovery through implementation",
+      "Skills, Agents, and apps in one platform",
+      "Enterprise permissions, approvals, and audit"
+    ]
+  },
+  "fde": {
+    "eyebrow": "FORWARD DEPLOYED ENGINEERING",
+    "title": "Understand the work\nbefore adding AI.",
+    "description": "Handing over another tool does not change operations. FDEs work alongside your people to map decisions, data, exceptions, and approval paths.",
+    "note": "A Forward Deployed Engineer is an AI implementation specialist who works directly with the field and owns delivery and iteration until the system is genuinely used.",
+    "photoCaption": "We learn the workflow and decisions where the work actually happens, not only in a meeting room.",
+    "steps": [
+      {
+        "title": "Understand operations",
+        "description": "Interviews and observation reveal manual work, tacit decisions, and links to existing systems."
+      },
+      {
+        "title": "Design the right form",
+        "description": "A single capability becomes a Skill, a multi-step process an Agent, and work requiring screens and data an app."
+      },
+      {
+        "title": "Drive adoption",
+        "description": "We configure access and approvals, deploy to the field, and improve continuously from real usage."
+      }
+    ]
+  },
+  "platform": {
+    "eyebrow": "ONE PLATFORM FOR WORK & AI",
+    "title": "Work and AI,\nin one workspace.",
+    "description": "From the daily Dashboard to AI consultation, specialist capabilities, automated execution, and custom systems, everything shares one organization, permission, data, and approval foundation.",
+    "layers": [
+      {
+        "title": "Dashboard",
+        "description": "Schedules, alerts, approvals, projects, and frequent work in one view."
+      },
+      {
+        "title": "AiGen Chat",
+        "description": "Uses company knowledge and business data to advise and act."
+      },
+      {
+        "title": "Skills",
+        "description": "Reusable specialist capabilities for translation, documents, analysis, and more."
+      },
+      {
+        "title": "Agents",
+        "description": "Combine Skills, APIs, and MCP with human confirmation to execute work."
+      },
+      {
+        "title": "Business apps",
+        "description": "Systemize unique work that needs interfaces, data, and workflows."
+      }
+    ]
+  },
+  "build": {
+    "eyebrow": "BUILD BY CONVERSATION",
+    "title": "After launch, teams can\nkeep building by talking.",
+    "description": "Once the FDE has established the foundation, field managers and operators can add functions through conversation with AI. Everyday operational language becomes the entry point to development.",
+    "prompt": "I want a screen that analyzes trends from historical sales data.",
+    "outputs": [
+      {
+        "title": "Skill Creator",
+        "description": "Turn decision criteria and output formats into specialist capabilities available in AI Chat."
+      },
+      {
+        "title": "Agent Creator",
+        "description": "Combine Skills and external services into an operating flow with sequence and human approval."
+      },
+      {
+        "title": "Business app generation",
+        "description": "Create systems with lists, forms, search, and approvals through conversation."
+      }
+    ]
+  },
+  "journey": {
+    "eyebrow": "FROM DISCOVERY TO ADOPTION",
+    "title": "Not just delivered.\nContinuously improved.",
+    "description": "Discovery, design, implementation, rollout, and iteration stay connected. FDEs and AiGen-One keep AI from ending as a temporary proof of concept.",
+    "steps": [
+      {
+        "title": "Listen",
+        "description": "Share the problem and the ideal way of working."
+      },
+      {
+        "title": "Decompose",
+        "description": "Map decisions, data, exceptions, and approvals."
+      },
+      {
+        "title": "Build",
+        "description": "Implement as Skills, Agents, and apps."
+      },
+      {
+        "title": "Deploy",
+        "description": "Make it easy to use from the Dashboard."
+      },
+      {
+        "title": "Improve",
+        "description": "Iterate from usage and field feedback."
+      }
+    ]
+  },
+  "outcomes": {
+    "eyebrow": "WHAT TEAMS CAN BUILD",
+    "title": "AI systems shaped\nfor how your company works.",
+    "description": "Instead of teaching everyone a generic AI tool, turn the work itself into AI-assisted systems.",
+    "items": [
+      {
+        "label": "Sales",
+        "title": "Proposals and opportunities",
+        "description": "Generate proposals from meeting notes, save them to opportunities, and share next actions on the Dashboard."
+      },
+      {
+        "label": "Operations",
+        "title": "Decisions and approvals",
+        "description": "Encode internal standards as Skills and let Agents move work forward with checks and approvals."
+      },
+      {
+        "label": "Knowledge",
+        "title": "Company data",
+        "description": "Use policies, minutes, and business databases to answer, aggregate, and create documents within access rules."
+      }
+    ]
+  },
+  "governance": {
+    "eyebrow": "ENTERPRISE GOVERNANCE",
+    "title": "Flexible to build.\nGoverned by the company.",
+    "description": "AiGen-One balances useful AI with responsible enterprise operations. FDEs design deployment around your existing controls.",
+    "items": [
+      {
+        "title": "Organization, access, approval",
+        "description": "Control available data, Skills, Agents, and apps by department and role."
+      },
+      {
+        "title": "Audit and usage",
+        "description": "Record who used, generated, and executed what, and use that insight to improve."
+      },
+      {
+        "title": "Existing system connections",
+        "description": "Connect APIs, MCP, Google Workspace, Git, and other current business assets."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "PLANS",
+    "title": "Pricing",
+    "description": "Plans reflect each user's role. FDE discovery and implementation are scoped to your target workflows and integrations.",
+    "plans": [
+      {
+        "name": "Business User",
+        "target": "People using business apps",
+        "features": "Dashboard and published business apps",
+        "price": "¥800 / user mo"
+      },
+      {
+        "name": "AI User",
+        "target": "People using AI at work",
+        "features": "Business User, AiGen Chat, Knowledge, Skills, Agents",
+        "price": "¥1,000 / user / month"
+      },
+      {
+        "name": "Organization Admin",
+        "target": "People managing rollout",
+        "features": "Access, approval, limits, business menus, and integrations",
+        "price": "¥3,000 / user / month"
+      }
+    ],
+    "note": "Plugin usage, platform usage, and plugin development fees may apply separately depending on your requirements.",
+    "cta": "Discuss scope and pricing"
+  },
+  "advisor": {
+    "title": "Aigen Advisor",
+    "subtitle": "Ask about product, adoption, and technology",
+    "open": "Ask Aigen",
+    "close": "Close",
+    "fullscreen": "Open full screen",
+    "exitFullscreen": "Exit full screen",
+    "reset": "New conversation",
+    "welcome": "Ask about AiGen-One chat, company knowledge, Skills, Agents, business apps, and implementation support.",
+    "tryAsking": "Try asking",
+    "suggestions": [
+      "How can we start from everyday AI?",
+      "How do we connect company knowledge?",
+      "How do we automate one workflow?"
+    ],
+    "placeholder": "Ask about AiGen-One",
+    "send": "Send",
+    "error": "We could not retrieve an answer. Please try again shortly.",
+    "disclaimer": "Answers use published product information",
+    "basedOn": "Based on {count} AiGen-One sources",
+    "status": {
+      "connecting": "Checking product information",
+      "answering": "Preparing an answer"
+    }
+  },
+  "cta": {
+    "eyebrow": "START WITH YOUR WORK",
+    "title": "Start with one workflow.\nSee what changes.",
+    "description": "Tell us how your team uses AI and where work gets stuck.\nExplore the product with us and choose the first workflow to connect.",
+    "primary": "Explore it for your team",
+    "secondary": "Watch the films first"
+  },
+  "footer": {
+    "description": "The AI workspace that connects your company’s work."
+  },
+  "experience": {
+    "heroNotes": {
+      "chat": "Ask about your company, too.",
+      "work": "Turn a conversation into action.",
+      "bottom": "One starting point for work that used to be scattered."
+    },
+    "entry": {
+      "title": "AI accounts for everyone.\nAre they used at work?",
+      "description": "You have given your team ChatGPT or Claude.\nIs their use moving beyond research?\nLet’s start with how your company actually uses AI.",
+      "ask": "How does it look at your company?",
+      "questions": [
+        "Who uses AI, and for which work?",
+        "Has the time spent finding company information fallen?",
+        "After the answer, is there still manual copying and follow-up?"
+      ],
+      "note": "Review how AI is used and managed in the context of your current subscriptions and usage."
+    },
+    "features": {
+      "label": "ONE WORKSPACE, CONNECTED WORK",
+      "title": "See the capabilities.\nFollow the work.",
+      "description": "Find. Ask. Create. Review. Act.\nConnect these steps with shared data, organization, and access controls.",
+      "tabs": "Choose a feature",
+      "foundation": "Shared organization, permissions, and data",
+      "items": [
+        {
+          "label": "Dashboard",
+          "title": "Your day’s work.\nAt a glance.",
+          "description": "Schedules, notifications, approvals, and project updates. Bring the starting points together so your team can find the next action."
+        },
+        {
+          "label": "AI Chat",
+          "title": "Ask about work.\nGet company context.",
+          "description": "Start with research and writing. With knowledge and database connections in place, ask about internal rules and operational data, too."
+        },
+        {
+          "label": "Skills",
+          "title": "Everyday expertise.\nReady to reuse.",
+          "description": "Translation, proposals, and analysis. Encode company criteria and output formats as Skills to reduce repeated instructions."
+        },
+        {
+          "label": "Agents",
+          "title": "Get an answer.\nMove the work forward.",
+          "description": "Connect Skills and external services into workflows for information retrieval, drafting, and review. Design in the steps that need human judgment."
+        },
+        {
+          "label": "Business apps",
+          "title": "Your way of working.\nYour own interface.",
+          "description": "Lists, forms, search, and approvals. Give scattered spreadsheet and chat workflows their own data and interface. Conversational app generation is in development."
+        }
+      ]
+    },
+    "visual": {
+      "actual": "Actual AiGen-One screen / creation example",
+      "concept": "Illustrative feature scenario",
+      "question": "How do I submit travel expenses?",
+      "sources": "Company knowledge referenced",
+      "answer": "Here is the travel expense process.",
+      "answerText": "Required fields and checks are summarized below. Review the source policy alongside the answer.",
+      "policy": "Travel policy",
+      "data": "Application data",
+      "compose": "Ask about your work…",
+      "skillTitle": "Your team’s expertise in one place.",
+      "skills": [
+        "Prepare a proposal",
+        "Summarize meeting notes",
+        "Analyze sales data"
+      ],
+      "request": "Prepare a proposal from the meeting notes.",
+      "phases": [
+        "Check information",
+        "Prepare a draft",
+        "Human review",
+        "Next step"
+      ],
+      "human": "Human review",
+      "control": "Keep human checks where judgment is needed."
+    },
+    "movies": {
+      "title": "See it in action.\nOne film at a time.",
+      "description": "The product introduction and six short films.\nChoose a film to explore how we approach AI at work.",
+      "main": "Introducing AiGen-One",
+      "short": "Short film",
+      "play": "Play film",
+      "carousel": "carousel",
+      "select": "Choose a film",
+      "previous": "Previous film",
+      "next": "Next film",
+      "youtube": "Watch on YouTube"
+    },
+    "build": {
+      "title": "“We need a better way.”\nThat’s where building starts.",
+      "description": "From individual AI conversations to team workflows.\nThen to company systems with their own interfaces and data.",
+      "voice": "In the words of your team",
+      "caption": "Actual creation example. AI business app generation is in development."
+    },
+    "growth": [
+      {
+        "title": "Start with everyday AI",
+        "description": "Research, writing, and company questions. Create an accessible starting point."
+      },
+      {
+        "title": "Connect team workflows",
+        "description": "Link company data with Skills and Agents, including checks and approvals."
+      },
+      {
+        "title": "Grow your own systems",
+        "description": "Turn unique operations into apps. Keep testing development and operations automation."
+      }
+    ],
+    "adoption": {
+      "title": "Start small.\nBuild from there.",
+      "description": "One workflow, one team. Understand the work and existing systems, then introduce AI in stages that people can actually use.",
+      "imageAlt": "Illustration of implementation support mapping a team workflow",
+      "caption": "Illustrative implementation scene",
+      "fde": "An FDE, a specialist implementation engineer, helps with workflow discovery, design, implementation, and adoption.",
+      "cta": "Discuss your first workflow"
+    },
+    "practice": {
+      "title": "In our own development work,\nwe’re testing what comes next.",
+      "description": "Automated development management is our own implementation initiative.\nWe are testing it on real projects to reduce manual coordination between clients and development.",
+      "badge": "Our own initiative / testing on real projects",
+      "context": "How far can AI reduce client coordination and handoffs in offshore development?",
+      "request": "Create a task\nfrom a change request.",
+      "steps": [
+        "Create a repair plan",
+        "Approve the plan",
+        "Implement and\ndeploy to staging",
+        "Staff verify\nthe behavior",
+        "Create a production\nPR in one click",
+        "A person merges"
+      ],
+      "human": "Human",
+      "todayTitle": "Today: three decisions stay with people",
+      "today": "People approve the plan, verify behavior, and merge. We share progress with clients while evaluating reductions in implementation and coordination effort.",
+      "futureTitle": "Our direction: systems companies can evolve",
+      "future": "Reduce dependence on engineers and directors so companies can develop and operate their own systems. Automation of the final merge is a future research topic.",
+      "measure": "Future evaluation: handling effort / coordination rounds / rework / time from verification to release."
+    },
+    "governance": {
+      "title": "One workspace for the team.\nOne place to manage it.",
+      "description": "Who can use what, and which data they can access.\nA shared management foundation as your use of AI and workflows grows.",
+      "connect": "Connect existing work"
+    },
+    "pricingNote": "We will confirm AI usage allowances, available models, integrations, and implementation scope during consultation."
+  }
 }

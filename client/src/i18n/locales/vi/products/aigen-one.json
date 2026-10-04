@@ -1,15 +1,370 @@
 {
-  "meta": {"title": "AiGen-One | Nền tảng nghiệp vụ AI cùng FDE", "description": "FDE chuyên môn hiểu nghiệp vụ và thiết kế Skill, Agent, ứng dụng nghiệp vụ trên AiGen-One, từ triển khai đến áp dụng và cải tiến liên tục."},
-  "nav": {"platform": "Nền tảng", "fde": "Dịch vụ FDE", "pricing": "Chi phí", "demo": "Demo"},
-  "hero": {"eyebrow": "FDE × AI BUSINESS PLATFORM", "title": "Biến nghiệp vụ thực tế thành\nhệ thống AI được sử dụng.", "description": "FDE chuyên môn cùng làm việc với hiện trường để hiểu nghiệp vụ và vấn đề. Chúng tôi thiết kế Skills, Agents và ứng dụng nghiệp vụ trên AiGen-One, đồng hành từ triển khai đến áp dụng và cải tiến.", "primaryCta": "Trao đổi với FDE", "secondaryCta": "Khám phá AiGen-One", "proofs": ["Đồng hành từ phân tích đến triển khai", "Tích hợp Skills, Agents và ứng dụng", "Quản lý quyền, phê duyệt và kiểm toán"]},
-  "fde": {"eyebrow": "FORWARD DEPLOYED ENGINEERING", "title": "Hiểu sâu nghiệp vụ\ntrước khi đưa AI vào.", "description": "Chỉ cung cấp thêm công cụ không làm thay đổi công việc. FDE làm việc cùng đội ngũ để hệ thống hóa tiêu chí quyết định, dữ liệu, ngoại lệ và luồng phê duyệt.", "note": "Forward Deployed Engineer là chuyên gia triển khai AI làm việc trực tiếp với hiện trường, chịu trách nhiệm xây dựng và cải tiến cho đến khi hệ thống thực sự được sử dụng.", "photoCaption": "Chúng tôi hiểu quy trình và quyết định ngay tại nơi công việc thực sự diễn ra, không chỉ trong phòng họp.", "steps": [{"title": "Hiểu nghiệp vụ", "description": "Phỏng vấn và quan sát để tìm công việc thủ công, quyết định ngầm và liên kết với hệ thống hiện có."}, {"title": "Thiết kế đúng hình thức", "description": "Năng lực đơn lẻ thành Skill, quy trình nhiều bước thành Agent, công việc cần màn hình và dữ liệu thành ứng dụng."}, {"title": "Đưa vào thực tế", "description": "Thiết lập quyền và phê duyệt, triển khai rồi cải tiến liên tục từ dữ liệu sử dụng."}]},
-  "platform": {"eyebrow": "ONE PLATFORM FOR WORK & AI", "title": "Nghiệp vụ và AI,\ntrong một nơi làm việc.", "description": "Từ Dashboard hàng ngày đến tư vấn AI, năng lực chuyên môn, thực thi nghiệp vụ và hệ thống riêng, tất cả dùng chung tổ chức, quyền, dữ liệu và phê duyệt.", "layers": [{"title": "Dashboard", "description": "Lịch, thông báo, phê duyệt, dự án và nghiệp vụ thường dùng trên một màn hình."}, {"title": "AiGen Chat", "description": "Hiểu tri thức và dữ liệu doanh nghiệp để tư vấn và thực hiện."}, {"title": "Skills", "description": "Năng lực chuyên môn tái sử dụng cho dịch thuật, tài liệu, phân tích và hơn thế nữa."}, {"title": "Agents", "description": "Kết hợp Skills, API và MCP để thực thi với bước xác nhận của con người."}, {"title": "Ứng dụng nghiệp vụ", "description": "Hệ thống hóa nghiệp vụ riêng cần giao diện, dữ liệu và quy trình."}]},
-  "build": {"eyebrow": "BUILD BY CONVERSATION", "title": "Sau triển khai, đội ngũ vẫn có thể\nphát triển bằng hội thoại.", "description": "Sau khi FDE xây dựng nền tảng, quản lý và nhân viên hiện trường có thể bổ sung chức năng qua hội thoại với AI. Ngôn ngữ nghiệp vụ hàng ngày trở thành điểm bắt đầu của phát triển.", "prompt": "Tôi muốn một màn hình phân tích xu hướng từ dữ liệu doanh số trong quá khứ.", "outputs": [{"title": "Skill Creator", "description": "Biến tiêu chí nghiệp vụ và định dạng đầu ra thành năng lực chuyên môn dùng trong AI Chat."}, {"title": "Agent Creator", "description": "Kết hợp Skills và dịch vụ ngoài thành luồng nghiệp vụ có thứ tự và phê duyệt."}, {"title": "Tạo ứng dụng nghiệp vụ", "description": "Tạo hệ thống có danh sách, biểu mẫu, tìm kiếm và phê duyệt bằng hội thoại."}]},
-  "journey": {"eyebrow": "FROM DISCOVERY TO ADOPTION", "title": "Không dừng khi hoàn thành.\nTiếp tục phát triển tại hiện trường.", "description": "Hiểu nghiệp vụ, thiết kế, triển khai, mở rộng và cải tiến không bị tách rời. FDE và AiGen-One giúp AI không dừng ở thử nghiệm ngắn hạn.", "steps": [{"title": "Lắng nghe", "description": "Chia sẻ vấn đề và cách làm việc lý tưởng."}, {"title": "Phân rã", "description": "Hệ thống hóa quyết định, dữ liệu, ngoại lệ, phê duyệt."}, {"title": "Xây dựng", "description": "Triển khai thành Skills, Agents và ứng dụng."}, {"title": "Đưa vào sử dụng", "description": "Sử dụng dễ dàng từ Dashboard."}, {"title": "Cải tiến", "description": "Phát triển từ dữ liệu và phản hồi hiện trường."}]},
-  "outcomes": {"eyebrow": "WHAT TEAMS CAN BUILD", "title": "Hệ thống AI riêng\ncho cách công ty bạn làm việc.", "description": "Không bắt mọi người học một công cụ AI chung; hãy AI hóa chính nghiệp vụ hàng ngày.", "items": [{"label": "Sales", "title": "Đề xuất và cơ hội", "description": "Tạo đề xuất từ ghi chú, lưu vào cơ hội và chia sẻ hành động tiếp theo trên Dashboard."}, {"label": "Operations", "title": "Quyết định và phê duyệt", "description": "Biến quy định nội bộ thành Skill và để Agent xử lý với kiểm tra, phê duyệt."}, {"label": "Knowledge", "title": "Dữ liệu nội bộ", "description": "Dùng quy định, biên bản và CSDL để trả lời, tổng hợp, tạo tài liệu theo quyền truy cập."}]},
-  "governance": {"eyebrow": "ENTERPRISE GOVERNANCE", "title": "Tự do xây dựng.\nDoanh nghiệp vẫn quản lý được.", "description": "AiGen-One cân bằng sự tiện lợi của AI với vận hành an toàn. FDE thiết kế triển khai phù hợp quy định hiện có.", "items": [{"title": "Tổ chức, quyền, phê duyệt", "description": "Kiểm soát dữ liệu, Skills, Agents và ứng dụng theo phòng ban và vai trò."}, {"title": "Kiểm toán và sử dụng", "description": "Ghi lại ai đã sử dụng, tạo và thực thi gì để quản lý và cải tiến."}, {"title": "Kết nối hệ thống hiện có", "description": "Kết nối API, MCP, Google Workspace, Git và tài sản nghiệp vụ hiện tại."}]},
-  "pricing": {"eyebrow": "PLANS", "title": "Chi phí", "description": "Cấu hình theo chức năng và vai trò. Dịch vụ FDE được báo giá theo nghiệp vụ và phạm vi tích hợp.", "plans": [{"name": "Business User", "target": "Người dùng ứng dụng nghiệp vụ", "features": "Dashboard và ứng dụng đã phát hành", "price": "¥800 / người tháng"}, {"name": "AI User", "target": "Người dùng AI trong công việc", "features": "Business User, AiGen Chat, Knowledge, Skills, Agents", "price": "¥2.800 / người tháng"}, {"name": "Workspace User", "target": "Người xây dựng và cải tiến", "features": "AI User và tạo Skills, Agents, ứng dụng nghiệp vụ", "price": "¥5.800 / người tháng"}, {"name": "Organization Admin", "target": "Người quản lý triển khai", "features": "Quyền, phê duyệt, giới hạn, menu nghiệp vụ, tích hợp", "price": "¥6.800 / người tháng"}], "note": "Phí nền tảng, triển khai ban đầu, dịch vụ FDE và phát triển riêng được tính riêng.", "cta": "Trao đổi phạm vi và chi phí"},
-  "advisor": {"title": "Aigen Advisor", "subtitle": "Tư vấn sản phẩm, triển khai và kỹ thuật", "open": "Hỏi Aigen", "close": "Đóng", "fullscreen": "Mở toàn màn hình", "exitFullscreen": "Thoát toàn màn hình", "reset": "Hội thoại mới", "welcome": "Hãy hỏi về AiGen-One, triển khai FDE, Skills, Agents và ứng dụng nghiệp vụ.", "tryAsking": "Ví dụ", "suggestions": ["FDE sẽ làm gì?", "Skill, Agent và ứng dụng khác nhau thế nào?", "Triển khai AI tại hiện trường ra sao?"], "placeholder": "Hỏi về AiGen-One", "send": "Gửi", "error": "Không thể lấy câu trả lời. Vui lòng thử lại sau.", "disclaimer": "Câu trả lời dựa trên thông tin sản phẩm công khai", "basedOn": "Tham khảo {count} nguồn AiGen-One", "status": {"connecting": "Đang kiểm tra thông tin", "answering": "Đang tạo câu trả lời"}},
-  "cta": {"eyebrow": "START WITH YOUR WORK", "title": "Hãy bắt đầu bằng cách kể\ncông việc hiện tại.", "description": "Bạn chưa cần có kế hoạch AI hoàn chỉnh. FDE sẽ cùng hệ thống hóa nghiệp vụ, vấn đề và đề xuất hệ thống đầu tiên nên xây dựng.", "primary": "Trao đổi với FDE", "secondary": "Xem demo"},
-  "footer": {"description": "Nền tảng nghiệp vụ AI cho doanh nghiệp, được xây dựng cùng FDE."}
+  "meta": {
+    "title": "AiGen-One | AI giúp công việc tiến lên",
+    "description": "Không gian làm việc AI kết nối trò chuyện, kiến thức nội bộ, Skills, Agents và ứng dụng nghiệp vụ. Từ sử dụng AI hằng ngày đến quy trình riêng cho doanh nghiệp."
+  },
+  "nav": {
+    "platform": "Tính năng",
+    "fde": "Triển khai",
+    "pricing": "Bảng giá",
+    "demo": "Video",
+    "practice": "Thực tiễn",
+    "menu": "Mở menu",
+    "closeMenu": "Đóng menu"
+  },
+  "hero": {
+    "eyebrow": "AIGEN-ONE / AI BUSINESS WORKSPACE",
+    "title": "Từ hỏi AI.\nĐến đưa công việc tiến lên.",
+    "description": "Kết nối trò chuyện, kiến thức nội bộ và công việc hằng ngày.\nTừ sử dụng AI đến quy trình dành riêng cho doanh nghiệp.",
+    "primaryCta": "Tư vấn cách dùng cho đội ngũ",
+    "secondaryCta": "Xem video",
+    "proofs": [
+      "Đồng hành từ phân tích đến triển khai",
+      "Tích hợp Skills, Agents và ứng dụng",
+      "Quản lý quyền, phê duyệt và kiểm toán"
+    ]
+  },
+  "fde": {
+    "eyebrow": "FORWARD DEPLOYED ENGINEERING",
+    "title": "Hiểu sâu nghiệp vụ\ntrước khi đưa AI vào.",
+    "description": "Chỉ cung cấp thêm công cụ không làm thay đổi công việc. FDE làm việc cùng đội ngũ để hệ thống hóa tiêu chí quyết định, dữ liệu, ngoại lệ và luồng phê duyệt.",
+    "note": "Forward Deployed Engineer là chuyên gia triển khai AI làm việc trực tiếp với hiện trường, chịu trách nhiệm xây dựng và cải tiến cho đến khi hệ thống thực sự được sử dụng.",
+    "photoCaption": "Chúng tôi hiểu quy trình và quyết định ngay tại nơi công việc thực sự diễn ra, không chỉ trong phòng họp.",
+    "steps": [
+      {
+        "title": "Hiểu nghiệp vụ",
+        "description": "Phỏng vấn và quan sát để tìm công việc thủ công, quyết định ngầm và liên kết với hệ thống hiện có."
+      },
+      {
+        "title": "Thiết kế đúng hình thức",
+        "description": "Năng lực đơn lẻ thành Skill, quy trình nhiều bước thành Agent, công việc cần màn hình và dữ liệu thành ứng dụng."
+      },
+      {
+        "title": "Đưa vào thực tế",
+        "description": "Thiết lập quyền và phê duyệt, triển khai rồi cải tiến liên tục từ dữ liệu sử dụng."
+      }
+    ]
+  },
+  "platform": {
+    "eyebrow": "ONE PLATFORM FOR WORK & AI",
+    "title": "Nghiệp vụ và AI,\ntrong một nơi làm việc.",
+    "description": "Từ Dashboard hàng ngày đến tư vấn AI, năng lực chuyên môn, thực thi nghiệp vụ và hệ thống riêng, tất cả dùng chung tổ chức, quyền, dữ liệu và phê duyệt.",
+    "layers": [
+      {
+        "title": "Dashboard",
+        "description": "Lịch, thông báo, phê duyệt, dự án và nghiệp vụ thường dùng trên một màn hình."
+      },
+      {
+        "title": "AiGen Chat",
+        "description": "Hiểu tri thức và dữ liệu doanh nghiệp để tư vấn và thực hiện."
+      },
+      {
+        "title": "Skills",
+        "description": "Năng lực chuyên môn tái sử dụng cho dịch thuật, tài liệu, phân tích và hơn thế nữa."
+      },
+      {
+        "title": "Agents",
+        "description": "Kết hợp Skills, API và MCP để thực thi với bước xác nhận của con người."
+      },
+      {
+        "title": "Ứng dụng nghiệp vụ",
+        "description": "Hệ thống hóa nghiệp vụ riêng cần giao diện, dữ liệu và quy trình."
+      }
+    ]
+  },
+  "build": {
+    "eyebrow": "BUILD BY CONVERSATION",
+    "title": "Sau triển khai, đội ngũ vẫn có thể\nphát triển bằng hội thoại.",
+    "description": "Sau khi FDE xây dựng nền tảng, quản lý và nhân viên hiện trường có thể bổ sung chức năng qua hội thoại với AI. Ngôn ngữ nghiệp vụ hàng ngày trở thành điểm bắt đầu của phát triển.",
+    "prompt": "Tôi muốn một màn hình phân tích xu hướng từ dữ liệu doanh số trong quá khứ.",
+    "outputs": [
+      {
+        "title": "Skill Creator",
+        "description": "Biến tiêu chí nghiệp vụ và định dạng đầu ra thành năng lực chuyên môn dùng trong AI Chat."
+      },
+      {
+        "title": "Agent Creator",
+        "description": "Kết hợp Skills và dịch vụ ngoài thành luồng nghiệp vụ có thứ tự và phê duyệt."
+      },
+      {
+        "title": "Tạo ứng dụng nghiệp vụ",
+        "description": "Tạo hệ thống có danh sách, biểu mẫu, tìm kiếm và phê duyệt bằng hội thoại."
+      }
+    ]
+  },
+  "journey": {
+    "eyebrow": "FROM DISCOVERY TO ADOPTION",
+    "title": "Không dừng khi hoàn thành.\nTiếp tục phát triển tại hiện trường.",
+    "description": "Hiểu nghiệp vụ, thiết kế, triển khai, mở rộng và cải tiến không bị tách rời. FDE và AiGen-One giúp AI không dừng ở thử nghiệm ngắn hạn.",
+    "steps": [
+      {
+        "title": "Lắng nghe",
+        "description": "Chia sẻ vấn đề và cách làm việc lý tưởng."
+      },
+      {
+        "title": "Phân rã",
+        "description": "Hệ thống hóa quyết định, dữ liệu, ngoại lệ, phê duyệt."
+      },
+      {
+        "title": "Xây dựng",
+        "description": "Triển khai thành Skills, Agents và ứng dụng."
+      },
+      {
+        "title": "Đưa vào sử dụng",
+        "description": "Sử dụng dễ dàng từ Dashboard."
+      },
+      {
+        "title": "Cải tiến",
+        "description": "Phát triển từ dữ liệu và phản hồi hiện trường."
+      }
+    ]
+  },
+  "outcomes": {
+    "eyebrow": "WHAT TEAMS CAN BUILD",
+    "title": "Hệ thống AI riêng\ncho cách công ty bạn làm việc.",
+    "description": "Không bắt mọi người học một công cụ AI chung; hãy AI hóa chính nghiệp vụ hàng ngày.",
+    "items": [
+      {
+        "label": "Sales",
+        "title": "Đề xuất và cơ hội",
+        "description": "Tạo đề xuất từ ghi chú, lưu vào cơ hội và chia sẻ hành động tiếp theo trên Dashboard."
+      },
+      {
+        "label": "Operations",
+        "title": "Quyết định và phê duyệt",
+        "description": "Biến quy định nội bộ thành Skill và để Agent xử lý với kiểm tra, phê duyệt."
+      },
+      {
+        "label": "Knowledge",
+        "title": "Dữ liệu nội bộ",
+        "description": "Dùng quy định, biên bản và CSDL để trả lời, tổng hợp, tạo tài liệu theo quyền truy cập."
+      }
+    ]
+  },
+  "governance": {
+    "eyebrow": "ENTERPRISE GOVERNANCE",
+    "title": "Tự do xây dựng.\nDoanh nghiệp vẫn quản lý được.",
+    "description": "AiGen-One cân bằng sự tiện lợi của AI với vận hành an toàn. FDE thiết kế triển khai phù hợp quy định hiện có.",
+    "items": [
+      {
+        "title": "Tổ chức, quyền, phê duyệt",
+        "description": "Kiểm soát dữ liệu, Skills, Agents và ứng dụng theo phòng ban và vai trò."
+      },
+      {
+        "title": "Kiểm toán và sử dụng",
+        "description": "Ghi lại ai đã sử dụng, tạo và thực thi gì để quản lý và cải tiến."
+      },
+      {
+        "title": "Kết nối hệ thống hiện có",
+        "description": "Kết nối API, MCP, Google Workspace, Git và tài sản nghiệp vụ hiện tại."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "PLANS",
+    "title": "Chi phí",
+    "description": "Cấu hình theo chức năng và vai trò. Dịch vụ FDE được báo giá theo nghiệp vụ và phạm vi tích hợp.",
+    "plans": [
+      {
+        "name": "Business User",
+        "target": "Người dùng ứng dụng nghiệp vụ",
+        "features": "Dashboard và ứng dụng đã phát hành",
+        "price": "¥800 / người tháng"
+      },
+      {
+        "name": "AI User",
+        "target": "Người dùng AI trong công việc",
+        "features": "Business User, AiGen Chat, Knowledge, Skills, Agents",
+        "price": "1.000 yên / người / tháng"
+      },
+      {
+        "name": "Organization Admin",
+        "target": "Người quản lý triển khai",
+        "features": "Quyền, phê duyệt, giới hạn, menu nghiệp vụ, tích hợp",
+        "price": "3.000 yên / người / tháng"
+      }
+    ],
+    "note": "Có thể phát sinh phí plugin, nền tảng và phát triển plugin tùy phạm vi sử dụng.",
+    "cta": "Trao đổi phạm vi và chi phí"
+  },
+  "advisor": {
+    "title": "Aigen Advisor",
+    "subtitle": "Tư vấn sản phẩm, triển khai và kỹ thuật",
+    "open": "Hỏi Aigen",
+    "close": "Đóng",
+    "fullscreen": "Mở toàn màn hình",
+    "exitFullscreen": "Thoát toàn màn hình",
+    "reset": "Hội thoại mới",
+    "welcome": "Hỏi về AI Chat, kiến thức nội bộ, Skills, Agents, ứng dụng và hỗ trợ triển khai của AiGen-One.",
+    "tryAsking": "Ví dụ",
+    "suggestions": [
+      "Bắt đầu từ AI hằng ngày như thế nào?",
+      "Kết nối kiến thức nội bộ ra sao?",
+      "Tự động hóa một quy trình như thế nào?"
+    ],
+    "placeholder": "Hỏi về AiGen-One",
+    "send": "Gửi",
+    "error": "Không thể lấy câu trả lời. Vui lòng thử lại sau.",
+    "disclaimer": "Câu trả lời dựa trên thông tin sản phẩm công khai",
+    "basedOn": "Tham khảo {count} nguồn AiGen-One",
+    "status": {
+      "connecting": "Đang kiểm tra thông tin",
+      "answering": "Đang tạo câu trả lời"
+    }
+  },
+  "cta": {
+    "eyebrow": "START WITH YOUR WORK",
+    "title": "Bắt đầu từ một quy trình.\nCùng kiểm chứng thay đổi.",
+    "description": "Chia sẻ cách đội ngũ đang dùng AI và những điểm vướng trong công việc.\nCùng xem sản phẩm và chọn quy trình đầu tiên cần kết nối.",
+    "primary": "Tư vấn cách dùng cho đội ngũ",
+    "secondary": "Xem video trước"
+  },
+  "footer": {
+    "description": "Không gian làm việc AI kết nối công việc trong doanh nghiệp."
+  },
+  "experience": {
+    "heroNotes": {
+      "chat": "Hỏi cả về công việc nội bộ.",
+      "work": "Từ trò chuyện đến hành động.",
+      "bottom": "Một điểm bắt đầu cho những công việc còn phân tán."
+    },
+    "entry": {
+      "title": "Đã cấp tài khoản AI.\nNhân viên có sử dụng không?",
+      "description": "Doanh nghiệp đã cấp ChatGPT hoặc Claude cho nhân viên.\nViệc sử dụng đã vượt ngoài tra cứu thông tin chưa?\nHãy bắt đầu từ cách AI đang được dùng thực tế.",
+      "ask": "Tại doanh nghiệp của bạn thì sao?",
+      "questions": [
+        "Ai đang dùng AI và cho công việc nào?",
+        "Thời gian tìm thông tin nội bộ đã giảm chưa?",
+        "Sau câu trả lời, còn phải sao chép và xử lý thủ công không?"
+      ],
+      "note": "Xem lại cách sử dụng và quản lý AI theo các gói hiện có và mức sử dụng thực tế."
+    },
+    "features": {
+      "label": "ONE WORKSPACE, CONNECTED WORK",
+      "title": "Khám phá tính năng.\nTheo dòng công việc.",
+      "description": "Tìm. Hỏi. Tạo. Kiểm tra. Thực hiện.\nKết nối các bước trên cùng dữ liệu, tổ chức và quyền truy cập.",
+      "tabs": "Chọn tính năng",
+      "foundation": "Nền tảng chung cho tổ chức, quyền và dữ liệu",
+      "items": [
+        {
+          "label": "Dashboard",
+          "title": "Công việc hôm nay.\nTrong một góc nhìn.",
+          "description": "Lịch, thông báo, phê duyệt và tiến độ dự án. Tập hợp điểm bắt đầu để đội ngũ biết cần làm gì tiếp theo."
+        },
+        {
+          "label": "AI Chat",
+          "title": "Hỏi về công việc.\nCó ngữ cảnh nội bộ.",
+          "description": "Từ tra cứu và soạn thảo đến quy định và dữ liệu nghiệp vụ. Kết nối kho kiến thức và cơ sở dữ liệu để hỗ trợ trao đổi theo ngữ cảnh công việc."
+        },
+        {
+          "label": "Skills",
+          "title": "Chuyên môn hằng ngày.\nSẵn sàng dùng lại.",
+          "description": "Dịch thuật, đề xuất và phân tích. Chuyển tiêu chí và định dạng của công ty thành Skill để giảm chỉ dẫn lặp lại."
+        },
+        {
+          "label": "Agents",
+          "title": "Nhận câu trả lời.\nTiếp tục công việc.",
+          "description": "Kết hợp Skills và dịch vụ bên ngoài thành quy trình thu thập thông tin, soạn thảo và kiểm tra. Thiết kế cả các bước cần con người quyết định."
+        },
+        {
+          "label": "Ứng dụng",
+          "title": "Cách làm việc riêng.\nGiao diện riêng.",
+          "description": "Danh sách, nhập liệu, tìm kiếm và phê duyệt. Chuyển công việc phân tán thành hệ thống có giao diện và dữ liệu. Tạo ứng dụng qua hội thoại đang được phát triển."
+        }
+      ]
+    },
+    "visual": {
+      "actual": "Màn hình thực tế / ví dụ tạo ứng dụng AiGen-One",
+      "concept": "Minh họa tình huống sử dụng",
+      "question": "Quy trình thanh toán công tác phí là gì?",
+      "sources": "Tham chiếu kiến thức nội bộ",
+      "answer": "Đây là các bước thanh toán công tác phí.",
+      "answerText": "Đã tổng hợp các mục bắt buộc và điểm cần kiểm tra. Bạn có thể xem quy định gốc cùng câu trả lời.",
+      "policy": "Quy định công tác phí",
+      "data": "Dữ liệu đề nghị",
+      "compose": "Hỏi về công việc…",
+      "skillTitle": "Chuyên môn đội ngũ trong một nơi.",
+      "skills": [
+        "Soạn đề xuất",
+        "Tóm tắt cuộc họp",
+        "Phân tích doanh số"
+      ],
+      "request": "Chuẩn bị đề xuất từ ghi chú cuộc họp.",
+      "phases": [
+        "Kiểm tra dữ liệu",
+        "Soạn bản nháp",
+        "Người phụ trách xem",
+        "Bước tiếp theo"
+      ],
+      "human": "Con người kiểm tra",
+      "control": "Con người kiểm tra ở những bước cần quyết định."
+    },
+    "movies": {
+      "title": "Hình dung cách dùng.\nQua từng video.",
+      "description": "Video giới thiệu và sáu video ngắn.\nChọn một video để tìm hiểu cách chúng tôi đưa AI vào công việc.",
+      "main": "Giới thiệu AiGen-One",
+      "short": "Video ngắn",
+      "play": "Phát video",
+      "carousel": "băng chuyền",
+      "select": "Chọn video",
+      "previous": "Video trước",
+      "next": "Video tiếp",
+      "youtube": "Xem trên YouTube"
+    },
+    "build": {
+      "title": "“Cần một cách làm tốt hơn.”\nĐó là khởi đầu để xây dựng.",
+      "description": "Từ trao đổi AI cá nhân đến quy trình nhóm.\nRồi đến hệ thống riêng có giao diện và dữ liệu.",
+      "voice": "Từ ngôn ngữ của đội ngũ",
+      "caption": "Ví dụ tạo ứng dụng thực tế. Chức năng tạo ứng dụng nghiệp vụ bằng AI đang phát triển."
+    },
+    "growth": [
+      {
+        "title": "Bắt đầu từ AI hằng ngày",
+        "description": "Tra cứu, soạn thảo và hỏi về nội bộ. Tạo điểm bắt đầu dễ sử dụng."
+      },
+      {
+        "title": "Kết nối công việc nhóm",
+        "description": "Kết nối dữ liệu với Skills và Agents, bao gồm kiểm tra và phê duyệt."
+      },
+      {
+        "title": "Phát triển hệ thống riêng",
+        "description": "Chuyển nghiệp vụ riêng thành ứng dụng. Tiếp tục thử nghiệm tự động hóa phát triển và vận hành."
+      }
+    ],
+    "adoption": {
+      "title": "Bắt đầu nhỏ.\nMở rộng từng bước.",
+      "description": "Một quy trình, một đội ngũ. Hiểu công việc và hệ thống hiện có, sau đó triển khai theo từng giai đoạn để nhân viên sử dụng được.",
+      "imageAlt": "Hình minh họa hỗ trợ triển khai và tìm hiểu quy trình",
+      "caption": "Hình minh họa hỗ trợ triển khai",
+      "fde": "FDE, kỹ sư chuyên hỗ trợ triển khai, đồng hành từ tìm hiểu nghiệp vụ, thiết kế và xây dựng đến áp dụng thực tế.",
+      "cta": "Trao đổi về quy trình đầu tiên"
+    },
+    "practice": {
+      "title": "Trong chính công việc phát triển,\nchúng tôi thử nghiệm tương lai.",
+      "description": "Tự động hóa quản lý phát triển là hoạt động thực tiễn của chúng tôi.\nChúng tôi thử nghiệm trên dự án thực để giảm thao tác và điều phối giữa khách hàng và đội phát triển.",
+      "badge": "Thực tiễn nội bộ / thử nghiệm trên dự án thực",
+      "context": "AI có thể giảm bao nhiêu công việc trao đổi và bàn giao trong phát triển offshore?",
+      "request": "Tạo tác vụ từ\nyêu cầu chỉnh sửa.",
+      "steps": [
+        "Tạo kế hoạch sửa",
+        "Phê duyệt kế hoạch",
+        "Sửa và triển khai\nlên staging",
+        "Nhân viên\nkiểm tra hoạt động",
+        "Tạo PR lên production\nbằng một nút",
+        "Con người merge"
+      ],
+      "human": "Người",
+      "todayTitle": "Hiện tại: con người giữ ba quyết định",
+      "today": "Con người phê duyệt kế hoạch, kiểm tra hoạt động và merge. Chia sẻ tiến độ với khách hàng và đánh giá mức giảm công sức thực hiện và điều phối.",
+      "futureTitle": "Hướng tới hệ thống doanh nghiệp tự phát triển",
+      "future": "Giảm phụ thuộc vào kỹ sư và người điều phối để doanh nghiệp tự phát triển và vận hành hệ thống. Tự động hóa cả merge cuối cùng là chủ đề kiểm chứng trong tương lai.",
+      "measure": "Đánh giá hiệu quả trong thời gian tới: công sức xử lý / số lượt điều phối / chỉnh sửa lại / thời gian từ kiểm tra đến phát hành."
+    },
+    "governance": {
+      "title": "Một nơi để làm việc.\nMột nơi để quản lý.",
+      "description": "Ai được dùng tính năng nào và truy cập dữ liệu nào.\nNền tảng quản lý chung khi AI và quy trình được mở rộng.",
+      "connect": "Kết nối công việc hiện có"
+    },
+    "pricingNote": "Hạn mức AI, mô hình, tích hợp và phạm vi hỗ trợ triển khai được xác nhận khi tư vấn."
+  }
 }

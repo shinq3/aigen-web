@@ -15,7 +15,7 @@ type ChatMessage = {
 const apiBase = import.meta.env.VITE_AIGEN_ADVISOR_API_BASE
   || (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
     ? "http://localhost:4192/api"
-    : "https://aigen-one.d-auchy.studio/api");
+    : "/api");
 
 function RichText({ content }: { content: string }) {
   return (
