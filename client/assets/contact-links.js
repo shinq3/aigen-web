@@ -6,6 +6,7 @@
     currentUrl.pathname.includes("/cms/preview/") &&
     currentUrl.searchParams.has("token")
   ) {
+    formUrl.pathname += "index.html";
     formUrl.searchParams.set("token", currentUrl.searchParams.get("token"));
   }
   const updateLinks = () => {
