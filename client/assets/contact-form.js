@@ -7,7 +7,7 @@
   let sending = false;
   let submissionId;
   // A CMS sandbox must never send a visitor inquiry while editing the site.
-  if (window.origin === "null") {
+  if (window.origin === "null" || window.location.pathname.includes("/cms/preview/")) {
     status.className = "preview-notice";
     status.textContent =
       "フォームのプレビューです。お問い合わせは公開サイトから送信できます。";

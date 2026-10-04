@@ -9,6 +9,7 @@ const source = readFileSync(
 );
 function fixture({
   origin = "https://www.aigen.tokyo",
+  pathname = "/contact/",
   valid = true,
   fetchImpl,
 } = {}) {
@@ -58,7 +59,7 @@ function fixture({
       getElementById: (id) => elements[id],
       querySelector: () => heading,
     },
-    window: { origin },
+    window: { origin, location: { pathname } },
     crypto: { randomUUID: () => "stable-submission-id" },
     AbortSignal,
     FormData: class {
@@ -174,4 +175,10 @@ test("CMS sandbox preview stays disabled and has no submit handler", () => {
   assert.equal(f.button.disabled, true);
   assert.equal(f.submit, undefined);
   assert.match(f.status.textContent, /プレビュー/);
+});
+
+test("standalone CMS preview also prevents visitor submissions", () => {
+  const f = fixture({ pathname: "/api/plugins/web-cms/cms/preview/job/contact/index.html" });
+  assert.equal(f.button.disabled, true);
+  assert.equal(f.submit, undefined);
 });
