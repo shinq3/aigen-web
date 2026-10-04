@@ -1,88 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700&family=Noto+Sans+JP:wght@400;500;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
-    <title>AiGen-One | FDEとつくるAI業務プラットフォーム</title>
-    <meta name="description" content="専門FDEが現場業務を理解し、Skills・Agents・業務アプリとして設計・実装。AI導入から現場定着、継続改善まで支援します。">
-    <script type="module" crossorigin src="./assets/aigen-CQcV8yge.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/site.css">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script>
-      (() => {
-        const root = document.getElementById("root");
-        const retryIntervalMs = 250;
-        const maxAttempts = 80;
-        let attempts = 0;
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Aigen-One｜調べるAIから、仕事が進むAIへ。</title>
+  <meta name="description" content="チャット、社内情報、日々の業務をひとつに。いつものAI相談から会社専用の仕事の仕組みへ広げるAIプラットフォーム。">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23ff6b2c'/%3E%3Cpath d='M18 44 30 17h5l12 27h-8l-2-6H27l-2 6zm12-13h5l-2.5-7z' fill='white'/%3E%3C/svg%3E">
+  <script type="module" crossorigin src="./assets/aigen-CQcV8yge.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/site.css">
+  <link rel="stylesheet" href="./assets/lp.css">
+</head>
+<body>
+  <div id="root" hidden aria-hidden="true"></div>
+  <div id="site">
+    <header class="topbar">
+      <a class="logo" href="#top" aria-label="Aigen-One トップ">Aigen<span>-One</span></a>
+      <nav aria-label="メインナビゲーション"><a href="#experience">機能</a><a href="#support">導入支援</a><a href="#price">料金</a></nav>
+      <a class="header-cta" href="./contact/">相談する</a>
+    </header>
 
-        const ensureDemoVideo = () => {
-          attempts += 1;
+    <main id="top">
+      <section class="hero reveal">
+        <p class="eyebrow">AI OPERATING PLATFORM</p>
+        <h1>調べるAIから、<br><span>仕事が進むAIへ。</span></h1>
+        <p class="hero-lead">チャット、社内の情報、日々の業務をひとつに。<br>いつものAI相談から、会社専用の仕事の仕組みへ。</p>
+        <div class="actions"><a class="button primary" href="./contact/">業務に合う使い方を相談</a><a class="button ghost" href="#movies">動画で見る <span aria-hidden="true">▶</span></a></div>
+        <figure class="hero-screen product-shot">
+          <img src="./assets/AIGenOne_dashboard_actual_v2-CHt2JP24.png" alt="Aigen-Oneのダッシュボード実画面。AIチャット、業務アプリ、利用状況がひとつの画面にまとまっている" width="1600" height="960">
+          <figcaption>実際のAigen-One ダッシュボード画面</figcaption>
+        </figure>
+      </section>
 
-          const main = root.querySelector("main");
-          const hero = main && main.querySelector("section");
-          if (!hero) return;
+      <section class="question dark reveal" aria-labelledby="question-title">
+        <div class="section-inner narrow">
+          <p class="eyebrow orange">BEYOND AI ACCOUNTS</p>
+          <h2 id="question-title">そのAIアカウント、<br>現場で使われていますか。</h2>
+          <ul class="question-list">
+            <li><span>01</span>誰が、何の業務でAIを使っていますか。</li>
+            <li><span>02</span>社内情報を探す時間は減りましたか。</li>
+            <li><span>03</span>AIの回答の後も、転記や手作業が残っていませんか。</li>
+          </ul>
+          <p class="quiet">AIを「答える場所」だけで終わらせず、情報を探し、次の作業へつなぎ、チームの仕事が前へ進む共通基盤へ。</p>
+        </div>
+      </section>
 
-          const existingSection = root.querySelector(".demo-video-section");
-          const existingIframe = existingSection && existingSection.querySelector(
-            'iframe[src*="RSjTnCubr6U"]'
-          );
-          const existingShorts = existingSection && existingSection.querySelector(
-            '.demo-shorts-grid'
-          );
-          if (existingIframe && existingShorts) return;
+      <section id="experience" class="feature-section reveal">
+        <div class="section-heading"><p class="eyebrow">PRODUCT EXPERIENCE</p><h2>仕事の入口は、<br>ひとつでいい。</h2><p>機能名を切り替えて、仕事がどう変わるかをご覧ください。</p></div>
+        <div class="feature-tabs" role="tablist" aria-label="Aigen-Oneの機能">
+          <button role="tab" aria-selected="true" data-feature="dashboard">Dashboard</button><button role="tab" aria-selected="false" data-feature="chat">AI Chat</button><button role="tab" aria-selected="false" data-feature="skills">Skills</button><button role="tab" aria-selected="false" data-feature="agents">Agents</button><button role="tab" aria-selected="false" data-feature="apps">業務アプリ</button>
+        </div>
+        <article class="feature-stage" aria-live="polite">
+          <div class="feature-copy"><p class="status-label">実画面</p><h3 id="feature-title">チームの仕事を、ひと目で。</h3><p id="feature-text">AIとの相談、導入済みの業務アプリ、組織の利用状況を、迷わない入口にまとめます。</p></div>
+          <figure class="product-shot"><img id="feature-image" src="./assets/AIGenOne_dashboard_actual_v2-CHt2JP24.png" alt="Aigen-One Dashboardの実画面"><figcaption id="feature-caption">Aigen-One Dashboard — 実画面</figcaption></figure>
+        </article>
+      </section>
 
-          // If React left only part of the injected section, replace that
-          // incomplete node instead of creating a duplicate.
-          if (existingSection) existingSection.remove();
+      <section id="movies" class="movies reveal">
+        <div class="section-heading"><p class="eyebrow">WATCH AIGEN-ONE</p><h2>見ると、仕事の流れが<br>もっと具体的に。</h2></div>
+        <div class="movie-shell">
+          <div class="movie-viewport" aria-live="polite"><div class="video-poster" id="video-poster"><img id="video-thumb" src="https://i.ytimg.com/vi/QnKgrSrNcmo/maxresdefault.jpg" alt="Aigen-One紹介動画のサムネイル"><button id="play-video" aria-label="動画を再生"><span>▶</span></button></div><iframe id="video-frame" title="Aigen-One紹介動画" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen hidden></iframe></div>
+          <div class="movie-meta"><div><p id="movie-count">01 / 07</p><h3 id="movie-title">Aigen-One 紹介動画</h3></div><div class="movie-arrows"><button id="movie-prev" aria-label="前の動画">←</button><button id="movie-next" aria-label="次の動画">→</button></div></div>
+          <div class="movie-selectors" id="movie-selectors" aria-label="動画を選択"></div>
+        </div>
+      </section>
 
-          const section = document.createElement("section");
-          section.className = "demo-video-section";
-          section.setAttribute("aria-labelledby", "demo-video-title");
-          section.innerHTML = `
-            <div class="demo-video-inner">
-              <p class="demo-video-eyebrow">PRODUCT MOVIE</p>
-              <h2 id="demo-video-title">AiGen-Oneを動画で見る</h2>
-              <div class="demo-video-frame">
-                <iframe
-                  src="https://www.youtube-nocookie.com/embed/RSjTnCubr6U?rel=0"
-                  title="AiGen-One 紹介動画"
-                  loading="lazy"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen></iframe>
-              </div>
-              <div class="demo-shorts" aria-labelledby="demo-shorts-title">
-                <div class="demo-shorts-heading">
-                  <p class="demo-video-eyebrow">SHORT MOVIES</p>
-                  <h3 id="demo-shorts-title">ショート動画</h3>
-                </div>
-                <ul class="demo-shorts-grid" role="list">
-                  <li><a class="demo-short-card" href="https://youtube.com/shorts/FRvYDCeY4sc?feature=share" target="_blank" rel="noopener noreferrer" aria-label="AiGen-One ショート動画 1をYouTubeで見る"><span class="demo-short-thumbnail"><img src="https://i.ytimg.com/vi/FRvYDCeY4sc/hqdefault.jpg" alt="AiGen-One ショート動画 1のサムネイル" loading="lazy"><span class="demo-short-play" aria-hidden="true">▶</span></span><span class="demo-short-label">Short movie 01</span></a></li>
-                  <li><a class="demo-short-card" href="https://youtube.com/shorts/crTaPI7aDSs?feature=share" target="_blank" rel="noopener noreferrer" aria-label="AiGen-One ショート動画 2をYouTubeで見る"><span class="demo-short-thumbnail"><img src="https://i.ytimg.com/vi/crTaPI7aDSs/hqdefault.jpg" alt="AiGen-One ショート動画 2のサムネイル" loading="lazy"><span class="demo-short-play" aria-hidden="true">▶</span></span><span class="demo-short-label">Short movie 02</span></a></li>
-                  <li><a class="demo-short-card" href="https://youtube.com/shorts/s6rt-ZhfYBo?feature=share" target="_blank" rel="noopener noreferrer" aria-label="AiGen-One ショート動画 3をYouTubeで見る"><span class="demo-short-thumbnail"><img src="https://i.ytimg.com/vi/s6rt-ZhfYBo/hqdefault.jpg" alt="AiGen-One ショート動画 3のサムネイル" loading="lazy"><span class="demo-short-play" aria-hidden="true">▶</span></span><span class="demo-short-label">Short movie 03</span></a></li>
-                  <li><a class="demo-short-card" href="https://youtube.com/shorts/NF4y8nVA6Cs?feature=share" target="_blank" rel="noopener noreferrer" aria-label="AiGen-One ショート動画 4をYouTubeで見る"><span class="demo-short-thumbnail"><img src="https://i.ytimg.com/vi/NF4y8nVA6Cs/hqdefault.jpg" alt="AiGen-One ショート動画 4のサムネイル" loading="lazy"><span class="demo-short-play" aria-hidden="true">▶</span></span><span class="demo-short-label">Short movie 04</span></a></li>
-                  <li><a class="demo-short-card" href="https://youtube.com/shorts/oB5WKp0E4jw?feature=share" target="_blank" rel="noopener noreferrer" aria-label="AiGen-One ショート動画 5をYouTubeで見る"><span class="demo-short-thumbnail"><img src="https://i.ytimg.com/vi/oB5WKp0E4jw/hqdefault.jpg" alt="AiGen-One ショート動画 5のサムネイル" loading="lazy"><span class="demo-short-play" aria-hidden="true">▶</span></span><span class="demo-short-label">Short movie 05</span></a></li>
-                  <li><a class="demo-short-card" href="https://youtube.com/shorts/VPtGVQ6d1FM?feature=share" target="_blank" rel="noopener noreferrer" aria-label="AiGen-One ショート動画 6をYouTubeで見る"><span class="demo-short-thumbnail"><img src="https://i.ytimg.com/vi/VPtGVQ6d1FM/hqdefault.jpg" alt="AiGen-One ショート動画 6のサムネイル" loading="lazy"><span class="demo-short-play" aria-hidden="true">▶</span></span><span class="demo-short-label">Short movie 06</span></a></li>
-                </ul>
-              </div>
-            </div>`;
-          hero.insertAdjacentElement("afterend", section);
-        };
+      <section class="growth reveal">
+        <div class="section-heading"><p class="eyebrow">GROW WITH YOUR WORK</p><h2>日常のAI利用から、<br>会社専用の仕組みへ。</h2></div>
+        <ol class="growth-flow">
+          <li><b>1</b><div><span>START</span><h3>AIに相談する</h3><p>いつもの言葉で相談し、社内情報を根拠に次の行動を整理する。</p></div></li>
+          <li><b>2</b><div><span>CONNECT</span><h3>チームの業務をつなぐ</h3><p>Skill CreatorとAgentsで、繰り返す作業や部門間の流れをつなぐ。</p><em>Skill Creator：提供中　／　Agent Creator：順次提供</em></div></li>
+          <li><b>3</b><div><span>BUILD</span><h3>自社のシステムを育てる</h3><p>会社固有のルールや画面を持つ業務アプリへ。必要に応じて既存システムとも連携。</p><em>業務アプリ作成：個別設計・開発</em></div></li>
+        </ol>
+      </section>
 
-        // Wait for React to create <main>, then keep checking for a bounded
-        // period so a later render cannot permanently remove the video.
-        const retryTimer = window.setInterval(() => {
-          ensureDemoVideo();
-          if (attempts >= maxAttempts) window.clearInterval(retryTimer);
-        }, retryIntervalMs);
-      })();
-    </script>
-    <script src="./assets/pricing-update.js"></script>
-    <script src="./assets/contact-links.js"></script>
-  </body>
+      <section id="support" class="support reveal">
+        <div class="support-copy"><p class="eyebrow">IMPLEMENTATION SUPPORT</p><h2>最初から、<br>全部変えなくていい。</h2><p>ひとつの業務、ひとつのチームから。現場を理解するFDEが、課題の整理から設計・実装、使い続けられる状態まで伴走します。</p><div class="support-steps"><span>01 業務整理</span><span>02 設計・実装</span><span>03 現場への定着</span></div></div>
+        <figure><img src="./assets/AIGenOne_FDE_workshop_v2-frVxEkgh.jpg" alt="FDEと現場チームが業務を整理するワークショップの様子"><figcaption>FDE（Forward Deployed Engineer）が現場に入り、仕事の流れから設計します。</figcaption></figure>
+      </section>
+
+      <section class="practice dark reveal">
+        <div class="section-heading light"><p class="eyebrow orange">OUR PRACTICE — CURRENT</p><h2>私たち自身の開発現場で、<br>人とAIの分担を検証しています。</h2><p>完全自動化ではありません。判断と品質確認は人が担い、定型的な実行をAIへ渡す現在の運用です。</p></div>
+        <div class="legend"><span class="ai-dot">AI・自動処理</span><span class="human-dot">人が判断</span></div>
+        <ol class="dev-flow">
+          <li class="ai"><span>01</span>Google Chatで<br>修正依頼</li><li class="ai"><span>02</span>タスク作成</li><li class="ai"><span>03</span>AIが修正プランを作成</li><li class="human"><span>04</span>人がプランを承認</li><li class="ai"><span>05</span>AIが修正し<br>ステージングへ</li><li class="human"><span>06</span>スタッフが<br>動作検証</li><li class="ai"><span>07</span>1ボタンで<br>本番向けPR</li><li class="human"><span>08</span>人がマージ</li>
+        </ol>
+        <div class="future"><p>FUTURE DIRECTION</p><h3>企業自身が、システムを育てられる未来へ。</h3><span>エンジニアやディレクターだけに依存せず、現場の改善意志を、安全な開発・運用につなげられる会社の姿を目指しています。</span></div>
+      </section>
+
+      <section class="governance reveal">
+        <div class="section-heading"><p class="eyebrow">ENTERPRISE CONTROL</p><h2>便利さを、<br>企業の管理の中で。</h2></div>
+        <div class="governance-grid"><article><span>01</span><h3>組織・権限・承認</h3><p>役割と共有範囲を決め、会社のルールに沿ってAIと業務アプリを展開。</p></article><article><span>02</span><h3>監査ログ・利用状況</h3><p>操作やAI利用の記録、モデル別の利用量・費用を管理側から確認。</p></article><article><span>03</span><h3>既存システム連携</h3><p>Google Workspace、GitHub、業務データなどを、許可された範囲で接続。</p></article></div>
+        <figure class="wide-shot"><img src="./assets/AIGenOne_governance_review_v2-CmM0uezv.jpg" alt="Aigen-Oneのガバナンス機能を管理者が確認している利用イメージ"><figcaption>説明用イメージ：組織の運用ルールに合わせた管理・確認</figcaption></figure>
+      </section>
+
+      <section id="price" class="pricing reveal">
+        <div class="section-heading"><p class="eyebrow">PRICING</p><h2>小さく始めて、<br>必要な分だけ広げる。</h2></div>
+        <div class="price-cards"><article><p>AIユーザー</p><strong><small>月額</small> 1,000<small>円 / 人</small></strong><span>AIチャットや許可された業務機能を使うメンバー向け</span></article><article class="accent-card"><p>組織管理者</p><strong><small>月額</small> 3,000<small>円 / 人</small></strong><span>組織設定、権限、連携、利用状況を管理する担当者向け</span></article></div>
+        <p class="price-note">※ プラグイン利用料、利用用途によりプラットフォーム利用料、プラグイン開発料等が別途発生する場合があります。詳細はご相談内容に応じてご案内します。</p>
+      </section>
+
+      <section class="final-cta reveal"><p class="eyebrow">START WITH ONE WORKFLOW</p><h2>御社の「ひとつの業務」で、<br>確かめませんか。</h2><p>導入する機能が決まっていなくても大丈夫です。<br>いま時間がかかっている仕事から、一緒に整理します。</p><a class="button primary" href="./contact/">業務に合う使い方を相談</a></section>
+    </main>
+    <footer><a class="logo" href="#top">Aigen<span>-One</span></a><p>調べるAIから、仕事が進むAIへ。</p><small>© Aigen-One</small></footer>
+  </div>
+  <script src="./assets/pricing-update.js"></script>
+  <script src="./assets/contact-links.js"></script>
+  <script src="./assets/lp.js"></script>
+</body>
 </html>
