@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useLocale } from "@/lib/i18n-utils";
-import dashboardImage from "@assets/generated_images/AIGenOne_dashboard_actual_v2.png";
+import dashboardImage from "../../../images/dashboard.jpg";
 import builderImage from "@assets/generated_images/AIGenOne_builder_chat_actual.jpg";
 import teamImage from "@assets/generated_images/AIGenOne_FDE_field_discovery_v2.jpg";
 import aiChatImage from "../../../images/AI_chat.png";
@@ -50,7 +50,7 @@ const featureScreens = [
   businessMenuImage,
 ];
 const screenDimensions: Record<string, { width: number; height: number }> = {
-  [dashboardImage]: { width: 1470, height: 1027 },
+  [dashboardImage]: { width: 1667, height: 1038 },
   [builderImage]: { width: 981, height: 854 },
   [aiChatImage]: { width: 1526, height: 900 },
   [skillsImage]: { width: 1777, height: 974 },
