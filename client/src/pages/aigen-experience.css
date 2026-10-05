@@ -530,8 +530,8 @@ html {
   transform: perspective(1000px) rotateY(-4deg);
 }
 .compact img {
-  aspect-ratio: 1.48;
-  object-fit: cover;
+  aspect-ratio: auto;
+  object-fit: contain;
   object-position: top;
 }
 .visual-caption {
@@ -1585,7 +1585,7 @@ html {
     transform: none;
   }
   .feature-art .compact img {
-    aspect-ratio: 1.55;
+    aspect-ratio: auto;
   }
   .concept-visual {
     min-height: 310px;

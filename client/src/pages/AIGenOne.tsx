@@ -13,7 +13,6 @@ import {
   ChevronLeft,
   ChevronRight,
   Database,
-  FileText,
   GitPullRequest,
   LayoutDashboard,
   MessageSquare,
@@ -27,6 +26,10 @@ import { useLocale } from "@/lib/i18n-utils";
 import dashboardImage from "@assets/generated_images/AIGenOne_dashboard_actual_v2.png";
 import builderImage from "@assets/generated_images/AIGenOne_builder_chat_actual.jpg";
 import teamImage from "@assets/generated_images/AIGenOne_FDE_field_discovery_v2.jpg";
+import aiChatImage from "../../../images/AI_chat.png";
+import skillsImage from "../../../images/skills.png";
+import agentsImage from "../../../images/agent.png";
+import businessMenuImage from "../../../images/bussiness_menu.png";
 import "./aigen-experience.css";
 
 const movieIds = [
@@ -39,6 +42,21 @@ const movieIds = [
   "VPtGVQ6d1FM",
 ];
 const icons = [LayoutDashboard, MessageSquare, Sparkles, Workflow, AppWindow];
+const featureScreens = [
+  dashboardImage,
+  aiChatImage,
+  skillsImage,
+  agentsImage,
+  businessMenuImage,
+];
+const screenDimensions: Record<string, { width: number; height: number }> = {
+  [dashboardImage]: { width: 1470, height: 1027 },
+  [builderImage]: { width: 981, height: 854 },
+  [aiChatImage]: { width: 1526, height: 900 },
+  [skillsImage]: { width: 1777, height: 974 },
+  [agentsImage]: { width: 982, height: 967 },
+  [businessMenuImage]: { width: 1364, height: 1023 },
+};
 type Item = {
   title: string;
   description: string;
@@ -115,103 +133,9 @@ function ProductFrame({
         src={image}
         alt={alt}
         loading="lazy"
-        width={image === dashboardImage ? 1470 : 981}
-        height={image === dashboardImage ? 1027 : 854}
+        width={screenDimensions[image].width}
+        height={screenDimensions[image].height}
       />
-    </div>
-  );
-}
-
-function ConceptVisual({ index }: { index: number }) {
-  const { t } = useTranslation("aigen-one");
-  const txt = (key: string) => t(`experience.visual.${key}`);
-  const phases = t("experience.visual.phases", {
-    returnObjects: true,
-  }) as string[];
-  return (
-    <div
-      className={`concept-visual concept-${index}`}
-      aria-label={txt("concept")}
-    >
-      <div className="concept-top">
-        <span className="app-mark">
-          <Sparkles size={18} />
-        </span>
-        <span>
-          AiGen-One{" "}
-          <b>{index === 1 ? "Chat" : index === 2 ? "Skills" : "Agents"}</b>
-        </span>
-        <span className="online-dot" />
-      </div>
-      {index === 1 ? (
-        <div className="chat-demo">
-          <p className="demo-user">{txt("question")}</p>
-          <div className="demo-answer">
-            <span className="answer-icon">
-              <Sparkles size={19} />
-            </span>
-            <div>
-              <small>{txt("sources")}</small>
-              <h4>{txt("answer")}</h4>
-              <p>{txt("answerText")}</p>
-              <div className="source-chips">
-                <span>
-                  <FileText size={12} /> {txt("policy")}
-                </span>
-                <span>
-                  <Database size={12} /> {txt("data")}
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="demo-compose">
-            <span>{txt("compose")}</span>
-            <ArrowUpRight size={18} />
-          </div>
-        </div>
-      ) : index === 2 ? (
-        <div className="skills-demo">
-          <p>{txt("skillTitle")}</p>
-          {(
-            t("experience.visual.skills", { returnObjects: true }) as string[]
-          ).map((skill, i) => (
-            <div className="skill-row" key={skill}>
-              <span className={`skill-icon color-${i}`}>
-                <Sparkles size={18} />
-              </span>
-              <b>{skill}</b>
-              <ArrowUpRight size={17} />
-            </div>
-          ))}
-        </div>
-      ) : (
-        <div className="agent-demo">
-          <p className="agent-request">
-            <MessageSquare size={17} /> {txt("request")}
-          </p>
-          <div className="agent-nodes">
-            {phases.map((phase, i) => (
-              <div
-                key={phase}
-                className={`agent-node ${i === 2 ? "human-node" : ""}`}
-              >
-                <span>
-                  {i === 2 ? <ShieldCheck size={19} /> : <Check size={19} />}
-                </span>
-                <div>
-                  <small>{i === 2 ? txt("human") : "AI"}</small>
-                  <b>{phase}</b>
-                </div>
-                {i !== phases.length - 1 && <span className="node-line" />}
-              </div>
-            ))}
-          </div>
-          <p className="agent-foot">
-            <ShieldCheck size={14} /> {txt("control")}
-          </p>
-        </div>
-      )}
-      <span className="visual-caption">{txt("concept")}</span>
     </div>
   );
 }
@@ -307,20 +231,14 @@ function FeatureGallery() {
                   </span>
                 </div>
                 <div className="feature-art">
-                  {selected === 0 || selected === 4 ? (
-                    <>
-                      <ProductFrame
-                        image={selected === 0 ? dashboardImage : builderImage}
-                        alt={selected === 0 ? "Dashboard" : "Builder Chat"}
-                        compact
-                      />
-                      <span className="visual-caption">
-                        {t("experience.visual.actual")}
-                      </span>
-                    </>
-                  ) : (
-                    <ConceptVisual index={selected} />
-                  )}
+                  <ProductFrame
+                    image={featureScreens[selected]}
+                    alt={features[selected].label ?? "AiGen-One"}
+                    compact
+                  />
+                  <span className="visual-caption">
+                    {t("experience.visual.actual")}
+                  </span>
                 </div>
               </motion.div>
             </AnimatePresence>
