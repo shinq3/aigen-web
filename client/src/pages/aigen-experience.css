@@ -202,7 +202,7 @@ html {
 }
 .aigen-hero {
   padding-top: 66px;
-  background: #f1f8f4;
+  background: #f2f3f4;
   position: relative;
   isolation: isolate;
   overflow: clip;
@@ -226,10 +226,10 @@ html {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(241, 248, 244, 0.82) 0%,
-    rgba(241, 248, 244, 0.66) 35%,
-    rgba(241, 248, 244, 0.79) 65%,
-    #f1f8f4 100%
+    rgba(242, 243, 244, 0.82) 0%,
+    rgba(242, 243, 244, 0.66) 35%,
+    rgba(242, 243, 244, 0.79) 65%,
+    #f2f3f4 100%
   );
 }
 .hero-copy {
