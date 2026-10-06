@@ -223,6 +223,12 @@
     "description": "The AI workspace that connects your company’s work."
   },
   "experience": {
+    "series": {
+      "goAudience": "For everyday users",
+      "proAudience": "For administrators",
+      "labAudience": "For development teams",
+      "note": "AiGen-Go, AiGen-Pro and AiGen-Lab organize AiGen-One’s capabilities into three perspectives: everyday work, administration and development. All three connect in the same workspace."
+    },
     "heroNotes": {
       "chat": "Ask about your company, too.",
       "work": "Turn a conversation into action.",

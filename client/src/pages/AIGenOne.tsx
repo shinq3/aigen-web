@@ -157,17 +157,27 @@ function Heading({
   label,
   title,
   description,
+  audience,
+  note,
 }: {
   label: string;
   title: string;
   description?: string;
+  audience?: string;
+  note?: string;
 }) {
   const reduced = useReducedMotion();
   return (
     <Reveal className="section-heading" stagger>
-      <Label>{label}</Label>
+      {audience ? (
+        <motion.p className="aigen-label series-label" variants={entrance(reduced)}>
+          <strong>{label}</strong>
+          <span>{audience}</span>
+        </motion.p>
+      ) : <Label>{label}</Label>}
       <motion.h2 variants={entrance(reduced, true, 0.12)}>{title}</motion.h2>
       {description && <motion.p className="section-description" variants={entrance(reduced, false, 0.24)}>{description}</motion.p>}
+      {note && <motion.p className="series-note" variants={entrance(reduced, false, 0.32)}>{note}</motion.p>}
     </Reveal>
   );
 }
@@ -221,6 +231,7 @@ function FeatureGallery() {
           label={t("experience.features.label")}
           title={t("experience.features.title")}
           description={t("experience.features.description")}
+          note={t("experience.series.note")}
         />
         <Reveal>
           <div
@@ -604,7 +615,8 @@ export default function AIGenOne() {
         <section id="build" className="aigen-section build-section">
           <div className="aigen-wrap">
             <Heading
-              label="GROW WITH YOUR WORK"
+              label="AiGen-Go"
+              audience={t("experience.series.goAudience")}
               title={t("experience.build.title")}
               description={t("experience.build.description")}
             />
@@ -688,10 +700,45 @@ export default function AIGenOne() {
           </div>
         </section>
 
+        <section id="governance" className="aigen-section governance-section">
+          <div className="aigen-wrap">
+            <Heading
+              label="AiGen-Pro"
+              audience={t("experience.series.proAudience")}
+              title={t("experience.governance.title")}
+              description={t("experience.governance.description")}
+            />
+            <div className="governance-grid">
+              {items("governance.items").map((item, i) => {
+                const Icon = [ShieldCheck, LayoutDashboard, Database][i];
+                return (
+                  <Reveal
+                    className="governance-item"
+                    key={item.title}
+                    delay={i * 0.1}
+                  >
+                    <Icon size={27} />
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </Reveal>
+                );
+              })}
+            </div>
+            <Reveal className="connection-strip">
+              <span>{t("experience.governance.connect")}</span>
+              <span>Google Workspace</span>
+              <span>PostgreSQL</span>
+              <span>API / MCP</span>
+              <span>Git</span>
+            </Reveal>
+          </div>
+        </section>
+
         <section id="practice" className="aigen-section practice-section">
           <div className="aigen-wrap">
             <Heading
-              label="OUR OWN PRACTICE"
+              label="AiGen-Lab"
+              audience={t("experience.series.labAudience")}
               title={t("experience.practice.title")}
               description={t("experience.practice.description")}
             />
@@ -752,39 +799,6 @@ export default function AIGenOne() {
             </div>
             <Reveal className="practice-measure">
               <p>{t("experience.practice.measure")}</p>
-            </Reveal>
-          </div>
-        </section>
-
-        <section className="aigen-section governance-section">
-          <div className="aigen-wrap">
-            <Heading
-              label="MADE FOR TEAMS"
-              title={t("experience.governance.title")}
-              description={t("experience.governance.description")}
-            />
-            <div className="governance-grid">
-              {items("governance.items").map((item, i) => {
-                const Icon = [ShieldCheck, LayoutDashboard, Database][i];
-                return (
-                  <Reveal
-                    className="governance-item"
-                    key={item.title}
-                    delay={i * 0.1}
-                  >
-                    <Icon size={27} />
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                  </Reveal>
-                );
-              })}
-            </div>
-            <Reveal className="connection-strip">
-              <span>{t("experience.governance.connect")}</span>
-              <span>Google Workspace</span>
-              <span>PostgreSQL</span>
-              <span>API / MCP</span>
-              <span>Git</span>
             </Reveal>
           </div>
         </section>

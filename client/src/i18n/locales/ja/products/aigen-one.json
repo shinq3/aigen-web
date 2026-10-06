@@ -223,6 +223,12 @@
     "description": "会社の仕事をつなぐ、AIワークスペース。"
   },
   "experience": {
+    "series": {
+      "goAudience": "一般ユーザー向け",
+      "proAudience": "管理者向け",
+      "labAudience": "開発部向け",
+      "note": "AiGen-Go・AiGen-Pro・AiGen-Labは、AiGen-Oneの機能を「現場・管理・開発」の3つの側面から整理したシリーズです。すべて同じワークスペースでつながります。"
+    },
     "heroNotes": {
       "chat": "社内のことも、AIに聞ける。",
       "work": "相談を、次のアクションへ。",

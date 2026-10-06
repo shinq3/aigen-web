@@ -223,6 +223,12 @@
     "description": "Không gian làm việc AI kết nối công việc trong doanh nghiệp."
   },
   "experience": {
+    "series": {
+      "goAudience": "Dành cho người dùng",
+      "proAudience": "Dành cho quản trị viên",
+      "labAudience": "Dành cho bộ phận phát triển",
+      "note": "AiGen-Go, AiGen-Pro và AiGen-Lab phân nhóm các chức năng của AiGen-One theo ba góc nhìn: công việc hằng ngày, quản trị và phát triển. Cả ba cùng kết nối trong một không gian làm việc."
+    },
     "heroNotes": {
       "chat": "Hỏi cả về công việc nội bộ.",
       "work": "Từ trò chuyện đến hành động.",

@@ -72,6 +72,30 @@ html {
   line-height: 1.95;
   white-space: pre-line;
 }
+.series-label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  letter-spacing: 0;
+}
+.series-label strong {
+  font-size: 22px;
+  font-weight: 600;
+}
+.series-label > span {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--muted);
+  border-left: 1px solid currentColor;
+  padding-left: 16px;
+}
+.series-note {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+  margin-top: 18px;
+}
 .aigen-button {
   display: inline-flex;
   align-items: center;
@@ -1153,6 +1177,9 @@ html {
 }
 .practice-section .aigen-label {
   color: #9ed2bd;
+}
+.practice-section .series-label > span {
+  color: #c2cbd3;
 }
 .practice-section .section-description {
   color: #bcc6cf;
