@@ -115,7 +115,7 @@ function AigenFooter() {
           <a href="https://d-auchy.studio" target="_blank" rel="noreferrer">
             {t("footer.developer")}d-auchy.studio <ArrowUpRight size={12} className="inline" />
           </a>
-          <a href="https://linnoedge.com" target="_blank" rel="noreferrer">
+          <a href={locale === "ja" ? "https://linnoedge.com/ja/home-ja/" : "https://linnoedge.com"} target="_blank" rel="noreferrer">
             {t("footer.operator")}linnoedge <ArrowUpRight size={12} className="inline" />
           </a>
         </nav>
