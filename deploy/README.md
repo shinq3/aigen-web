@@ -6,7 +6,7 @@
 - 公開URL: `https://www.aigen.tokyo/`（`/ja`、`/en`、`/vi`）
 - サーバー: `ubuntu@13.193.44.69`
 - 配信先: `/var/www/aigen-one/releases/lp/current`
-- 配信済みソース: `c2dbaabad7e322448fce316484a6be5918e63513`
+- 初回配信ソース: `c2dbaabad7e322448fce316484a6be5918e63513`
 - 公開リリース情報: `/aigen-lp-release.json`（コミット、クリーンソース、成果物SHA-256）
 
 プロダクトサイトはWeb CMSの公開先から分離し、このリポジトリをビルドして配信する。

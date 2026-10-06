@@ -300,8 +300,8 @@
       "control": "Keep human checks where judgment is needed."
     },
     "movies": {
-      "title": "See it in action.\nOne film at a time.",
-      "description": "The product introduction and six short films.\nChoose a film to explore how we approach AI at work.",
+      "title": "Bringing AI into work.\nSix questions to consider.",
+      "description": "Six short films about putting AI to work.\nExplore questions about adoption, operation, and improvement.",
       "main": "Introducing AiGen-One",
       "short": "Short film",
       "play": "Play film",
@@ -309,7 +309,15 @@
       "select": "Choose a film",
       "previous": "Previous film",
       "next": "Next film",
-      "youtube": "Watch on YouTube"
+      "youtube": "Watch on YouTube",
+      "titles": [
+        "Does everyone need AI?",
+        "Why is the workload not shrinking?",
+        "Can we leave everything to AI?",
+        "Is building an AI agent the finish line?",
+        "Who turns problems on the front line into system improvements?",
+        "Do we still need development companies?"
+      ]
     },
     "build": {
       "title": "“We need a better way.”\nThat’s where building starts.",

@@ -300,8 +300,8 @@
       "control": "Con người kiểm tra ở những bước cần quyết định."
     },
     "movies": {
-      "title": "Hình dung cách dùng.\nQua từng video.",
-      "description": "Video giới thiệu và sáu video ngắn.\nChọn một video để tìm hiểu cách chúng tôi đưa AI vào công việc.",
+      "title": "Đưa AI vào công việc.\nSáu câu hỏi cần cân nhắc.",
+      "description": "Sáu video ngắn về cách đưa AI vào công việc thực tế.\nKhám phá những câu hỏi về triển khai, vận hành và cải tiến.",
       "main": "Giới thiệu AiGen-One",
       "short": "Video ngắn",
       "play": "Phát video",
@@ -309,7 +309,15 @@
       "select": "Chọn video",
       "previous": "Video trước",
       "next": "Video tiếp",
-      "youtube": "Xem trên YouTube"
+      "youtube": "Xem trên YouTube",
+      "titles": [
+        "Ai cũng cần AI?",
+        "Vì sao công việc vẫn không giảm?",
+        "Có thể giao hết cho AI không?",
+        "Tạo xong AI agent là kết thúc?",
+        "Ai biến khó khăn ở hiện trường thành cải tiến hệ thống?",
+        "Có còn cần công ty phát triển phần mềm không?"
+      ]
     },
     "build": {
       "title": "“Cần một cách làm tốt hơn.”\nĐó là khởi đầu để xây dựng.",

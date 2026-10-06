@@ -780,6 +780,7 @@ html {
   position: absolute;
   bottom: 55px;
   left: 55px;
+  right: 55px;
   color: white;
 }
 .movie-overlay > p {
@@ -1614,6 +1615,7 @@ html {
   }
   .movie-overlay {
     left: 25px;
+    right: 25px;
     bottom: 30px;
   }
   .movie-overlay h3 {
