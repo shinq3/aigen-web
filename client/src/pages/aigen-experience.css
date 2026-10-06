@@ -502,12 +502,44 @@ html {
 .feature-section {
   background: #e2f0e9;
 }
+.feature-navigation {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) 48px;
+  width: fit-content;
+  max-width: 100%;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 22px;
+  margin-inline: auto;
+}
+.feature-arrow {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: #fff;
+  background: #124b46;
+  box-shadow: 0 4px 12px #124b4624;
+  transition: background 0.2s, transform 0.2s;
+}
+.feature-arrow:hover {
+  background: #0f666a;
+  transform: scale(1.06);
+}
+.feature-arrow:active {
+  transform: scale(0.96);
+}
+.feature-arrow:focus-visible,
+.feature-tabs button:focus-visible {
+  outline: 3px solid #0f666a;
+  outline-offset: 3px;
+}
 .feature-tabs {
   display: flex;
-  gap: 8px;
-  margin-bottom: 22px;
+  gap: 10px;
   overflow-x: auto;
-  padding: 5px 2px 10px;
+  padding: 7px 4px;
   scrollbar-width: none;
 }
 .feature-tabs::-webkit-scrollbar {
@@ -515,27 +547,43 @@ html {
 }
 .feature-tabs button {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   gap: 9px;
-  padding: 12px 18px;
+  min-height: 54px;
+  padding: 14px 22px;
+  border: 1px solid #aac3b7;
   border-radius: 100px;
-  font-size: 12px;
-  color: #58716a;
+  font-size: 14px;
+  font-weight: 600;
+  color: #254f45;
   white-space: nowrap;
-  background: #dbe9e5;
+  background: #fff;
+  box-shadow: 0 3px 8px #124b4612;
   transition:
     color 0.2s,
-    background 0.2s;
+    background 0.2s,
+    border-color 0.2s;
+}
+.feature-tabs button:hover {
+  border-color: #124b46;
+  background: #f1f8f4;
 }
 .feature-tabs button[aria-selected="true"] {
   color: white;
   background: #124b46;
+  border-color: #124b46;
+  box-shadow: 0 5px 12px #124b4629;
+}
+.feature-swipe-hint {
+  display: none;
 }
 .feature-panel {
   border-radius: 28px;
   background: #fff;
   overflow: hidden;
   min-height: 460px;
+  touch-action: pan-y pinch-zoom;
 }
 .feature-content {
   display: grid;
@@ -1657,15 +1705,33 @@ html {
   }
   .feature-tabs {
     gap: 6px;
-    margin-inline: -3px;
-    padding-inline: 5px;
+    padding-inline: 4px;
+  }
+  .feature-navigation {
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .feature-arrow {
+    width: 44px;
+    height: 44px;
   }
   .feature-tabs button {
-    padding: 11px 14px;
-    font-size: 10px;
+    min-height: 48px;
+    padding: 12px 16px;
+    font-size: 12px;
   }
   .feature-tabs svg {
     width: 16px;
+  }
+  .feature-swipe-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    color: #376556;
+    font-size: 11px;
+    margin-bottom: 16px;
   }
   .feature-panel {
     min-height: 560px;

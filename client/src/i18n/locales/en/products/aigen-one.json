@@ -250,6 +250,9 @@
       "title": "See the capabilities.\nFollow the work.",
       "description": "Find. Ask. Create. Review. Act.\nConnect these steps with shared data, organization, and access controls.",
       "tabs": "Choose a feature",
+      "previous": "Previous feature",
+      "next": "Next feature",
+      "swipe": "Swipe left or right to switch",
       "foundation": "Shared organization, permissions, and data",
       "items": [
         {

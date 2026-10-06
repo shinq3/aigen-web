@@ -250,6 +250,9 @@
       "title": "Khám phá tính năng.\nTheo dòng công việc.",
       "description": "Tìm. Hỏi. Tạo. Kiểm tra. Thực hiện.\nKết nối các bước trên cùng dữ liệu, tổ chức và quyền truy cập.",
       "tabs": "Chọn tính năng",
+      "previous": "Tính năng trước",
+      "next": "Tính năng tiếp theo",
+      "swipe": "Vuốt sang trái hoặc phải để chuyển",
       "foundation": "Nền tảng chung cho tổ chức, quyền và dữ liệu",
       "items": [
         {

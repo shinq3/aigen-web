@@ -218,11 +218,29 @@ function FeatureGallery() {
     returnObjects: true,
   }) as Item[];
   const [selected, setSelected] = useState(0);
+  const [direction, setDirection] = useState(1);
   const reduced = useReducedMotion();
   const tabs = useRef<Array<HTMLButtonElement | null>>([]);
-  function select(index: number, focus = false) {
+  const tabList = useRef<HTMLDivElement>(null);
+  const swipe = useRef<{ id: number; x: number; y: number } | null>(null);
+  useEffect(() => {
+    const list = tabList.current;
+    const active = tabs.current[selected];
+    if (!list || !active) return;
+    const listRect = list.getBoundingClientRect();
+    const activeRect = active.getBoundingClientRect();
+    list.scrollTo({
+      left: list.scrollLeft + activeRect.left - listRect.left - (list.clientWidth - activeRect.width) / 2,
+      behavior: reduced ? "auto" : "smooth",
+    });
+  }, [selected, reduced]);
+  function select(index: number, focus = false, travel = index > selected ? 1 : -1) {
+    setDirection(travel);
     setSelected(index);
     if (focus) tabs.current[index]?.focus();
+  }
+  function move(step: number) {
+    select((selected + step + features.length) % features.length, false, step);
   }
   return (
     <section id="platform" className="aigen-section feature-section">
@@ -234,62 +252,113 @@ function FeatureGallery() {
           note={t("experience.series.note")}
         />
         <Reveal>
-          <div
-            className="feature-tabs"
-            role="tablist"
-            aria-label={t("experience.features.tabs")}
-          >
-            {features.map((item, i) => {
-              const Icon = icons[i];
-              return (
-                <button
-                  key={item.label}
-                  ref={(el) => {
-                    tabs.current[i] = el;
-                  }}
-                  id={`feature-tab-${i}`}
-                  role="tab"
-                  aria-selected={selected === i}
-                  aria-controls="feature-panel"
-                  tabIndex={selected === i ? 0 : -1}
-                  onClick={() => select(i)}
-                  onKeyDown={(event) => {
-                    const next =
-                      event.key === "ArrowRight"
-                        ? (i + 1) % features.length
-                        : event.key === "ArrowLeft"
-                          ? (i - 1 + features.length) % features.length
-                          : event.key === "Home"
-                            ? 0
-                            : event.key === "End"
-                              ? features.length - 1
-                              : null;
-                    if (next !== null) {
-                      event.preventDefault();
-                      select(next, true);
-                    }
-                  }}
-                >
-                  <Icon size={19} />
-                  {item.label}
-                </button>
-              );
-            })}
+          <div className="feature-navigation">
+            <button
+              type="button"
+              className="feature-arrow"
+              aria-label={t("experience.features.previous")}
+              aria-controls="feature-panel"
+              onClick={() => move(-1)}
+            >
+              <ChevronLeft size={23} aria-hidden="true" />
+            </button>
+            <div
+              ref={tabList}
+              className="feature-tabs"
+              role="tablist"
+              aria-label={t("experience.features.tabs")}
+            >
+              {features.map((item, i) => {
+                const Icon = icons[i];
+                return (
+                  <button
+                    key={item.label}
+                    ref={(el) => {
+                      tabs.current[i] = el;
+                    }}
+                    id={`feature-tab-${i}`}
+                    role="tab"
+                    aria-selected={selected === i}
+                    aria-controls="feature-panel"
+                    tabIndex={selected === i ? 0 : -1}
+                    onClick={() => select(i)}
+                    onKeyDown={(event) => {
+                      const next =
+                        event.key === "ArrowRight"
+                          ? (i + 1) % features.length
+                          : event.key === "ArrowLeft"
+                            ? (i - 1 + features.length) % features.length
+                            : event.key === "Home"
+                              ? 0
+                              : event.key === "End"
+                                ? features.length - 1
+                                : null;
+                      if (next !== null) {
+                        event.preventDefault();
+                        select(next, true, event.key === "ArrowLeft" ? -1 : event.key === "ArrowRight" ? 1 : next > i ? 1 : -1);
+                      }
+                    }}
+                  >
+                    <Icon size={19} />
+                    {item.label}
+                  </button>
+                );
+              })}
+            </div>
+            <button
+              type="button"
+              className="feature-arrow"
+              aria-label={t("experience.features.next")}
+              aria-controls="feature-panel"
+              onClick={() => move(1)}
+            >
+              <ChevronRight size={23} aria-hidden="true" />
+            </button>
           </div>
+          <p className="feature-swipe-hint">
+            <ChevronLeft size={14} aria-hidden="true" />
+            {t("experience.features.swipe")}
+            <ChevronRight size={14} aria-hidden="true" />
+          </p>
           <div
             id="feature-panel"
             className={`feature-panel feature-panel-${selected}`}
             role="tabpanel"
             aria-labelledby={`feature-tab-${selected}`}
             tabIndex={0}
+            onDragStart={(event) => event.preventDefault()}
+            onPointerDown={(event) => {
+              if (!event.isPrimary || event.button !== 0 ||
+                  (event.target as HTMLElement).closest("a, button, input, select, textarea")) return;
+              swipe.current = { id: event.pointerId, x: event.clientX, y: event.clientY };
+              event.currentTarget.setPointerCapture(event.pointerId);
+            }}
+            onPointerUp={(event) => {
+              const start = swipe.current;
+              swipe.current = null;
+              if (!start || start.id !== event.pointerId) return;
+              const dx = event.clientX - start.x;
+              const dy = event.clientY - start.y;
+              if (Math.abs(dx) >= 48 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+                move(dx < 0 ? 1 : -1);
+              }
+            }}
+            onPointerCancel={() => { swipe.current = null; }}
+            onLostPointerCapture={() => { swipe.current = null; }}
           >
-            <AnimatePresence mode="wait" initial={false}>
+            <AnimatePresence mode="wait" initial={false} custom={direction}>
               <motion.div
                 key={selected}
                 className="feature-content"
-                initial={{ opacity: 0, y: reduced ? 0 : 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: reduced ? 0 : -12 }}
+                custom={direction}
+                variants={{
+                  enter: (travel: number) => ({ opacity: 0, x: reduced ? 0 : travel * 28 }),
+                  visible: { opacity: 1, x: 0 },
+                  exit: (travel: number) => ({ opacity: 0, x: reduced ? 0 : travel * -28 }),
+                }}
+                initial="enter"
+                animate="visible"
+                exit="exit"
                 transition={{ duration: reduced ? 0 : 0.3 }}
               >
                 <div className="feature-copy">
