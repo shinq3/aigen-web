@@ -220,6 +220,8 @@
     "secondary": "Watch the films first"
   },
   "footer": {
+    "developer": "Developed by: ",
+    "operator": "Operated by: ",
     "description": "The AI workspace that connects your company’s work."
   },
   "experience": {

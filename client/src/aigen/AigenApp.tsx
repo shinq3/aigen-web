@@ -113,7 +113,10 @@ function AigenFooter() {
             Contact <ArrowUpRight size={12} className="inline" />
           </a>
           <a href="https://d-auchy.studio" target="_blank" rel="noreferrer">
-            D’auchy.Studio <ArrowUpRight size={12} className="inline" />
+            {t("footer.developer")}d-auchy.studio <ArrowUpRight size={12} className="inline" />
+          </a>
+          <a href="https://linnoedge.com" target="_blank" rel="noreferrer">
+            {t("footer.operator")}linnoedge <ArrowUpRight size={12} className="inline" />
           </a>
         </nav>
       </div>

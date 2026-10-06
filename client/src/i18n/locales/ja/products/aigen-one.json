@@ -220,6 +220,8 @@
     "secondary": "まずは動画を見る"
   },
   "footer": {
+    "developer": "開発元：",
+    "operator": "運営：",
     "description": "会社の仕事をつなぐ、AIワークスペース。"
   },
   "experience": {

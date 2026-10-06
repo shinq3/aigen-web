@@ -220,6 +220,8 @@
     "secondary": "Xem video trước"
   },
   "footer": {
+    "developer": "Phát triển: ",
+    "operator": "Vận hành: ",
     "description": "Không gian làm việc AI kết nối công việc trong doanh nghiệp."
   },
   "experience": {
