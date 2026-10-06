@@ -305,6 +305,7 @@
       "main": "Giới thiệu AiGen-One",
       "short": "Video ngắn",
       "play": "Phát video",
+      "stop": "Đóng video",
       "carousel": "băng chuyền",
       "select": "Chọn video",
       "previous": "Video trước",

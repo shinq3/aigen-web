@@ -783,73 +783,107 @@ html {
 .movie-section .section-heading {
   margin-bottom: 40px;
 }
-.movie-stage {
+.movie-track {
   position: relative;
-  border-radius: 25px;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: #56616b #252b30;
+  padding: 3px 0 15px;
+}
+.movie-card {
+  flex: 0 0 calc((100% - 40px) / 3);
+  min-width: 0;
   overflow: hidden;
+  border-radius: 20px;
   background: #23272b;
-  aspect-ratio: 2/1;
+  border: 1px solid #394249;
+  scroll-snap-align: start;
+  transition: border-color 0.25s;
 }
-.movie-slide {
+.movie-card.active-movie {
+  border-color: var(--accent);
+}
+.movie-thumbnail {
+  position: relative;
+  display: block;
   width: 100%;
-  height: 100%;
-  position: absolute;
-  inset: 0;
+  height: 224px;
+  background: #202428;
+  cursor: pointer;
   overflow: hidden;
-  touch-action: pan-y;
 }
-.movie-slide > img {
+.movie-thumbnail img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-}
-.movie-slide.short-slide > img {
   object-fit: contain;
-  background: #23272b;
+  transition: transform 0.4s;
 }
-.movie-shade {
+.movie-thumbnail:hover img {
+  transform: scale(1.03);
+}
+.thumbnail-play {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(90deg, #171a1dde, #171a1d0a 80%),
-    linear-gradient(0deg, #171a1d66, transparent 70%);
+  margin: auto;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #fffffff2;
+  color: #23272b;
+  box-shadow: 0 5px 24px #0005;
 }
-.movie-overlay {
-  position: absolute;
-  bottom: 55px;
-  left: 55px;
-  right: 55px;
-  color: white;
+.movie-thumbnail:focus-visible {
+  outline-offset: -5px;
 }
-.movie-overlay > p {
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  color: #c2cbd3;
+.movie-card-copy {
+  padding: 19px 22px 23px;
+  min-height: 112px;
 }
-.movie-overlay h3 {
-  font-size: clamp(25px, 3vw, 40px);
-  margin-top: 12px;
+.movie-card-copy > p {
+  color: var(--accent);
+  font-size: 9px;
+  letter-spacing: 0.16em;
 }
-.play-button {
+.movie-card-copy h3 {
+  font-size: 18px;
+  line-height: 1.55;
+  margin-top: 10px;
+}
+.movie-player {
+  margin-top: 26px;
+  border: 1px solid #394249;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #111416;
+}
+.movie-player-heading {
   display: flex;
   align-items: center;
-  gap: 10px;
-  border-radius: 100px;
-  background: #fff;
-  color: #23272b;
-  padding: 13px 22px;
-  margin-top: 24px;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 18px;
   font-size: 12px;
-  font-weight: 600;
-  transition: transform 0.2s;
 }
-.play-button:hover {
-  transform: scale(1.04);
+.movie-player-close {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  color: var(--muted);
+  padding: 6px;
+  border-radius: 6px;
 }
-.movie-slide iframe {
-  height: 100%;
+.movie-player iframe {
+  display: block;
   width: 100%;
+  height: 390px;
   border: 0;
+  background: #000;
 }
 .movie-controls {
   display: flex;
@@ -1651,17 +1685,32 @@ html {
   .agent-demo {
     padding-inline: 18px;
   }
-  .movie-stage {
-    aspect-ratio: 1.25;
-    border-radius: 20px;
+  .movie-track {
+    gap: 14px;
+    padding-bottom: 12px;
   }
-  .movie-overlay {
-    left: 25px;
-    right: 25px;
-    bottom: 30px;
+  .movie-card {
+    flex-basis: 84%;
+    border-radius: 16px;
   }
-  .movie-overlay h3 {
-    font-size: 24px;
+  .movie-thumbnail {
+    height: 210px;
+  }
+  .movie-card-copy {
+    padding: 16px 18px 20px;
+  }
+  .movie-card-copy h3 {
+    font-size: 17px;
+  }
+  .movie-player-heading {
+    align-items: flex-start;
+    padding: 12px;
+  }
+  .movie-player-close {
+    font-size: 10px;
+  }
+  .movie-player iframe {
+    height: 230px;
   }
   .movie-controls {
     gap: 10px;
@@ -1685,13 +1734,6 @@ html {
   .gallery-arrows button {
     width: 36px;
     height: 36px;
-  }
-  .play-button {
-    font-size: 11px;
-    padding: 12px 18px;
-  }
-  .short-slide iframe {
-    max-height: 100%;
   }
   .build-stage {
     padding: 95px 0 0;

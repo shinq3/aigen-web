@@ -21,6 +21,7 @@ import {
   ShieldCheck,
   Sparkles,
   Workflow,
+  X,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useLocale } from "@/lib/i18n-utils";
@@ -316,6 +317,8 @@ function MovieGallery() {
   const [playing, setPlaying] = useState(false);
   const reduced = useReducedMotion();
   const section = useRef<HTMLElement>(null);
+  const track = useRef<HTMLDivElement>(null);
+  const cards = useRef<Array<HTMLElement | null>>([]);
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -329,12 +332,21 @@ function MovieGallery() {
   const shortTitles = t("experience.movies.titles", {
     returnObjects: true,
   }) as string[];
-  const title = movies[active].short
-    ? shortTitles[active]
-    : t("experience.movies.main");
+  const movieTitle = (index: number) =>
+    movies[index].short ? shortTitles[index] : t("experience.movies.main");
+  const title = movieTitle(active);
   function change(index: number) {
+    const next = (index + movies.length) % movies.length;
     setPlaying(false);
-    setActive((index + movies.length) % movies.length);
+    setActive(next);
+    track.current?.scrollTo({
+      left: cards.current[next]?.offsetLeft ?? 0,
+      behavior: reduced ? "auto" : "smooth",
+    });
+  }
+  function play(index: number) {
+    setActive(index);
+    setPlaying(true);
   }
   return (
     <section id="movies" className="aigen-section movie-section" ref={section}>
@@ -346,69 +358,49 @@ function MovieGallery() {
         />
         <Reveal>
           <div
-            className="movie-stage"
+            className="movie-track"
+            ref={track}
             role="region"
             aria-roledescription={t("experience.movies.carousel")}
             aria-label={t("experience.movies.title")}
           >
-            {playing ? (
-              <div
-                className={`movie-slide ${movies[active].short ? "short-slide" : ""}`}
+            {movies.map((movie, i) => (
+              <article
+                className={`movie-card ${active === i ? "active-movie" : ""}`}
+                key={movie.id}
+                ref={(element) => {
+                  cards.current[i] = element;
+                }}
               >
-                <iframe
-                  key={movies[active].id}
-                  src={`https://www.youtube-nocookie.com/embed/${movies[active].id}?autoplay=1&rel=0`}
-                  title={title}
-                  allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-                  allowFullScreen
-                  referrerPolicy="strict-origin-when-cross-origin"
-                />
-              </div>
-            ) : (
-              <AnimatePresence mode="wait" initial={false}>
-                <motion.div
-                  className={`movie-slide ${movies[active].short ? "short-slide" : ""}`}
-                  key={active}
-                  initial={{ opacity: 0, scale: reduced ? 1 : 0.98 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: reduced ? 1 : 1.02 }}
-                  transition={{ duration: reduced ? 0 : 0.35 }}
-                  drag="x"
-                  dragConstraints={{ left: 0, right: 0 }}
-                  dragElastic={0.06}
-                  onDragEnd={(_, info) => {
-                    if (info.offset.x < -60) change(active + 1);
-                    if (info.offset.x > 60) change(active - 1);
-                  }}
+                <button
+                  className="movie-thumbnail"
+                  aria-label={`${movieTitle(i)} — ${t("experience.movies.play")}`}
+                  aria-pressed={playing && active === i}
+                  onClick={() => play(i)}
                 >
                   <img
-                    src={movies[active].thumbnail}
-                    alt={title}
+                    src={movie.thumbnail}
+                    alt=""
                     loading="lazy"
                     onError={(event) => {
                       event.currentTarget.onerror = null;
                       event.currentTarget.src = dashboardImage;
                     }}
                   />
-                  <div className="movie-shade" />
-                  <div className="movie-overlay">
-                    <p>
-                      {movies[active].short
-                        ? `SHORT FILM ${String(active + 1).padStart(2, "0")}`
-                        : "PRODUCT FILM"}
-                    </p>
-                    <h3>{title}</h3>
-                    <button
-                      className="play-button"
-                      onClick={() => setPlaying(true)}
-                    >
-                      <Play size={17} fill="currentColor" />
-                      {t("experience.movies.play")}
-                    </button>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-            )}
+                  <span className="thumbnail-play" aria-hidden="true">
+                    <Play size={20} fill="currentColor" />
+                  </span>
+                </button>
+                <div className="movie-card-copy">
+                  <p>
+                    {movie.short
+                      ? `SHORT FILM ${String(i + 1).padStart(2, "0")}`
+                      : "PRODUCT FILM"}
+                  </p>
+                  <h3>{movieTitle(i)}</h3>
+                </div>
+              </article>
+            ))}
           </div>
           <div className="movie-controls">
             <div
@@ -418,9 +410,7 @@ function MovieGallery() {
               {movies.map((movie, i) => (
                 <button
                   key={movie.id}
-                  aria-label={
-                    movie.short ? shortTitles[i] : t("experience.movies.main")
-                  }
+                  aria-label={movieTitle(i)}
                   aria-pressed={active === i}
                   onClick={() => change(i)}
                 >
@@ -430,9 +420,7 @@ function MovieGallery() {
             </div>
             <p aria-live="polite" aria-atomic="true">
               {title}{" "}
-              <span>
-                {active + 1} / {movies.length}
-              </span>
+              <span>{active + 1} / {movies.length}</span>
             </p>
             <div className="gallery-arrows">
               <button
@@ -449,6 +437,29 @@ function MovieGallery() {
               </button>
             </div>
           </div>
+          {playing && (
+            <div className="movie-player">
+              <div className="movie-player-heading">
+                <p>{title}</p>
+                <button
+                  className="movie-player-close"
+                  onClick={() => setPlaying(false)}
+                  aria-label={t("experience.movies.stop")}
+                >
+                  <X size={18} />
+                  {t("experience.movies.stop")}
+                </button>
+              </div>
+              <iframe
+                key={movies[active].id}
+                src={`https://www.youtube-nocookie.com/embed/${movies[active].id}?autoplay=1&rel=0`}
+                title={title}
+                allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+                allowFullScreen
+                referrerPolicy="strict-origin-when-cross-origin"
+              />
+            </div>
+          )}
           <a
             className="text-link movie-fallback"
             href={`https://www.youtube.com/watch?v=${movies[active].id}`}

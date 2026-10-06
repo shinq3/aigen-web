@@ -305,6 +305,7 @@
       "main": "AiGen-One 紹介動画",
       "short": "ショート動画",
       "play": "動画を再生",
+      "stop": "再生を閉じる",
       "carousel": "カルーセル",
       "select": "動画を選ぶ",
       "previous": "前の動画",

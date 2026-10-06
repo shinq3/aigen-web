@@ -305,6 +305,7 @@
       "main": "Introducing AiGen-One",
       "short": "Short film",
       "play": "Play film",
+      "stop": "Close video",
       "carousel": "carousel",
       "select": "Choose a film",
       "previous": "Previous film",
