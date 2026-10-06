@@ -670,7 +670,7 @@ export default function AIGenOne() {
               description={t("experience.entry.description")}
             />
             <Reveal className="entry-questions" stagger delay={0.15}>
-              <motion.p className="entry-intro" variants={entrance(reduced)}>{t("experience.entry.ask")}</motion.p>
+              <motion.h3 className="entry-intro" variants={entrance(reduced)}>{t("experience.entry.ask")}</motion.h3>
               {list("experience.entry.questions").map((question, i) => (
                 <motion.div className="entry-question" key={question} variants={entrance(reduced, false, 0.12 * (i + 1))}>
                   <span>0{i + 1}</span>

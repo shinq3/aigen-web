@@ -44,7 +44,7 @@ html {
 .aigen-label {
   color: var(--accent);
   font:
-    600 11px/1.5 Inter,
+    600 12px/1.5 Inter,
     sans-serif;
   letter-spacing: 0.18em;
   margin-bottom: 23px;
@@ -85,7 +85,7 @@ html {
   font-weight: 600;
 }
 .series-label > span {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
   color: var(--muted);
   border-left: 1px solid currentColor;
@@ -104,7 +104,7 @@ html {
   gap: 20px;
   background: var(--accent);
   color: white;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   padding: 16px 24px;
   border-radius: 100px;
@@ -120,7 +120,7 @@ html {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   transition: color 0.2s;
 }
@@ -163,7 +163,7 @@ html {
   display: flex;
   align-items: center;
   gap: 26px;
-  font-size: 11px;
+  font-size: 13px;
   color: #4e7066;
 }
 .aigen-nav a:hover {
@@ -178,7 +178,7 @@ html {
   display: flex;
   gap: 9px;
   font:
-    500 10px Inter,
+    500 11px Inter,
     sans-serif;
   color: #58716a;
 }
@@ -191,7 +191,7 @@ html {
   border-radius: 100px;
   color: white;
   background: #124b46;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -205,7 +205,7 @@ html {
   color: #b8cfc4;
   background: #183c36;
   padding: 44px 0 110px;
-  font-size: 11px;
+  font-size: 13px;
 }
 .aigen-footer-inner {
   display: flex;
@@ -223,7 +223,7 @@ html {
 }
 .aigen-site-footer nav {
   display: flex;
-  gap: 28px;
+  gap: 14px 24px;
   flex-wrap: wrap;
 }
 .aigen-hero {
@@ -362,7 +362,7 @@ html {
   flex: 1;
   text-align: center;
   color: #58716a;
-  font-size: 8px;
+  font-size: 9px;
   letter-spacing: 0.01em;
 }
 .window-bar svg {
@@ -394,13 +394,13 @@ html {
 .floating-note small {
   display: block;
   color: #58716a;
-  font-size: 9px;
+  font-size: 11px;
   margin-bottom: 5px;
 }
 .floating-note b {
   display: block;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
 }
 .floating-note > svg {
   color: #0f666a;
@@ -432,7 +432,7 @@ html {
   right: 10px;
   bottom: -25px;
   color: #58716a;
-  font-size: 9px;
+  font-size: 11px;
 }
 .hero-bottom {
   display: flex;
@@ -447,7 +447,7 @@ html {
 }
 .hero-bottom > span {
   letter-spacing: 0.15em;
-  font-size: 9px;
+  font-size: 11px;
 }
 .hero-bottom > span span {
   margin: 0 14px;
@@ -473,8 +473,11 @@ html {
   font-size: clamp(30px, 3vw, 40px);
 }
 .entry-intro {
-  color: var(--muted);
-  font-size: calc(11px + var(--reading-size-increase));
+  color: #f5f7fa;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  font-size: 21px;
   padding-bottom: 17px;
 }
 .entry-question {
@@ -487,7 +490,7 @@ html {
 .entry-question > span {
   color: var(--accent);
   font:
-    500 10px Inter,
+    500 12px Inter,
     sans-serif;
 }
 .entry-question p {
@@ -598,7 +601,7 @@ html {
 }
 .feature-index {
   font:
-    500 12px Inter,
+    500 13px Inter,
     sans-serif;
   color: #0f666a;
 }
@@ -621,7 +624,7 @@ html {
 .feature-tag {
   display: inline-flex;
   gap: 8px;
-  font-size: 10px;
+  font-size: 12px;
   align-items: center;
   color: #58716a;
   margin-top: 37px;
@@ -647,7 +650,7 @@ html {
   margin-top: 13px;
   color: #58716a;
   text-align: right;
-  font-size: 9px;
+  font-size: 11px;
 }
 .concept-visual {
   min-height: 335px;
@@ -918,7 +921,7 @@ html {
 }
 .movie-card-copy > p {
   color: var(--accent);
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.16em;
 }
 .movie-card-copy h3 {
@@ -949,7 +952,7 @@ html {
   justify-content: space-between;
   gap: 20px;
   padding: 12px 18px;
-  font-size: 12px;
+  font-size: 14px;
 }
 .movie-player-close {
   display: flex;
@@ -975,7 +978,7 @@ html {
   margin-top: 23px;
 }
 .movie-controls > p {
-  font-size: 11px;
+  font-size: 13px;
   color: var(--muted);
   margin-right: auto;
 }
@@ -1066,7 +1069,7 @@ html {
   box-shadow: 0 20px 45px #274b4022;
 }
 .build-dialog > span {
-  font-size: 10px;
+  font-size: 12px;
   color: #c3e5d5;
   display: flex;
   gap: 9px;
@@ -1106,7 +1109,7 @@ html {
   padding-top: 20px;
 }
 .creator-item > span {
-  font-size: 10px;
+  font-size: 12px;
   color: #0f666a;
 }
 .creator-item h3 {
@@ -1141,7 +1144,7 @@ html {
 }
 .growth-path span {
   color: #58716a;
-  font-size: 10px;
+  font-size: 12px;
 }
 .growth-path h3 {
   font-size: calc(16px + var(--reading-size-increase));
@@ -1186,7 +1189,7 @@ html {
   left: 27px;
   color: #deebe7;
   z-index: 1;
-  font-size: 10px;
+  font-size: 12px;
 }
 .adoption-grid .section-heading {
   margin-bottom: 27px;
@@ -1205,7 +1208,7 @@ html {
 }
 .adoption-steps li > span {
   color: #0f666a;
-  font-size: 10px;
+  font-size: 12px;
   margin-top: 4px;
 }
 .adoption-steps h3 {
@@ -1249,7 +1252,7 @@ html {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 10px;
+  font-size: 12px;
   white-space: nowrap;
   color: #b7ddc8;
 }
@@ -1284,7 +1287,7 @@ html {
 .request-origin small {
   display: block;
   color: #aab6c1;
-  font-size: 10px;
+  font-size: 12px;
   margin-top: 18px;
 }
 .request-origin p {
@@ -1299,15 +1302,15 @@ html {
 }
 .practice-flow li {
   position: relative;
-  min-height: 139px;
+  min-height: 153px;
   border: 1px solid #394249;
   background: #22282e;
   border-radius: 14px;
-  padding: 19px;
+  padding: 19px 19px 40px;
 }
 .flow-count {
   display: block;
-  font-size: 10px;
+  font-size: 12px;
   color: #aab8c4;
 }
 .flow-role {
@@ -1315,11 +1318,11 @@ html {
   top: 16px;
   right: 15px;
   color: #b5c6ca;
-  font-size: 9px;
+  font-size: 11px;
 }
 .practice-flow b {
   display: block;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.8;
   font-weight: 500;
   margin-top: 18px;
@@ -1398,11 +1401,11 @@ html {
   margin-top: 55px;
   padding-top: 26px;
   color: #54786d;
-  font-size: 11px;
+  font-size: 13px;
 }
 .connection-strip > span:first-child {
   color: #58716a;
-  font-size: 10px;
+  font-size: 12px;
   margin-right: auto;
 }
 .pricing-section {
@@ -1424,7 +1427,7 @@ html {
   border-color: #8bbdaa;
 }
 .plan-role {
-  font-size: 10px;
+  font-size: 12px;
   color: #58716a;
 }
 .pricing-card h3 {
@@ -1462,7 +1465,7 @@ html {
 .pricing-notes a {
   margin-top: 17px;
   color: #0f666a;
-  font-size: 11px;
+  font-size: 14px;
 }
 .final-section {
   text-align: center;
@@ -1553,7 +1556,7 @@ html {
     font-size: 33px;
   }
   .aigen-label {
-    font-size: 9px;
+    font-size: 11px;
     margin-bottom: 20px;
   }
   .section-heading {
@@ -1614,15 +1617,16 @@ html {
     max-width: 450px;
   }
   .hero-actions {
-    gap: 19px;
+    flex-wrap: wrap;
+    gap: 14px 19px;
   }
   .aigen-button {
-    font-size: 11px;
+    font-size: 13px;
     padding: 14px 17px;
     gap: 12px;
   }
   .text-link {
-    font-size: 11px;
+    font-size: 13px;
   }
   .hero-product {
     padding-top: 50px;
@@ -1638,7 +1642,7 @@ html {
     padding-inline: 9px;
   }
   .window-bar p {
-    font-size: 6px;
+    font-size: 8px;
   }
   .window-bar > span {
     width: 4px;
@@ -1650,11 +1654,11 @@ html {
     border-radius: 11px;
   }
   .floating-note small {
-    font-size: 7px;
+    font-size: 9px;
     margin-bottom: 3px;
   }
   .floating-note b {
-    font-size: 9px;
+    font-size: 11px;
   }
   .floating-icon {
     height: 25px;
@@ -1684,7 +1688,7 @@ html {
     text-align: center;
   }
   .hero-screen-caption {
-    font-size: 7px;
+    font-size: 10px;
     bottom: -20px;
   }
   .orbit-two {
@@ -1703,7 +1707,7 @@ html {
     font-size: calc(13px + var(--reading-size-increase));
   }
   .entry-intro {
-    font-size: calc(10px + var(--reading-size-increase));
+    font-size: 19px;
   }
   .feature-tabs {
     gap: 6px;
@@ -1721,7 +1725,7 @@ html {
   .feature-tabs button {
     min-height: 48px;
     padding: 12px 16px;
-    font-size: 12px;
+    font-size: 13px;
   }
   .feature-tabs svg {
     width: 16px;
@@ -1732,7 +1736,7 @@ html {
     justify-content: center;
     gap: 7px;
     color: #376556;
-    font-size: 11px;
+    font-size: 12px;
     margin-bottom: 16px;
   }
   .feature-panel {
@@ -1756,7 +1760,7 @@ html {
   }
   .feature-tag {
     margin-top: 19px;
-    font-size: 9px;
+    font-size: 11px;
   }
   .feature-art {
     padding: 10px 20px 25px;
@@ -1810,7 +1814,7 @@ html {
     padding: 12px;
   }
   .movie-player-close {
-    font-size: 10px;
+    font-size: 12px;
   }
   .movie-player {
     width: calc(100% - 24px);
@@ -1826,7 +1830,7 @@ html {
     order: 3;
     width: 100%;
     margin-top: 8px;
-    font-size: 10px;
+    font-size: 12px;
   }
   .movie-dots {
     padding: 4px 7px;
@@ -1907,7 +1911,7 @@ html {
   }
   .adoption-photo span {
     left: 22px;
-    font-size: 9px;
+    font-size: 11px;
   }
   .adoption-grid .section-description {
     font-size: calc(12px + var(--reading-size-increase));
@@ -1941,11 +1945,11 @@ html {
     gap: 10px;
   }
   .practice-flow li {
-    min-height: 136px;
-    padding: 16px;
+    min-height: 148px;
+    padding: 16px 16px 38px;
   }
   .practice-flow b {
-    font-size: 11px;
+    font-size: 13px;
   }
   .practice-bottom {
     grid-template-columns: 1fr;
@@ -1976,7 +1980,7 @@ html {
   .connection-strip {
     gap: 17px;
     margin-top: 30px;
-    font-size: 10px;
+    font-size: 12px;
   }
   .connection-strip > span:first-child {
     width: 100%;
