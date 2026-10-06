@@ -203,7 +203,7 @@ html {
 .aigen-site-footer {
   color: #b8cfc4;
   background: #183c36;
-  padding: 44px 0;
+  padding: 44px 0 110px;
   font-size: 11px;
 }
 .aigen-footer-inner {
@@ -2008,7 +2008,7 @@ html {
     gap: 27px;
   }
   .aigen-site-footer {
-    padding-bottom: 90px;
+    padding-bottom: 110px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
