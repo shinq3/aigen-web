@@ -799,12 +799,10 @@ html {
   overflow: hidden;
   border-radius: 20px;
   background: #23272b;
-  border: 1px solid #394249;
   scroll-snap-align: start;
-  transition: border-color 0.25s;
 }
-.movie-card.active-movie {
-  border-color: var(--accent);
+.movie-card.active-movie .movie-card-copy h3 {
+  color: var(--accent);
 }
 .movie-thumbnail {
   position: relative;
@@ -855,11 +853,21 @@ html {
   margin-top: 10px;
 }
 .movie-player {
-  margin-top: 26px;
-  border: 1px solid #394249;
+  position: fixed;
+  inset: 0;
+  width: min(960px, calc(100% - 40px));
+  max-height: calc(100dvh - 40px);
+  margin: auto;
+  padding: 0;
+  border: 0;
   border-radius: 18px;
-  overflow: hidden;
+  overflow: auto;
   background: #111416;
+  color: #f5f7fa;
+}
+.movie-player::backdrop {
+  background: #000b;
+  backdrop-filter: blur(6px);
 }
 .movie-player-heading {
   display: flex;
@@ -881,7 +889,7 @@ html {
 .movie-player iframe {
   display: block;
   width: 100%;
-  height: 390px;
+  height: min(540px, calc(100dvh - 110px));
   border: 0;
   background: #000;
 }
@@ -1709,8 +1717,11 @@ html {
   .movie-player-close {
     font-size: 10px;
   }
+  .movie-player {
+    width: calc(100% - 24px);
+  }
   .movie-player iframe {
-    height: 230px;
+    height: min(420px, calc(100dvh - 120px));
   }
   .movie-controls {
     gap: 10px;

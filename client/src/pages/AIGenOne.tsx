@@ -319,6 +319,13 @@ function MovieGallery() {
   const section = useRef<HTMLElement>(null);
   const track = useRef<HTMLDivElement>(null);
   const cards = useRef<Array<HTMLElement | null>>([]);
+  const player = useRef<HTMLDialogElement>(null);
+  useEffect(() => {
+    const dialog = player.current;
+    if (!dialog) return;
+    if (playing && !dialog.open) dialog.showModal();
+    if (!playing && dialog.open) dialog.close();
+  }, [playing]);
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -437,19 +444,28 @@ function MovieGallery() {
               </button>
             </div>
           </div>
-          {playing && (
-            <div className="movie-player">
-              <div className="movie-player-heading">
-                <p>{title}</p>
-                <button
-                  className="movie-player-close"
-                  onClick={() => setPlaying(false)}
-                  aria-label={t("experience.movies.stop")}
-                >
-                  <X size={18} />
-                  {t("experience.movies.stop")}
-                </button>
-              </div>
+          <dialog
+            className="movie-player"
+            ref={player}
+            aria-labelledby="movie-player-title"
+            onCancel={() => setPlaying(false)}
+            onClose={() => setPlaying(false)}
+            onClick={(event) => {
+              if (event.target === event.currentTarget) setPlaying(false);
+            }}
+          >
+            <div className="movie-player-heading">
+              <p id="movie-player-title">{title}</p>
+              <button
+                className="movie-player-close"
+                onClick={() => setPlaying(false)}
+                aria-label={t("experience.movies.stop")}
+              >
+                <X size={18} />
+                {t("experience.movies.stop")}
+              </button>
+            </div>
+            {playing && (
               <iframe
                 key={movies[active].id}
                 src={`https://www.youtube-nocookie.com/embed/${movies[active].id}?autoplay=1&rel=0`}
@@ -458,8 +474,8 @@ function MovieGallery() {
                 allowFullScreen
                 referrerPolicy="strict-origin-when-cross-origin"
               />
-            </div>
-          )}
+            )}
+          </dialog>
           <a
             className="text-link movie-fallback"
             href={`https://www.youtube.com/watch?v=${movies[active].id}`}
