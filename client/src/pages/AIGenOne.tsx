@@ -443,7 +443,7 @@ function MovieGallery() {
           title={t("experience.movies.title")}
           description={t("experience.movies.description")}
         />
-        <Reveal>
+        <Reveal stagger>
           <div
             className="movie-track"
             ref={track}
@@ -452,8 +452,9 @@ function MovieGallery() {
             aria-label={t("experience.movies.title")}
           >
             {movies.map((movie, i) => (
-              <article
+              <motion.article
                 className={`movie-card ${active === i ? "active-movie" : ""}`}
+                variants={entrance(reduced, true, i * 0.22)}
                 key={movie.id}
                 ref={(element) => {
                   cards.current[i] = element;
@@ -486,7 +487,7 @@ function MovieGallery() {
                   </p>
                   <h3>{movieTitle(i)}</h3>
                 </div>
-              </article>
+              </motion.article>
             ))}
           </div>
           <div className="movie-controls">

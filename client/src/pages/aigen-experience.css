@@ -2025,7 +2025,8 @@ html {
 }
 
 /* Keyboard navigation should expose focused content immediately. */
-.scroll-reveal:focus-within {
+.scroll-reveal:focus-within,
+.movie-card:focus-within {
   opacity: 1 !important;
   transform: none !important;
   filter: none !important;
