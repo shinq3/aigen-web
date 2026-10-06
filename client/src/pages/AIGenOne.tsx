@@ -4,6 +4,7 @@ import {
   motion,
   MotionConfig,
   useReducedMotion,
+  type Variants,
 } from "framer-motion";
 import {
   AppWindow,
@@ -78,30 +79,78 @@ type Item = {
   price?: string;
 };
 
+const entranceEase = [0.22, 1, 0.36, 1] as const;
+const revealViewport = {
+  once: true,
+  amount: 0.12,
+  margin: "0px 0px -48px 0px",
+} as const;
+
+function entrance(reduced: boolean | null, title = false, delay = 0): Variants {
+  return {
+    hidden: reduced
+      ? { opacity: 1, y: 0, filter: "blur(0px)" }
+      : {
+          opacity: 0,
+          y: title ? 28 : 44,
+          ...(title ? { filter: "blur(4px)" } : {}),
+        },
+    visible: {
+      opacity: 1,
+      y: 0,
+      ...(title || reduced ? { filter: "blur(0px)" } : {}),
+      transition: {
+        duration: reduced ? 0 : 0.95,
+        delay: reduced ? 0 : delay,
+        ease: entranceEase,
+      },
+    },
+  };
+}
+function sequence(reduced: boolean | null, delay = 0): Variants {
+  return {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: reduced ? 0 : 0.12,
+        delayChildren: reduced ? 0 : delay,
+      },
+    },
+  };
+}
 function Reveal({
   children,
   className = "",
   delay = 0,
+  stagger = false,
 }: {
   children: ReactNode;
   className?: string;
   delay?: number;
+  stagger?: boolean;
 }) {
   const reduced = useReducedMotion();
   return (
     <motion.div
-      className={className}
-      initial={reduced ? false : { opacity: 0, y: 36 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.12 }}
-      transition={{ duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] }}
+      className={`scroll-reveal ${className}`}
+      initial={reduced ? false : "hidden"}
+      whileInView="visible"
+      viewport={revealViewport}
+      variants={
+        stagger ? sequence(reduced, delay) : entrance(reduced, false, delay)
+      }
     >
       {children}
     </motion.div>
   );
 }
 function Label({ children }: { children: ReactNode }) {
-  return <p className="aigen-label">{children}</p>;
+  const reduced = useReducedMotion();
+  return (
+    <motion.p className="aigen-label" variants={entrance(reduced)}>
+      {children}
+    </motion.p>
+  );
 }
 function Heading({
   label,
@@ -112,11 +161,12 @@ function Heading({
   title: string;
   description?: string;
 }) {
+  const reduced = useReducedMotion();
   return (
-    <Reveal className="section-heading">
+    <Reveal className="section-heading" stagger>
       <Label>{label}</Label>
-      <h2>{title}</h2>
-      {description && <p className="section-description">{description}</p>}
+      <motion.h2 variants={entrance(reduced, true, 0.12)}>{title}</motion.h2>
+      {description && <motion.p className="section-description" variants={entrance(reduced, false, 0.24)}>{description}</motion.p>}
     </Reveal>
   );
 }
@@ -436,22 +486,22 @@ export default function AIGenOne() {
           </div>
           <div className="aigen-wrap hero-copy">
             <motion.div
-              initial={reduced ? false : { opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={reduced ? false : "hidden"}
+              animate="visible"
+              variants={sequence(reduced, 0.08)}
             >
               <Label>{t("hero.eyebrow")}</Label>
               <h1>
                 {t("hero.title")
                   .split("\n")
                   .map((line, i) => (
-                    <span key={line} className={i === 1 ? "hero-accent" : ""}>
+                    <motion.span key={line} className={i === 1 ? "hero-accent" : ""} variants={entrance(reduced, true)}>
                       {line}
-                    </span>
+                    </motion.span>
                   ))}
               </h1>
-              <p className="hero-description">{t("hero.description")}</p>
-              <div className="hero-actions">
+              <motion.p className="hero-description" variants={entrance(reduced)}>{t("hero.description")}</motion.p>
+              <motion.div className="hero-actions" variants={entrance(reduced)}>
                 <a className="aigen-button" href={contact}>
                   {t("hero.primaryCta")}
                   <ArrowUpRight size={17} />
@@ -460,10 +510,10 @@ export default function AIGenOne() {
                   <Play size={15} />
                   {t("hero.secondaryCta")}
                 </a>
-              </div>
+              </motion.div>
             </motion.div>
           </div>
-          <Reveal className="hero-product" delay={0.15}>
+          <Reveal className="hero-product" delay={0.25}>
             <div className="hero-orbit orbit-one" />
             <div className="hero-orbit orbit-two" />
             <div className="hero-product-inner">
@@ -507,16 +557,16 @@ export default function AIGenOne() {
               title={t("experience.entry.title")}
               description={t("experience.entry.description")}
             />
-            <Reveal className="entry-questions">
-              <p className="entry-intro">{t("experience.entry.ask")}</p>
+            <Reveal className="entry-questions" stagger delay={0.15}>
+              <motion.p className="entry-intro" variants={entrance(reduced)}>{t("experience.entry.ask")}</motion.p>
               {list("experience.entry.questions").map((question, i) => (
-                <div className="entry-question" key={question}>
+                <motion.div className="entry-question" key={question} variants={entrance(reduced, false, 0.12 * (i + 1))}>
                   <span>0{i + 1}</span>
                   <p>{question}</p>
                   <ArrowUpRight size={19} />
-                </div>
+                </motion.div>
               ))}
-              <p className="small-note">{t("experience.entry.note")}</p>
+              <motion.p className="small-note" variants={entrance(reduced, false, 0.48)}>{t("experience.entry.note")}</motion.p>
             </Reveal>
           </div>
         </section>
@@ -551,7 +601,7 @@ export default function AIGenOne() {
                 <Reveal
                   className="creator-item"
                   key={item.title}
-                  delay={i * 0.06}
+                  delay={i * 0.1}
                 >
                   <span>0{i + 1}</span>
                   <h3>{item.title}</h3>
@@ -561,7 +611,7 @@ export default function AIGenOne() {
             </div>
             <div className="growth-path">
               {items("experience.growth").map((item, i) => (
-                <Reveal key={item.title}>
+                <Reveal key={item.title} delay={i * 0.1}>
                   <span>{String(i + 1).padStart(2, "0")}</span>
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
@@ -589,18 +639,18 @@ export default function AIGenOne() {
                 title={t("experience.adoption.title")}
                 description={t("experience.adoption.description")}
               />
+              <ol className="adoption-steps">
+                {items("fde.steps").map((item, i) => (
+                  <motion.li key={item.title} initial={reduced ? false : "hidden"} whileInView="visible" viewport={revealViewport} variants={entrance(reduced, false, i * 0.08)}>
+                    <span>0{i + 1}</span>
+                    <div>
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                    </div>
+                  </motion.li>
+                ))}
+              </ol>
               <Reveal>
-                <ol className="adoption-steps">
-                  {items("fde.steps").map((item, i) => (
-                    <li key={item.title}>
-                      <span>0{i + 1}</span>
-                      <div>
-                        <h3>{item.title}</h3>
-                        <p>{item.description}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ol>
                 <p className="small-note">{t("experience.adoption.fde")}</p>
                 <a href={contact} className="text-link">
                   {t("experience.adoption.cta")}
@@ -618,61 +668,63 @@ export default function AIGenOne() {
               title={t("experience.practice.title")}
               description={t("experience.practice.description")}
             />
-            <Reveal>
-              <div className="practice-intro">
-                <span className="experiment-badge">
-                  <span />
-                  {t("experience.practice.badge")}
+            <Reveal className="practice-intro">
+              <span className="experiment-badge">
+                <span />
+                {t("experience.practice.badge")}
+              </span>
+              <p>{t("experience.practice.context")}</p>
+            </Reveal>
+            <div className="practice-flow">
+              <Reveal className="request-origin">
+                <span className="google-chat-mark">
+                  <MessageSquare size={26} />
                 </span>
-                <p>{t("experience.practice.context")}</p>
-              </div>
-              <div className="practice-flow">
-                <div className="request-origin">
-                  <span className="google-chat-mark">
-                    <MessageSquare size={26} />
-                  </span>
-                  <small>Google Chat</small>
-                  <p>{t("experience.practice.request")}</p>
-                </div>
-                <ol>
-                  {list("experience.practice.steps").map((step, i) => (
-                    <li
-                      key={step}
-                      className={
-                        [1, 3, 5].includes(i) ? "human-step" : "ai-step"
-                      }
-                    >
-                      <span className="flow-count">0{i + 1}</span>
-                      <span className="flow-role">
-                        {[1, 3, 5].includes(i)
-                          ? t("experience.practice.human")
-                          : "AI"}
-                      </span>
-                      <b>{step}</b>
-                      {i === 4 ? (
-                        <GitPullRequest size={20} />
-                      ) : i === 5 ? (
-                        <ShieldCheck size={20} />
-                      ) : (
-                        <ArrowRight size={20} />
-                      )}
-                    </li>
-                  ))}
-                </ol>
-              </div>
-              <div className="practice-bottom">
-                <div>
-                  <h3>{t("experience.practice.todayTitle")}</h3>
-                  <p>{t("experience.practice.today")}</p>
-                </div>
-                <div>
-                  <h3>{t("experience.practice.futureTitle")}</h3>
-                  <p>{t("experience.practice.future")}</p>
-                </div>
-              </div>
-              <p className="practice-measure">
-                {t("experience.practice.measure")}
-              </p>
+                <small>Google Chat</small>
+                <p>{t("experience.practice.request")}</p>
+              </Reveal>
+              <ol>
+                {list("experience.practice.steps").map((step, i) => (
+                  <motion.li
+                    initial={reduced ? false : "hidden"}
+                    whileInView="visible"
+                    viewport={revealViewport}
+                    variants={entrance(reduced, false, i * 0.08)}
+                    key={step}
+                    className={
+                      [1, 3, 5].includes(i) ? "human-step" : "ai-step"
+                    }
+                  >
+                    <span className="flow-count">0{i + 1}</span>
+                    <span className="flow-role">
+                      {[1, 3, 5].includes(i)
+                        ? t("experience.practice.human")
+                        : "AI"}
+                    </span>
+                    <b>{step}</b>
+                    {i === 4 ? (
+                      <GitPullRequest size={20} />
+                    ) : i === 5 ? (
+                      <ShieldCheck size={20} />
+                    ) : (
+                      <ArrowRight size={20} />
+                    )}
+                  </motion.li>
+                ))}
+              </ol>
+            </div>
+            <div className="practice-bottom">
+              <Reveal>
+                <h3>{t("experience.practice.todayTitle")}</h3>
+                <p>{t("experience.practice.today")}</p>
+              </Reveal>
+              <Reveal delay={0.1}>
+                <h3>{t("experience.practice.futureTitle")}</h3>
+                <p>{t("experience.practice.future")}</p>
+              </Reveal>
+            </div>
+            <Reveal className="practice-measure">
+              <p>{t("experience.practice.measure")}</p>
             </Reveal>
           </div>
         </section>
@@ -691,7 +743,7 @@ export default function AIGenOne() {
                   <Reveal
                     className="governance-item"
                     key={item.title}
-                    delay={i * 0.06}
+                    delay={i * 0.1}
                   >
                     <Icon size={27} />
                     <h3>{item.title}</h3>
@@ -722,7 +774,7 @@ export default function AIGenOne() {
                 <Reveal
                   className={`pricing-card ${i === 1 ? "featured-plan" : ""}`}
                   key={plan.name}
-                  delay={i * 0.06}
+                  delay={i * 0.1}
                 >
                   <span className="plan-role">{plan.target}</span>
                   <h3>{plan.name}</h3>
@@ -747,11 +799,11 @@ export default function AIGenOne() {
 
         <section className="aigen-section final-section">
           <div className="aigen-wrap">
-            <Reveal>
+            <Reveal stagger>
               <Label>LET’S CONNECT YOUR WORK</Label>
-              <h2>{t("cta.title")}</h2>
-              <p>{t("cta.description")}</p>
-              <div className="hero-actions">
+              <motion.h2 variants={entrance(reduced, true, 0.12)}>{t("cta.title")}</motion.h2>
+              <motion.p variants={entrance(reduced, false, 0.24)}>{t("cta.description")}</motion.p>
+              <motion.div className="hero-actions" variants={entrance(reduced)}>
                 <a className="aigen-button" href={contact}>
                   {t("cta.primary")}
                   <ArrowUpRight size={18} />
@@ -760,10 +812,10 @@ export default function AIGenOne() {
                   {t("cta.secondary")}
                   <Play size={16} />
                 </a>
-              </div>
-              <span className="final-wordmark" aria-hidden="true">
+              </motion.div>
+              <motion.span className="final-wordmark" aria-hidden="true" variants={entrance(reduced)}>
                 AiGen-One.
-              </span>
+              </motion.span>
             </Reveal>
           </div>
         </section>
