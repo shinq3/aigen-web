@@ -854,7 +854,27 @@ export default function AIGenOne() {
                   <Play size={16} />
                 </a>
               </motion.div>
-              <motion.span className="final-wordmark" aria-hidden="true" variants={entrance(reduced)}>
+              <motion.span
+                className="final-wordmark"
+                aria-hidden="true"
+                initial={reduced ? false : "hidden"}
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3, margin: "0px 0px -24px 0px" }}
+                variants={{
+                  hidden: { opacity: 0, y: 32, scale: 0.96, filter: "blur(6px)" },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                    filter: "blur(0px)",
+                    transition: {
+                      duration: reduced ? 0 : 2.8,
+                      delay: reduced ? 0 : 0.15,
+                      ease: [0.22, 0.61, 0.36, 1],
+                    },
+                  },
+                }}
+              >
                 AiGen-One.
               </motion.span>
             </Reveal>
