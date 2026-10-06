@@ -311,8 +311,8 @@
       "control": "Keep human checks where judgment is needed."
     },
     "movies": {
-      "title": "Bringing AI into work.\nSix questions to consider.",
-      "description": "Six short films about putting AI to work.\nExplore questions about adoption, operation, and improvement.",
+      "title": "Bringing AI into work.\nQuestions to consider.",
+      "description": "Seven short films about putting AI to work.\nExplore questions about adoption, operation, and improvement.",
       "main": "Introducing AiGen-One",
       "short": "Short film",
       "play": "Play film",
@@ -323,6 +323,7 @@
       "next": "Next film",
       "youtube": "Watch on YouTube",
       "titles": [
+        "Your ideas, everyone’s work",
         "Does everyone need AI?",
         "Why is the workload not shrinking?",
         "Can we leave everything to AI?",

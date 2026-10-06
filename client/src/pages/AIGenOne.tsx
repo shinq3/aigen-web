@@ -33,6 +33,7 @@ import aiChatImage from "../../../images/AI_chat.png";
 import skillsImage from "../../../images/skills.png";
 import agentsImage from "../../../images/agent.png";
 import businessMenuImage from "../../../images/bussiness_menu.png";
+import sharedWorkImage from "../../../images/shorts/shared-work.png";
 import shortOneImage from "../../../images/shorts/short-1.jpg";
 import shortTwoImage from "../../../images/shorts/short-2.jpg";
 import shortThreeImage from "../../../images/shorts/short-3.jpg";
@@ -42,6 +43,7 @@ import shortSixImage from "../../../images/shorts/short-6.jpg";
 import "./aigen-experience.css";
 
 const movies = [
+  { id: "w4Nsak-qOEk", thumbnail: sharedWorkImage, short: true },
   { id: "FRvYDCeY4sc", thumbnail: shortOneImage, short: true },
   { id: "crTaPI7aDSs", thumbnail: shortTwoImage, short: true },
   { id: "s6rt-ZhfYBo", thumbnail: shortThreeImage, short: true },
