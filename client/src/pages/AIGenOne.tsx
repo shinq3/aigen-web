@@ -24,6 +24,7 @@ import {
 import { useTranslation } from "react-i18next";
 import { useLocale } from "@/lib/i18n-utils";
 import dashboardImage from "../../../images/dashboard.jpg";
+import officeImage from "@assets/generated_images/AIGenOne_FDE_workshop_v2.jpg";
 import builderImage from "@assets/generated_images/AIGenOne_builder_chat_actual.jpg";
 import teamImage from "@assets/generated_images/AIGenOne_FDE_field_discovery_v2.jpg";
 import aiChatImage from "../../../images/AI_chat.png";
@@ -430,6 +431,9 @@ export default function AIGenOne() {
     <MotionConfig reducedMotion="user">
       <div className="aigen-experience">
         <section className="aigen-hero">
+          <div className="hero-backdrop" aria-hidden="true">
+            <img src={officeImage} alt="" fetchPriority="high" />
+          </div>
           <div className="aigen-wrap hero-copy">
             <motion.div
               initial={reduced ? false : { opacity: 0, y: 24 }}
