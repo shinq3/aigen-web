@@ -354,12 +354,16 @@ function FeatureGallery() {
                 variants={{
                   enter: (travel: number) => ({ opacity: 0, x: reduced ? 0 : travel * 28 }),
                   visible: { opacity: 1, x: 0 },
-                  exit: (travel: number) => ({ opacity: 0, x: reduced ? 0 : travel * -28 }),
+                  exit: (travel: number) => ({
+                    opacity: 0,
+                    x: reduced ? 0 : travel * -28,
+                    transition: { duration: reduced ? 0 : 0.25 },
+                  }),
                 }}
                 initial="enter"
                 animate="visible"
                 exit="exit"
-                transition={{ duration: reduced ? 0 : 0.3 }}
+                transition={{ duration: reduced ? 0 : 0.9, ease: entranceEase }}
               >
                 <div className="feature-copy">
                   <span className="feature-index">
@@ -690,7 +694,7 @@ export default function AIGenOne() {
               title={t("experience.build.title")}
               description={t("experience.build.description")}
             />
-            <Reveal className="build-stage">
+            <Reveal className="build-stage" delay={0.5}>
               <div className="build-dialog">
                 <span>
                   <MessageSquare size={17} /> {t("experience.build.voice")}
