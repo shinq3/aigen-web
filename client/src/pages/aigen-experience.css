@@ -4,6 +4,7 @@ html {
   scroll-padding-top: 88px;
 }
 .aigen-experience {
+  --reading-size-increase: 2pt;
   --ink: #183c36;
   --muted: #58716a;
   --accent: #0f666a;
@@ -68,7 +69,7 @@ html {
   max-width: 690px;
   margin-top: 24px;
   color: var(--muted);
-  font-size: 16px;
+  font-size: calc(16px + var(--reading-size-increase));
   line-height: 1.95;
   white-space: pre-line;
 }
@@ -92,7 +93,7 @@ html {
 }
 .series-note {
   color: var(--muted);
-  font-size: 12px;
+  font-size: calc(12px + var(--reading-size-increase));
   line-height: 1.9;
   margin-top: 18px;
 }
@@ -127,7 +128,7 @@ html {
   color: var(--accent);
 }
 .small-note {
-  font-size: 11px;
+  font-size: calc(11px + var(--reading-size-increase));
   line-height: 1.9;
   color: var(--muted);
 }
@@ -216,6 +217,7 @@ html {
   color: white;
 }
 .aigen-site-footer p {
+  font-size: calc(11px + 2pt);
   margin-top: 12px;
   line-height: 1.9;
 }
@@ -282,7 +284,7 @@ html {
   margin: 25px auto 0;
   max-width: 620px;
   color: #28483e;
-  font-size: 14px;
+  font-size: calc(14px + var(--reading-size-increase));
   line-height: 1.95;
   white-space: pre-line;
 }
@@ -472,7 +474,7 @@ html {
 }
 .entry-intro {
   color: var(--muted);
-  font-size: 11px;
+  font-size: calc(11px + var(--reading-size-increase));
   padding-bottom: 17px;
 }
 .entry-question {
@@ -491,7 +493,7 @@ html {
 .entry-question p {
   flex: 1;
   font-weight: 500;
-  font-size: 14px;
+  font-size: calc(14px + var(--reading-size-increase));
 }
 .entry-question svg {
   color: #96b6ac;
@@ -605,13 +607,13 @@ html {
   margin-left: 8px;
 }
 .feature-copy h3 {
-  font-size: clamp(25px, 2.5vw, 34px);
+  font-size: calc(clamp(25px, 2.5vw, 34px) + var(--reading-size-increase));
   line-height: 1.55;
   margin-top: 27px;
   white-space: pre-line;
 }
 .feature-copy > p {
-  font-size: 13px;
+  font-size: calc(13px + var(--reading-size-increase));
   line-height: 1.95;
   color: #58716a;
   margin-top: 20px;
@@ -920,7 +922,7 @@ html {
   letter-spacing: 0.16em;
 }
 .movie-card-copy h3 {
-  font-size: 18px;
+  font-size: calc(18px + var(--reading-size-increase));
   line-height: 1.55;
   margin-top: 10px;
 }
@@ -1071,7 +1073,7 @@ html {
   align-items: center;
 }
 .build-dialog p {
-  font-size: 18px;
+  font-size: calc(18px + var(--reading-size-increase));
   line-height: 1.8;
   margin-top: 16px;
   letter-spacing: -0.03em;
@@ -1089,7 +1091,7 @@ html {
 }
 .build-caption {
   text-align: right;
-  font-size: 9px;
+  font-size: calc(9px + var(--reading-size-increase));
   color: #58716a;
   margin-top: 14px;
 }
@@ -1108,12 +1110,12 @@ html {
   color: #0f666a;
 }
 .creator-item h3 {
-  font-size: 18px;
+  font-size: calc(18px + var(--reading-size-increase));
   letter-spacing: -0.025em;
   margin-top: 15px;
 }
 .creator-item p {
-  font-size: 12px;
+  font-size: calc(12px + var(--reading-size-increase));
   line-height: 1.9;
   color: #58716a;
   margin-top: 12px;
@@ -1142,13 +1144,13 @@ html {
   font-size: 10px;
 }
 .growth-path h3 {
-  font-size: 16px;
+  font-size: calc(16px + var(--reading-size-increase));
   margin-top: 12px;
 }
 .growth-path p {
   color: #58716a;
   line-height: 1.8;
-  font-size: 11px;
+  font-size: calc(11px + var(--reading-size-increase));
   margin-top: 10px;
 }
 .adoption-section {
@@ -1193,7 +1195,7 @@ html {
   font-size: clamp(30px, 3.1vw, 40px);
 }
 .adoption-grid .section-description {
-  font-size: 13px;
+  font-size: calc(13px + var(--reading-size-increase));
 }
 .adoption-steps li {
   display: flex;
@@ -1207,11 +1209,11 @@ html {
   margin-top: 4px;
 }
 .adoption-steps h3 {
-  font-size: 13px;
+  font-size: calc(13px + var(--reading-size-increase));
 }
 .adoption-steps p {
   color: #58716a;
-  font-size: 11px;
+  font-size: calc(11px + var(--reading-size-increase));
   line-height: 1.9;
   margin-top: 7px;
 }
@@ -1258,7 +1260,7 @@ html {
   border-radius: 100%;
 }
 .practice-intro > p {
-  font-size: 11px;
+  font-size: calc(11px + var(--reading-size-increase));
   color: #c2cbd3;
   line-height: 1.8;
 }
@@ -1286,7 +1288,7 @@ html {
   margin-top: 18px;
 }
 .request-origin p {
-  font-size: 14px;
+  font-size: calc(14px + var(--reading-size-increase));
   line-height: 1.8;
   margin-top: 9px;
 }
@@ -1351,16 +1353,16 @@ html {
 }
 .practice-bottom h3 {
   color: #e2e9ed;
-  font-size: 13px;
+  font-size: calc(13px + var(--reading-size-increase));
 }
 .practice-bottom p {
   color: #c2cbd3;
-  font-size: 12px;
+  font-size: calc(12px + var(--reading-size-increase));
   line-height: 1.95;
   margin-top: 13px;
 }
 .practice-measure {
-  font-size: 10px;
+  font-size: calc(10px + var(--reading-size-increase));
   line-height: 1.9;
   color: #bcc6cf;
   margin-top: 29px;
@@ -1379,10 +1381,10 @@ html {
   stroke-width: 1.4;
 }
 .governance-item h3 {
-  font-size: 16px;
+  font-size: calc(16px + var(--reading-size-increase));
 }
 .governance-item p {
-  font-size: 12px;
+  font-size: calc(12px + var(--reading-size-increase));
   color: #58716a;
   line-height: 1.9;
   margin-top: 14px;
@@ -1426,12 +1428,12 @@ html {
   color: #58716a;
 }
 .pricing-card h3 {
-  font-size: 19px;
+  font-size: calc(19px + var(--reading-size-increase));
   margin-top: 13px;
 }
 .plan-price {
   margin: 25px 0;
-  font-size: 23px;
+  font-size: calc(23px + var(--reading-size-increase));
   letter-spacing: -0.04em;
   font-weight: 500;
 }
@@ -1440,7 +1442,7 @@ html {
   gap: 9px;
   line-height: 1.9;
   color: #58716a;
-  font-size: 11px;
+  font-size: calc(11px + var(--reading-size-increase));
   border-top: 1px solid #cee1db;
   padding-top: 23px;
 }
@@ -1454,7 +1456,7 @@ html {
 }
 .pricing-notes p {
   color: #58716a;
-  font-size: 10px;
+  font-size: calc(10px + var(--reading-size-increase));
   line-height: 1.9;
 }
 .pricing-notes a {
@@ -1475,7 +1477,7 @@ html {
   font-size: clamp(32px, 4.2vw, 54px);
 }
 .final-section p:not(.aigen-label) {
-  font-size: 13px;
+  font-size: calc(13px + var(--reading-size-increase));
   color: #507263;
   line-height: 1.95;
   max-width: 580px;
@@ -1558,7 +1560,7 @@ html {
     margin-bottom: 35px;
   }
   .section-description {
-    font-size: 13px;
+    font-size: calc(13px + var(--reading-size-increase));
     margin-top: 20px;
   }
   .aigen-header-inner {
@@ -1608,7 +1610,7 @@ html {
     letter-spacing: -0.065em;
   }
   .hero-description {
-    font-size: 12px;
+    font-size: calc(12px + var(--reading-size-increase));
     max-width: 450px;
   }
   .hero-actions {
@@ -1698,10 +1700,10 @@ html {
     padding-block: 18px;
   }
   .entry-question p {
-    font-size: 13px;
+    font-size: calc(13px + var(--reading-size-increase));
   }
   .entry-intro {
-    font-size: 10px;
+    font-size: calc(10px + var(--reading-size-increase));
   }
   .feature-tabs {
     gap: 6px;
@@ -1745,11 +1747,11 @@ html {
     padding: 27px 27px 20px;
   }
   .feature-copy h3 {
-    font-size: 25px;
+    font-size: calc(25px + var(--reading-size-increase));
     margin-top: 15px;
   }
   .feature-copy p {
-    font-size: 12px;
+    font-size: calc(12px + var(--reading-size-increase));
     margin-top: 13px;
   }
   .feature-tag {
@@ -1801,7 +1803,7 @@ html {
     padding: 16px 18px 20px;
   }
   .movie-card-copy h3 {
-    font-size: 17px;
+    font-size: calc(17px + var(--reading-size-increase));
   }
   .movie-player-heading {
     align-items: flex-start;
@@ -1852,14 +1854,14 @@ html {
     left: 8px;
   }
   .build-dialog p {
-    font-size: 15px;
+    font-size: calc(15px + var(--reading-size-increase));
     margin-top: 12px;
   }
   .build-dialog > div {
     display: none;
   }
   .build-caption {
-    font-size: 8px;
+    font-size: calc(8px + var(--reading-size-increase));
     line-height: 1.8;
   }
   .creator-grid {
@@ -1873,11 +1875,11 @@ html {
   .creator-item h3 {
     display: inline-block;
     margin: 0 0 0 14px;
-    font-size: 16px;
+    font-size: calc(16px + var(--reading-size-increase));
   }
   .creator-item p {
     margin-top: 10px;
-    font-size: 11px;
+    font-size: calc(11px + var(--reading-size-increase));
   }
   .growth-path {
     grid-template-columns: 1fr;
@@ -1908,7 +1910,7 @@ html {
     font-size: 9px;
   }
   .adoption-grid .section-description {
-    font-size: 12px;
+    font-size: calc(12px + var(--reading-size-increase));
   }
   .practice-intro {
     flex-direction: column;
@@ -1931,7 +1933,7 @@ html {
   }
   .request-origin p {
     margin: 0;
-    font-size: 12px;
+    font-size: calc(12px + var(--reading-size-increase));
     flex: 1;
   }
   .practice-flow ol {
@@ -1950,10 +1952,10 @@ html {
     gap: 28px;
   }
   .practice-bottom p {
-    font-size: 11px;
+    font-size: calc(11px + var(--reading-size-increase));
   }
   .practice-measure {
-    font-size: 9px;
+    font-size: calc(9px + var(--reading-size-increase));
   }
   .governance-grid {
     grid-template-columns: 1fr;
@@ -1968,7 +1970,7 @@ html {
     width: 25px;
   }
   .governance-item p {
-    font-size: 11px;
+    font-size: calc(11px + var(--reading-size-increase));
     margin-top: 10px;
   }
   .connection-strip {
@@ -1990,13 +1992,13 @@ html {
     margin-block: 20px;
   }
   .pricing-notes p {
-    font-size: 9px;
+    font-size: calc(9px + var(--reading-size-increase));
   }
   .final-section {
     padding-bottom: 0;
   }
   .final-section p:not(.aigen-label) {
-    font-size: 12px;
+    font-size: calc(12px + var(--reading-size-increase));
   }
   .final-wordmark {
     padding-top: 55px;
@@ -2036,5 +2038,15 @@ html {
     opacity: 1 !important;
     transform: none !important;
     filter: none !important;
+  }
+}
+
+/* Keep inherited hero caption sizes consistent with the body-text increase. */
+.hero-bottom p {
+  font-size: calc(11px + var(--reading-size-increase));
+}
+@media (max-width: 760px) {
+  .hero-bottom p {
+    font-size: calc(10px + var(--reading-size-increase));
   }
 }
