@@ -34,7 +34,6 @@ import skillsImage from "../../../images/skills.png";
 import agentsImage from "../../../images/agent.png";
 import businessMenuImage from "../../../images/bussiness_menu.png";
 import introductionImage from "../../../images/aigen-one-introduction.png";
-import workReportVideo from "../../../videos/work-report.mp4";
 import workReportImage from "../../../images/shorts/work-report.png";
 import sharedWorkImage from "../../../images/shorts/shared-work.png";
 import shortOneImage from "../../../images/shorts/short-1.jpg";
@@ -48,7 +47,7 @@ import "./aigen-experience.css";
 type Movie = { id: string; thumbnail: string; short: boolean; source?: string };
 const movies: Movie[] = [
   { id: "w4Nsak-qOEk", thumbnail: sharedWorkImage, short: true },
-  { id: "work-report", thumbnail: workReportImage, short: true, source: workReportVideo },
+  { id: "RYaz15RtTDY", thumbnail: workReportImage, short: true },
   { id: "FRvYDCeY4sc", thumbnail: shortOneImage, short: true },
   { id: "crTaPI7aDSs", thumbnail: shortTwoImage, short: true },
   { id: "s6rt-ZhfYBo", thumbnail: shortThreeImage, short: true },
