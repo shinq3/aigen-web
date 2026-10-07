@@ -963,12 +963,16 @@ html {
   padding: 6px;
   border-radius: 6px;
 }
-.movie-player iframe {
+.movie-player iframe,
+.movie-player video {
   display: block;
   width: 100%;
   height: min(540px, calc(100dvh - 110px));
   border: 0;
   background: #000;
+}
+.movie-player video {
+  object-fit: contain;
 }
 .movie-controls {
   display: flex;
@@ -1819,7 +1823,8 @@ html {
   .movie-player {
     width: calc(100% - 24px);
   }
-  .movie-player iframe {
+  .movie-player iframe,
+  .movie-player video {
     height: min(420px, calc(100dvh - 120px));
   }
   .movie-controls {

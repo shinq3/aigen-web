@@ -33,6 +33,8 @@ import aiChatImage from "../../../images/AI_chat.png";
 import skillsImage from "../../../images/skills.png";
 import agentsImage from "../../../images/agent.png";
 import businessMenuImage from "../../../images/bussiness_menu.png";
+import workReportVideo from "../../../videos/work-report.mp4";
+import workReportImage from "../../../images/shorts/work-report.png";
 import sharedWorkImage from "../../../images/shorts/shared-work.png";
 import shortOneImage from "../../../images/shorts/short-1.jpg";
 import shortTwoImage from "../../../images/shorts/short-2.jpg";
@@ -42,8 +44,10 @@ import shortFiveImage from "../../../images/shorts/short-5.jpg";
 import shortSixImage from "../../../images/shorts/short-6.jpg";
 import "./aigen-experience.css";
 
-const movies = [
+type Movie = { id: string; thumbnail: string; short: boolean; source?: string };
+const movies: Movie[] = [
   { id: "w4Nsak-qOEk", thumbnail: sharedWorkImage, short: true },
+  { id: "work-report", thumbnail: workReportImage, short: true, source: workReportVideo },
   { id: "FRvYDCeY4sc", thumbnail: shortOneImage, short: true },
   { id: "crTaPI7aDSs", thumbnail: shortTwoImage, short: true },
   { id: "s6rt-ZhfYBo", thumbnail: shortThreeImage, short: true },
@@ -552,7 +556,18 @@ function MovieGallery() {
                 {t("experience.movies.stop")}
               </button>
             </div>
-            {playing && (
+            {playing && (movies[active].source ? (
+              <video
+                key={movies[active].id}
+                src={movies[active].source}
+                poster={movies[active].thumbnail}
+                aria-label={title}
+                controls
+                autoPlay
+                playsInline
+                preload="metadata"
+              />
+            ) : (
               <iframe
                 key={movies[active].id}
                 src={`https://www.youtube-nocookie.com/embed/${movies[active].id}?autoplay=1&rel=0`}
@@ -561,15 +576,15 @@ function MovieGallery() {
                 allowFullScreen
                 referrerPolicy="strict-origin-when-cross-origin"
               />
-            )}
+            ))}
           </dialog>
           <a
             className="text-link movie-fallback"
-            href={`https://www.youtube.com/watch?v=${movies[active].id}`}
+            href={movies[active].source ?? `https://www.youtube.com/watch?v=${movies[active].id}`}
             target="_blank"
             rel="noreferrer"
           >
-            {t("experience.movies.youtube")}
+            {t(movies[active].source ? "experience.movies.openVideo" : "experience.movies.youtube")}
             <ArrowUpRight size={16} />
           </a>
         </Reveal>

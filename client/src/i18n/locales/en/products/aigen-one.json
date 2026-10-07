@@ -312,7 +312,7 @@
     },
     "movies": {
       "title": "Bringing AI into work.\nQuestions to consider.",
-      "description": "Seven short films about putting AI to work.\nExplore questions about adoption, operation, and improvement.",
+      "description": "Eight short films about putting AI to work.\nExplore questions about adoption, operation, and improvement.",
       "main": "Introducing AiGen-One",
       "short": "Short film",
       "play": "Play film",
@@ -321,9 +321,11 @@
       "select": "Choose a film",
       "previous": "Previous film",
       "next": "Next film",
+      "openVideo": "Open video in a new window",
       "youtube": "Watch on YouTube",
       "titles": [
         "Your ideas, everyone’s work",
+        "Work report business app",
         "Does everyone need AI?",
         "Why is the workload not shrinking?",
         "Can we leave everything to AI?",

@@ -312,7 +312,7 @@
     },
     "movies": {
       "title": "Đưa AI vào công việc.\nNhững câu hỏi cần cân nhắc.",
-      "description": "Bảy video ngắn về cách đưa AI vào công việc thực tế.\nKhám phá những câu hỏi về triển khai, vận hành và cải tiến.",
+      "description": "Tám video ngắn về cách đưa AI vào công việc thực tế.\nKhám phá những câu hỏi về triển khai, vận hành và cải tiến.",
       "main": "Giới thiệu AiGen-One",
       "short": "Video ngắn",
       "play": "Phát video",
@@ -321,9 +321,11 @@
       "select": "Chọn video",
       "previous": "Video trước",
       "next": "Video tiếp",
+      "openVideo": "Mở video trong cửa sổ mới",
       "youtube": "Xem trên YouTube",
       "titles": [
         "Sáng kiến của bạn, công việc của mọi người",
+        "Ứng dụng báo cáo công việc",
         "Ai cũng cần AI?",
         "Vì sao công việc vẫn không giảm?",
         "Có thể giao hết cho AI không?",
