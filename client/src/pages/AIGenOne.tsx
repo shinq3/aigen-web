@@ -404,6 +404,7 @@ function FeatureGallery() {
 function FeaturedMovie() {
   const { t } = useTranslation("aigen-one");
   const [playing, setPlaying] = useState(false);
+  const reduced = useReducedMotion();
   const player = useRef<HTMLDialogElement>(null);
   const title = t("experience.movies.featured");
   useEffect(() => {
@@ -413,13 +414,29 @@ function FeaturedMovie() {
     if (!playing && dialog.open) dialog.close();
   }, [playing]);
   return (
-    <Reveal className="featured-movie">
-      <div className="featured-movie-heading">
+    <Reveal className="featured-movie" stagger>
+      <motion.div className="featured-movie-heading" variants={entrance(reduced, true)}>
         <p className="aigen-label">PRODUCT FILM</p>
         <h2>{title}</h2>
-      </div>
-      <button
+      </motion.div>
+      <motion.button
         className="featured-movie-thumbnail"
+        variants={{
+          hidden: reduced
+            ? { opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }
+            : { opacity: 0, y: 40, scale: 0.97, filter: "blur(6px)" },
+          visible: {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            filter: "blur(0px)",
+            transition: {
+              duration: reduced ? 0 : 1.6,
+              delay: reduced ? 0 : 0.35,
+              ease: entranceEase,
+            },
+          },
+        }}
         aria-label={`${title} — ${t("experience.movies.play")}`}
         aria-haspopup="dialog"
         onClick={() => setPlaying(true)}
@@ -428,7 +445,7 @@ function FeaturedMovie() {
         <span className="thumbnail-play" aria-hidden="true">
           <Play size={28} fill="currentColor" />
         </span>
-      </button>
+      </motion.button>
       <dialog
         className="movie-player"
         ref={player}
@@ -460,7 +477,8 @@ function FeaturedMovie() {
           />
         )}
       </dialog>
-      <a
+      <motion.a
+        variants={entrance(reduced, false, 0.55)}
         className="text-link movie-fallback"
         href="https://youtu.be/5xBz3kFdmFw"
         target="_blank"
@@ -468,7 +486,7 @@ function FeaturedMovie() {
       >
         {t("experience.movies.youtube")}
         <ArrowUpRight size={16} />
-      </a>
+      </motion.a>
     </Reveal>
   );
 }
