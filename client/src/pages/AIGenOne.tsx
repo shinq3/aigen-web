@@ -33,6 +33,7 @@ import aiChatImage from "../../../images/AI_chat.png";
 import skillsImage from "../../../images/skills.png";
 import agentsImage from "../../../images/agent.png";
 import businessMenuImage from "../../../images/bussiness_menu.png";
+import introductionImage from "../../../images/aigen-one-introduction.png";
 import workReportVideo from "../../../videos/work-report.mp4";
 import workReportImage from "../../../images/shorts/work-report.png";
 import sharedWorkImage from "../../../images/shorts/shared-work.png";
@@ -401,6 +402,78 @@ function FeatureGallery() {
   );
 }
 
+function FeaturedMovie() {
+  const { t } = useTranslation("aigen-one");
+  const [playing, setPlaying] = useState(false);
+  const player = useRef<HTMLDialogElement>(null);
+  const title = t("experience.movies.featured");
+  useEffect(() => {
+    const dialog = player.current;
+    if (!dialog) return;
+    if (playing && !dialog.open) dialog.showModal();
+    if (!playing && dialog.open) dialog.close();
+  }, [playing]);
+  return (
+    <Reveal className="featured-movie">
+      <div className="featured-movie-heading">
+        <p className="aigen-label">PRODUCT FILM</p>
+        <h2>{title}</h2>
+      </div>
+      <button
+        className="featured-movie-thumbnail"
+        aria-label={`${title} — ${t("experience.movies.play")}`}
+        aria-haspopup="dialog"
+        onClick={() => setPlaying(true)}
+      >
+        <img src={introductionImage} alt="" loading="lazy" />
+        <span className="thumbnail-play" aria-hidden="true">
+          <Play size={28} fill="currentColor" />
+        </span>
+      </button>
+      <dialog
+        className="movie-player"
+        ref={player}
+        aria-labelledby="featured-movie-player-title"
+        onCancel={() => setPlaying(false)}
+        onClose={() => setPlaying(false)}
+        onClick={(event) => {
+          if (event.target === event.currentTarget) setPlaying(false);
+        }}
+      >
+        <div className="movie-player-heading">
+          <p id="featured-movie-player-title">{title}</p>
+          <button
+            className="movie-player-close"
+            onClick={() => setPlaying(false)}
+            aria-label={t("experience.movies.stop")}
+          >
+            <X size={18} />
+            {t("experience.movies.stop")}
+          </button>
+        </div>
+        {playing && (
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/5xBz3kFdmFw?autoplay=1&rel=0"
+            title={title}
+            allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+            allowFullScreen
+            referrerPolicy="strict-origin-when-cross-origin"
+          />
+        )}
+      </dialog>
+      <a
+        className="text-link movie-fallback"
+        href="https://youtu.be/5xBz3kFdmFw"
+        target="_blank"
+        rel="noreferrer"
+      >
+        {t("experience.movies.youtube")}
+        <ArrowUpRight size={16} />
+      </a>
+    </Reveal>
+  );
+}
+
 function MovieGallery() {
   const { t } = useTranslation("aigen-one");
   const [active, setActive] = useState(0);
@@ -448,6 +521,7 @@ function MovieGallery() {
   return (
     <section id="movies" className="aigen-section movie-section" ref={section}>
       <div className="aigen-wrap">
+        <FeaturedMovie />
         <Heading
           label="AI AT WORK"
           title={t("experience.movies.title")}
