@@ -12,6 +12,13 @@
 プロダクトサイトはWeb CMSの公開先から分離し、このリポジトリをビルドして配信する。
 `https://aigen.tokyo/` はAigen-One本体/PWA、`https://aigen.d-auchy.studio/` は旧サイト。LP更新でこれらの配信先を変更しない。
 
+## 規約ページ（2026-10-29追加）
+
+- `/privacy/` と `/terms/` は `content/legal/` のMarkdownからビルド時に生成する静的HTML。`npm run build` に生成処理を含む。
+- 全言語のLPフッターから日本語文書へリンクする。`client/public/sitemap.xml` にも両ページを含む。
+- `legal.css`、`privacy/index.html`、`terms/index.html` とサイトマップを含め、成果物ハッシュを検証する。
+- JavaScript無効時の本文表示、PC・390px幅の表示、目次とメールリンク、3言語のフッターを確認。既存問い合わせページとそのアセットは引き続き保持する。
+
 ## ビルド・更新の手順
 
 1. 配信するGitコミットを指定し、`git archive <commit>` などで隔離したクリーンなソースを作る。未コミットのファイルや共有作業ディレクトリの`dist`を配信しない。

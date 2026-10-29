@@ -116,8 +116,10 @@ function AigenFooter() {
             {t("footer.developer")}d-auchy.studio <ArrowUpRight size={12} className="inline" />
           </a>
           <a href={locale === "ja" ? "https://linnoedge.com/ja/home-ja/" : "https://linnoedge.com"} target="_blank" rel="noreferrer">
-            {t("footer.operator")}linnoedge <ArrowUpRight size={12} className="inline" />
+            {t("footer.operator")}株式会社コトリノ <ArrowUpRight size={12} className="inline" />
           </a>
+          <a href="/privacy/">{t("footer.privacy")}</a>
+          <a href="/terms/">{t("footer.terms")}</a>
         </nav>
       </div>
     </footer>

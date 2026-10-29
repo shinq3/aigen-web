@@ -1,4 +1,6 @@
 node_modules
+client/public/privacy/
+client/public/terms/
 dist
 .DS_Store
 server/public
